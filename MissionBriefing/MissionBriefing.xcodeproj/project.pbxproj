@@ -12,7 +12,7 @@
 		AA43E3031BC57C5D00620C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3011BC57C5D00620C20 /* Main.storyboard */; };
 		AA43E3051BC57C5D00620C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3041BC57C5D00620C20 /* Assets.xcassets */; };
 		AA43E3081BC57C5E00620C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3061BC57C5E00620C20 /* LaunchScreen.storyboard */; };
-		AAEEEA5E1BC5A41D003A81F8 /* TIYLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AAEEEA5D1BC5A41D003A81F8 /* TIYLogo.png */; settings = {ASSET_TAGS = (); }; };
+		AAA0775F1BC5A872006847FA /* TIYLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA0775E1BC5A872006847FA /* TIYLogo.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		AA43E3041BC57C5D00620C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA43E3071BC57C5E00620C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA43E3091BC57C5E00620C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAEEEA5D1BC5A41D003A81F8 /* TIYLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIYLogo.png; path = "../../../../Homework2015--FALL--iOS/images/TIYLogo.png"; sourceTree = "<group>"; };
+		AAA0775E1BC5A872006847FA /* TIYLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIYLogo.png; path = "../../../../2015--FALL--iOS/images/TIYLogo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		AA43E2FC1BC57C5D00620C20 /* MissionBriefingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AAEEEA5D1BC5A41D003A81F8 /* TIYLogo.png */,
+				AAA0775E1BC5A872006847FA /* TIYLogo.png */,
 				AA43E2FD1BC57C5D00620C20 /* AppDelegate.swift */,
 				AA43E2FF1BC57C5D00620C20 /* MissionBriefingViewController */,
 				AA43E3011BC57C5D00620C20 /* Main.storyboard */,
@@ -126,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA43E3081BC57C5E00620C20 /* LaunchScreen.storyboard in Resources */,
-				AAEEEA5E1BC5A41D003A81F8 /* TIYLogo.png in Resources */,
+				AAA0775F1BC5A872006847FA /* TIYLogo.png in Resources */,
 				AA43E3051BC57C5D00620C20 /* Assets.xcassets in Resources */,
 				AA43E3031BC57C5D00620C20 /* Main.storyboard in Resources */,
 			);
