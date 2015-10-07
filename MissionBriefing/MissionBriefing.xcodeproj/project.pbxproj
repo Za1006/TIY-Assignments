@@ -12,7 +12,7 @@
 		AA43E3031BC57C5D00620C20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3011BC57C5D00620C20 /* Main.storyboard */; };
 		AA43E3051BC57C5D00620C20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3041BC57C5D00620C20 /* Assets.xcassets */; };
 		AA43E3081BC57C5E00620C20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3061BC57C5E00620C20 /* LaunchScreen.storyboard */; };
-		AA43E3161BC59F8300620C20 /* TIYLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3151BC59F8300620C20 /* TIYLogo@2x.png */; settings = {ASSET_TAGS = (); }; };
+		AA43E3181BC5A1BA00620C20 /* TIYLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AA43E3171BC5A1BA00620C20 /* TIYLogo.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		AA43E3041BC57C5D00620C20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA43E3071BC57C5E00620C20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA43E3091BC57C5E00620C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA43E3151BC59F8300620C20 /* TIYLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TIYLogo@2x.png"; path = "images/TIYLogo@2x.png"; sourceTree = SOURCE_ROOT; };
+		AA43E3171BC5A1BA00620C20 /* TIYLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TIYLogo.png; path = ../../../../images/TIYLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 		AA43E2F11BC57C5D00620C20 = {
 			isa = PBXGroup;
 			children = (
-				AA43E2FC1BC57C5D00620C20 /* MissionBriefing */,
+				AA43E2FC1BC57C5D00620C20 /* MissionBriefingViewController */,
 				AA43E2FB1BC57C5D00620C20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,10 +53,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA43E2FC1BC57C5D00620C20 /* MissionBriefing */ = {
+		AA43E2FC1BC57C5D00620C20 /* MissionBriefingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AA43E3151BC59F8300620C20 /* TIYLogo@2x.png */,
+				AA43E3171BC5A1BA00620C20 /* TIYLogo.png */,
 				AA43E2FD1BC57C5D00620C20 /* AppDelegate.swift */,
 				AA43E2FF1BC57C5D00620C20 /* MissionBriefingViewController */,
 				AA43E3011BC57C5D00620C20 /* Main.storyboard */,
@@ -64,6 +64,7 @@
 				AA43E3061BC57C5E00620C20 /* LaunchScreen.storyboard */,
 				AA43E3091BC57C5E00620C20 /* Info.plist */,
 			);
+			name = MissionBriefingViewController;
 			path = MissionBriefing;
 			sourceTree = "<group>";
 		};
@@ -125,8 +126,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA43E3081BC57C5E00620C20 /* LaunchScreen.storyboard in Resources */,
+				AA43E3181BC5A1BA00620C20 /* TIYLogo.png in Resources */,
 				AA43E3051BC57C5D00620C20 /* Assets.xcassets in Resources */,
-				AA43E3161BC59F8300620C20 /* TIYLogo@2x.png in Resources */,
 				AA43E3031BC57C5D00620C20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
