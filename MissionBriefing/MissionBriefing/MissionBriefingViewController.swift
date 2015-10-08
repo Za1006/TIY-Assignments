@@ -73,6 +73,7 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
         greetingLabel.text = "Good evening, Agent\(nameComponents[0])"
         
         
+        
     
       
         
@@ -96,12 +97,18 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
-            
+        
+             @IBAction func viewBackgroundColorChange(sender: UIColor)
+        {
+        
+        
+                 view.backgroundColor = UIColor(Red: 0.585, Green: 0.78, Blue: 0.188, alpha: 1.0)
+        }
+        
                     
+        
                     
-                    
-                    
-                    
+        
         
             //
             // 8. The view's background color needs to switch to red to indicate a failed login by the agent.
