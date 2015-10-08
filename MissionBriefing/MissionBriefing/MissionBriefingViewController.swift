@@ -42,16 +42,18 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
     @IBAction func authenticateAgent(sender: UIButton)
     {
         // This will cause the keyboard to dismiss when the authenticate button is tapped
-        if <#name text field property identifier goes here#>.isFirstResponder
+        if sender. isFirstResponder
         {
-            <#name text field property identifier goes here#>.resignFirstResponder
+            name text field property identifier goes here.resignFirstResponder
         }
         
         //
         // 4. Check whether there is text in BOTH the name and password textfields
         //
-        if <#?#>
-        {
+        func sayGoodEveningAgent() -> Bool
+        if
+        
+        
             //
             // 5. The greeting label needs to be populated with the the string "Good evening, Agent #", where # is the last name of
             //    the agent logging in. The agent's full name is listed in the text field, but you need to pull out just the last
@@ -61,10 +63,15 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //
             
           
+        }
+//        MARK: - UITextView Delegate
+        
+        func textView(sender: UITextView)
+        {
             
-            
-            
-            
+        
+        }
+        
             //
             // 6. The mission briefing textview needs to be populated with the briefing from HQ, but it must also include the last
             //    name of the agent that logged in. Perhaps you could use the text in the textfield to get the agent's last name.

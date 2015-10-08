@@ -51,6 +51,9 @@
                                 <rect key="frame" x="60" y="103" width="480" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateAgent:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="rfM-KQ-Nez"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvE-IQ-iWm">
                                 <rect key="frame" x="277" y="136" width="42" height="21"/>
@@ -73,6 +76,9 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="b9C-0q-B3F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0LO-jk-Wo3"/>
                             <constraint firstItem="8TF-1S-Mku" firstAttribute="width" secondItem="cMB-zf-gbG" secondAttribute="width" id="0dT-aV-T0z"/>
@@ -100,6 +106,11 @@
                                 <exclude reference="vWy-AT-M7k"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outlet property="nameTextField" destination="b9C-0q-B3F" id="Njq-mZ-v63"/>
+                            <outlet property="passwordTextField" destination="cMB-zf-gbG" id="GRn-0v-eMz"/>
+                            <outlet property="view" destination="Bto-Lo-cKD" id="Scn-Eh-Dbq"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
