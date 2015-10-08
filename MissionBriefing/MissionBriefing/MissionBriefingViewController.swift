@@ -8,20 +8,26 @@
 
 import UIKit
 
-class MissionBriefingViewController: UIViewController
+class MissionBriefingViewController: UIViewController, UITextFieldDelegate
 {
     // Place IBOutlet properties below
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         //
         // 3. The three UI elements need to be emptied on launch
         //    Hint: there is a string literal that represents empty
         //
+        
+        nameTextField.text = ""
+        passwordTextField.text = ""
+        
+        
         
     }
 
@@ -54,7 +60,7 @@ class MissionBriefingViewController: UIViewController
             //    the delimiter would be a space character.
             //
             
-            
+          
             
             
             
@@ -65,7 +71,7 @@ class MissionBriefingViewController: UIViewController
             //    How would you inject that last name into the paragraph of the mission briefing?
             //    Set the textview text property to the paragraph in "MissionBriefing.txt"
             //
-            
+//            nameTextView.text = "  ,\(%@)"
             
             
             
@@ -80,14 +86,12 @@ class MissionBriefingViewController: UIViewController
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
             
-            
-            
-            
-            
-            
-        }
-        else
-        {
+                    
+                    
+                    
+                    
+                    
+        
             //
             // 8. The view's background color needs to switch to red to indicate a failed login by the agent.
             //
@@ -98,8 +102,6 @@ class MissionBriefingViewController: UIViewController
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
 
-            
-            
             
             
             
