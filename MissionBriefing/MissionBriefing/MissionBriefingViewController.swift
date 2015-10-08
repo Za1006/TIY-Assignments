@@ -26,6 +26,8 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
         
         nameTextField.text = ""
         passwordTextField.text = ""
+//        greetingLable
+//        textView
         
         
         
@@ -42,18 +44,23 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
     @IBAction func authenticateAgent(sender: UIButton)
     {
         // This will cause the keyboard to dismiss when the authenticate button is tapped
-        if sender. isFirstResponder
+        if agentUserTextField.isFirstResponder()
         {
-            name text field property identifier goes here.resignFirstResponder
+            agentUserTextField.resignFirstResponder()
         }
+        {
+            passwordTextField.isFirstResponder()
+        }
+//        if agentUserTextField.isFirst
+//             agentUser... .resign
+//        if passwordTextField.isFirst
         
         //
         // 4. Check whether there is text in BOTH the name and password textfields
         //
-        func sayGoodEveningAgent() -> Bool
-        if
-        
-        
+        if agentUserTextField.text != "" && passwordTextField.text !=
+        {
+
             //
             // 5. The greeting label needs to be populated with the the string "Good evening, Agent #", where # is the last name of
             //    the agent logging in. The agent's full name is listed in the text field, but you need to pull out just the last
@@ -61,16 +68,12 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    Strings". You should be able to find a method that allows you to break up a string using a delimiter. In our case,
             //    the delimiter would be a space character.
             //
-            
-          
-        }
-//        MARK: - UITextView Delegate
-        
-        func textView(sender: UITextView)
-        {
-            
+//        let nameComponents = agentUserTextField.text!.characters.split(" ").map {String($0)}
+//        greetingLabel.text = "Good evening, Agent\(nameComponents[0])"
         
         }
+        
+      
         
             //
             // 6. The mission briefing textview needs to be populated with the briefing from HQ, but it must also include the last
@@ -78,7 +81,6 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    How would you inject that last name into the paragraph of the mission briefing?
             //    Set the textview text property to the paragraph in "MissionBriefing.txt"
             //
-//            nameTextView.text = "  ,\(%@)"
             
             
             
