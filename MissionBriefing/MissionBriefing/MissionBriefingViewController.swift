@@ -46,11 +46,12 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
         // This will cause the keyboard to dismiss when the authenticate button is tapped
         if agentUserTextField.isFirstResponder()
         {
-            agentUserTextField.resignFirstResponder()
+            
         }
         {
             passwordTextField.isFirstResponder()
         }
+        
 //        if agentUserTextField.isFirst
 //             agentUser... .resign
 //        if passwordTextField.isFirst
@@ -67,12 +68,12 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    name. Open the Apple Documentation and go to the page for NSString. There is a section in the left called "Dividing
             //    Strings". You should be able to find a method that allows you to break up a string using a delimiter. In our case,
             //    the delimiter would be a space character.
-            //
-//        let nameComponents = agentUserTextField.text!.characters.split(" ").map {String($0)}
-//        greetingLabel.text = "Good evening, Agent\(nameComponents[0])"
+            
+        let nameComponents = agentUserTextField.text!.characters.split(" ").map {String($0)}
+        greetingLabel.text = "Good evening, Agent\(nameComponents[0])"
         
-        }
         
+    
       
         
             //
@@ -81,7 +82,8 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    How would you inject that last name into the paragraph of the mission briefing?
             //    Set the textview text property to the paragraph in "MissionBriefing.txt"
             //
-            
+        
+        
             
             
             
