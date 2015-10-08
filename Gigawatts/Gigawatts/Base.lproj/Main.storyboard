@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8AQ-Sa-K9d">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Time Circuits View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TimeCircuitsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" misplaced="YES" text="DESTINATION TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AST-46-NPf">
+                                <rect key="frame" x="235" y="98" width="156" height="22"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PRESENT TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-d8-Fuo">
+                                <rect key="frame" x="252" y="189" width="122" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JAN 01 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILR-bn-F0G">
+                                <rect key="frame" x="260" y="142" width="107" height="19"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AST-46-NPf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="DVd-je-TpO"/>
+                            <constraint firstItem="sOC-d8-Fuo" firstAttribute="top" secondItem="AST-46-NPf" secondAttribute="bottom" constant="69" id="EX0-Q2-SoR"/>
+                            <constraint firstItem="ILR-bn-F0G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mya-kE-0L5"/>
+                            <constraint firstItem="ILR-bn-F0G" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="TgK-v3-ZOw"/>
+                            <constraint firstItem="sOC-d8-Fuo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vp3-II-Pt8"/>
+                            <constraint firstItem="sOC-d8-Fuo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="125" id="XaO-40-cbl"/>
+                            <constraint firstItem="ILR-bn-F0G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="dqu-J5-4r1"/>
+                            <constraint firstItem="AST-46-NPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iPh-ny-It3"/>
+                            <constraint firstItem="ILR-bn-F0G" firstAttribute="top" secondItem="AST-46-NPf" secondAttribute="bottom" constant="21" id="j9r-p4-ZQW"/>
+                            <constraint firstItem="sOC-d8-Fuo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="qcb-5T-XGh"/>
+                            <constraint firstItem="sOC-d8-Fuo" firstAttribute="top" secondItem="ILR-bn-F0G" secondAttribute="bottom" constant="28" id="saH-JC-ah6"/>
+                            <constraint firstItem="AST-46-NPf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="8" id="tSu-wd-UBI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KYh-Wx-FCi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QYh-iC-Pgh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8AQ-Sa-K9d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCg-u4-WQV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rTh-ud-gVI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gc0-Tv-ecb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="387"/>
+        </scene>
+    </scenes>
+</document>
