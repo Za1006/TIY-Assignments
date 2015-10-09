@@ -13,6 +13,8 @@
 		AADD5A361BC7091400913D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADD5A351BC7091400913D90 /* Assets.xcassets */; };
 		AADD5A391BC7091400913D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADD5A371BC7091400913D90 /* LaunchScreen.storyboard */; };
 		AADD5A411BC7099F00913D90 /* TimeCircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD5A401BC7099F00913D90 /* TimeCircuitsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AADD5A451BC73FC100913D90 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AADD5A441BC73FC100913D90 /* digital-7.ttf */; settings = {ASSET_TAGS = (); }; };
+		AADD5A481BC769D600913D90 /* Gigawatts.app in Resources */ = {isa = PBXBuildFile; fileRef = AADD5A2B1BC7091400913D90 /* Gigawatts.app */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		AADD5A381BC7091400913D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AADD5A3A1BC7091400913D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AADD5A401BC7099F00913D90 /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCircuitsViewController.swift; sourceTree = "<group>"; };
+		AADD5A441BC73FC100913D90 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "digital-7.ttf"; path = "../../2015--FALL--iOS/digital-7.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		AADD5A2D1BC7091400913D90 /* Gigawatts */ = {
 			isa = PBXGroup;
 			children = (
+				AADD5A441BC73FC100913D90 /* digital-7.ttf */,
 				AADD5A2E1BC7091400913D90 /* AppDelegate.swift */,
 				AADD5A301BC7091400913D90 /* ViewController.swift */,
 				AADD5A321BC7091400913D90 /* Main.storyboard */,
@@ -128,6 +132,8 @@
 				AADD5A391BC7091400913D90 /* LaunchScreen.storyboard in Resources */,
 				AADD5A361BC7091400913D90 /* Assets.xcassets in Resources */,
 				AADD5A341BC7091400913D90 /* Main.storyboard in Resources */,
+				AADD5A481BC769D600913D90 /* Gigawatts.app in Resources */,
+				AADD5A451BC73FC100913D90 /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
