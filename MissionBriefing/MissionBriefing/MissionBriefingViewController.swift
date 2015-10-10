@@ -11,24 +11,23 @@ import UIKit
 class MissionBriefingViewController: UIViewController, UITextFieldDelegate
 {
     // Place IBOutlet properties below
-    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var agentUserTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
+    @IBOutlet var greetingLabel: UILabel!
+    @IBOutlet var briefingTextView: UITextView!
+    @IBOutlet var backgroundColor: UIColor!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //
-        // 3. The three UI elements need to be emptied on launch
+        // 3. The two UI elements need to be emptied on launch
         //    Hint: there is a string literal that represents empty
         //
         
-        nameTextField.text = ""
-        passwordTextField.text = ""
-//        greetingLable
-//        textView
-        
+        greetingLabel.text = ""
+        briefingTextView.text = ""
         
         
     }
@@ -43,24 +42,59 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func authenticateAgent(sender: UIButton)
     {
-        // This will cause the keyboard to dismiss when the authenticate button is tapped
-        if agentUserTextField.isFirstResponder()
-        {
-            
-        }
-        {
-            passwordTextField.isFirstResponder()
-        }
+        signInAgent()
+    }
+    
+    // MARK: UITextField Delegate
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool
+    {
+        var rc = false
         
-//        if agentUserTextField.isFirst
-//             agentUser... .resign
-//        if passwordTextField.isFirst
+        if textField.text != ""
+        {
+            if textField == agentUserTextField
+            {
+                passwordTextField.becomeFirstResponder()
+            }
+            else if textField == passwordTextField
+            {
+                rc = true
+                signInAgent()
+            }
+        
+        }
+        return rc
+    }
+    
+//    MARK: - Private
+    
+    func signInAgent()
+    {
+        // This will cause the keyboard to dismiss when the authenticate button is tapped
+
+        if agentUserTextField.resignFirstResponder()
+        {
+            agentUserTextField.resignFirstResponder()
+        }
+        if passwordTextField.isFirstResponder()
+        {
+            passwordTextField.resignFirstResponder()
+        }
+    }
+    
+        // This will cause the keyboard to dismiss when the authenticate button is tapped
+    
+    
         
         //
         // 4. Check whether there is text in BOTH the name and password textfields
         //
-        if agentUserTextField.text != "" && passwordTextField.text !=
+    
+        if agentUserTextField.text != "" && passwordTextField.text != ""
+    
         {
+    
+
 
             //
             // 5. The greeting label needs to be populated with the the string "Good evening, Agent #", where # is the last name of
@@ -69,13 +103,10 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    Strings". You should be able to find a method that allows you to break up a string using a delimiter. In our case,
             //    the delimiter would be a space character.
             
-        let nameComponents = agentUserTextField.text!.characters.split(" ").map {String($0)}
-        greetingLabel.text = "Good evening, Agent\(nameComponents[0])"
-        
-        
-        
+        let nameComponents = agentUserTextField.text!.characters.split(" ").map { String($0) }
+        greetingLabel.text = "Good evening, Agent\(nameComponents[1])"
     
-      
+    
         
             //
             // 6. The mission briefing textview needs to be populated with the briefing from HQ, but it must also include the last
@@ -83,8 +114,8 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    How would you inject that last name into the paragraph of the mission briefing?
             //    Set the textview text property to the paragraph in "MissionBriefing.txt"
             //
-        
-        
+    
+                briefingTextView.text = "This mission will be an arduous one, fraught with peril. You will cover much strange and unfamiliar territory. Should you choose to accept this mission, Agent \(nameComponents[1]), you will certainly be disavowed, but you will be doing your country a great service. This message will self destruct in 5 seconds."
             
             
             
@@ -97,16 +128,16 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
-        
-             @IBAction func viewBackgroundColorChange(sender: UIColor)
-        {
-        
-        
-                 view.backgroundColor = UIColor(Red: 0.585, Green: 0.78, Blue: 0.188, alpha: 1.0)
-        }
-        
-                    
-        
+    
+            view.backgroundColor = UIColor(red: 0.585, green: 0.78, blue: 0.188, alpha: 1.0)
+             }
+             else
+            {
+               view.backgroundColor = UIColor(red: 0.78, green: 0.188, blue: 0.188, alpha: 1.0)
+
+            }
+    
+    
                     
         
         
@@ -120,10 +151,10 @@ class MissionBriefingViewController: UIViewController, UITextFieldDelegate
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
 
-            
-            
-            
+    
+    
+    
         }
-    }
-}
+
+
 
