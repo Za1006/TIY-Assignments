@@ -1,12 +1,10 @@
 //
-//  TimeCircuitsViewController.swift
+//  ViewController.swift
 //  Gigawatts
 //
 //  Created by Elizabeth Yeh on 10/8/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
-
-import UIKit
 
 import UIKit
 
@@ -20,3 +18,6 @@ class TimeCircutsViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet var picker: UIPickerView!
     @IBOutlet weak var timeLabel: UILabel!
     var date: NSDateFormatter?
+
+
+   
