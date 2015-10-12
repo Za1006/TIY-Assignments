@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA43E2F91BC57C5D00620C20"
-               BuildableName = "MissionBriefing.app"
-               BlueprintName = "MissionBriefing"
-               ReferencedContainer = "container:MissionBriefing.xcodeproj">
+               BlueprintIdentifier = "AADD5A2A1BC7091400913D90"
+               BuildableName = "Gigawatts.app"
+               BlueprintName = "Gigawatts"
+               ReferencedContainer = "container:Gigawatts.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA43E2F91BC57C5D00620C20"
-            BuildableName = "MissionBriefing.app"
-            BlueprintName = "MissionBriefing"
-            ReferencedContainer = "container:MissionBriefing.xcodeproj">
+            BlueprintIdentifier = "AADD5A2A1BC7091400913D90"
+            BuildableName = "Gigawatts.app"
+            BlueprintName = "Gigawatts"
+            ReferencedContainer = "container:Gigawatts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA43E2F91BC57C5D00620C20"
-            BuildableName = "MissionBriefing.app"
-            BlueprintName = "MissionBriefing"
-            ReferencedContainer = "container:MissionBriefing.xcodeproj">
+            BlueprintIdentifier = "AADD5A2A1BC7091400913D90"
+            BuildableName = "Gigawatts.app"
+            BlueprintName = "Gigawatts"
+            ReferencedContainer = "container:Gigawatts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AA43E2F91BC57C5D00620C20"
-            BuildableName = "MissionBriefing.app"
-            BlueprintName = "MissionBriefing"
-            ReferencedContainer = "container:MissionBriefing.xcodeproj">
+            BlueprintIdentifier = "AADD5A2A1BC7091400913D90"
+            BuildableName = "Gigawatts.app"
+            BlueprintName = "Gigawatts"
+            ReferencedContainer = "container:Gigawatts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

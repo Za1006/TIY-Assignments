@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MissionBriefing.xcscheme</key>
+		<key>Gigawatts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AA43E2F91BC57C5D00620C20</key>
+		<key>AADD5A2A1BC7091400913D90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
