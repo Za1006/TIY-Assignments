@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-d8-Fuo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRESENT TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-d8-Fuo" customClass="UIPresentTimeLabel">
                                 <rect key="frame" x="228" y="183" width="144" height="26"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -46,7 +46,7 @@
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST TIME DEPARTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cga-zQ-UEH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST TIME DEPARTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cga-zQ-UEH" customClass="UIlastTimeDepartureLabel">
                                 <rect key="frame" x="189" y="265" width="223" height="27"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -83,7 +83,7 @@
                                     <segue destination="Vjd-lc-soN" kind="show" id="G9W-yX-7tJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAd-f6-T1z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAd-f6-T1z" customClass="UITravelBack">
                                 <rect key="frame" x="233" y="491" width="134" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -351,7 +351,7 @@
                         <viewControllerLayoutGuide type="top" id="AD4-B7-ggN"/>
                         <viewControllerLayoutGuide type="bottom" id="Wej-BC-OcE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Hfe-Kz-erD">
+                    <view key="view" contentMode="scaleToFill" id="Hfe-Kz-erD" customClass="UIPickerView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -370,6 +370,9 @@
                             <constraint firstItem="2bY-GI-JCz" firstAttribute="centerX" secondItem="Hfe-Kz-erD" secondAttribute="centerX" id="Dao-g8-yNn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="Hfe-Kz-erD" id="gfw-Qn-4w9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyM-3B-umA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
