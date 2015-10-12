@@ -10,11 +10,12 @@ import UIKit
 
 class HeroTableViewController: UITableViewController
 {
-
+    var heroes = Array<Hero>()
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        title = "Heros"
+      title = "S.H.I.E.L.D. Hero Tracker"
+
         
         loadHeroes()
 
@@ -35,12 +36,12 @@ class HeroTableViewController: UITableViewController
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return heroes.count
     }
 
 
@@ -48,8 +49,12 @@ class HeroTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("HeroCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        let aHero = heroes[indexPath.row]
+        cell.textLabel?.text = aHero.heroName
+        
 
         return cell
+        
     }
 
 
@@ -104,7 +109,9 @@ class HeroTableViewController: UITableViewController
         {
             let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
             let dataFromFile = NSData(contentsOfFile: filePath!)
-            let 
+            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: [] as! NSArray
+            
+            for heroDictionary in
         }
     }
 }

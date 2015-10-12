@@ -12,7 +12,7 @@
 		AAFE3C391BCC2B3A00B66EC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFE3C381BCC2B3A00B66EC8 /* Assets.xcassets */; };
 		AAFE3C3C1BCC2B3A00B66EC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFE3C3A1BCC2B3A00B66EC8 /* LaunchScreen.storyboard */; };
 		AAFE3C441BCC2D5700B66EC8 /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE3C431BCC2D5700B66EC8 /* HeroTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		AAFE3C461BCC2F6600B66EC8 /* Heros.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE3C451BCC2F6600B66EC8 /* Heros.swift */; settings = {ASSET_TAGS = (); }; };
+		AAFE3C461BCC2F6600B66EC8 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE3C451BCC2F6600B66EC8 /* Hero.swift */; settings = {ASSET_TAGS = (); }; };
 		AAFE3C481BCC346400B66EC8 /* HeroDetailViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFE3C471BCC346400B66EC8 /* HeroDetailViewController .swift */; settings = {ASSET_TAGS = (); }; };
 		AAFE3C4A1BCC36EA00B66EC8 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = AAFE3C491BCC36EA00B66EC8 /* heroes.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		AAFE3C3B1BCC2B3A00B66EC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAFE3C3D1BCC2B3A00B66EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAFE3C431BCC2D5700B66EC8 /* HeroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTableViewController.swift; sourceTree = "<group>"; };
-		AAFE3C451BCC2F6600B66EC8 /* Heros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heros.swift; sourceTree = "<group>"; };
+		AAFE3C451BCC2F6600B66EC8 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		AAFE3C471BCC346400B66EC8 /* HeroDetailViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HeroDetailViewController .swift"; sourceTree = "<group>"; };
 		AAFE3C491BCC36EA00B66EC8 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +64,7 @@
 				AAFE3C311BCC2B3A00B66EC8 /* AppDelegate.swift */,
 				AAFE3C431BCC2D5700B66EC8 /* HeroTableViewController.swift */,
 				AAFE3C471BCC346400B66EC8 /* HeroDetailViewController .swift */,
-				AAFE3C451BCC2F6600B66EC8 /* Heros.swift */,
+				AAFE3C451BCC2F6600B66EC8 /* Hero.swift */,
 				AAFE3C351BCC2B3A00B66EC8 /* Main.storyboard */,
 				AAFE3C381BCC2B3A00B66EC8 /* Assets.xcassets */,
 				AAFE3C3A1BCC2B3A00B66EC8 /* LaunchScreen.storyboard */,
@@ -148,7 +148,7 @@
 				AAFE3C321BCC2B3A00B66EC8 /* AppDelegate.swift in Sources */,
 				AAFE3C441BCC2D5700B66EC8 /* HeroTableViewController.swift in Sources */,
 				AAFE3C481BCC346400B66EC8 /* HeroDetailViewController .swift in Sources */,
-				AAFE3C461BCC2F6600B66EC8 /* Heros.swift in Sources */,
+				AAFE3C461BCC2F6600B66EC8 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

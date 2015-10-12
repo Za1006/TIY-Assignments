@@ -8,15 +8,15 @@
 
 import Foundation
 
-class Heros
+class Hero
 {
-    var name: String
+    var heroName: String
     var homeWorld: String
     var powers: String
     
     init(dictionary: NSDictionary)
     {
-        name = dictionary["name"] as! String
+        heroName = dictionary["name"] as! String
         homeWorld = dictionary["homeWorld"] as! String
         powers = dictionary["powers"] as! String
     }
