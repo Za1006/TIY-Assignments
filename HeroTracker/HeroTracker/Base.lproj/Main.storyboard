@@ -69,22 +69,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-b4-XwY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-b4-XwY">
                                 <rect key="frame" x="91" y="114" width="52" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-eF-kHs">
-                                <rect key="frame" x="279" y="304" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="homeWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-jC-Dbd">
+                                <rect key="frame" x="72" y="165" width="90" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="homeWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-jC-Dbd">
-                                <rect key="frame" x="72" y="165" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="powers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-eF-kHs">
+                                <rect key="frame" x="87" y="219" width="61" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -96,13 +96,21 @@
                         <constraints>
                             <constraint firstItem="fEM-jC-Dbd" firstAttribute="top" secondItem="wGb-b4-XwY" secondAttribute="bottom" constant="30" id="1gw-cd-T9C"/>
                             <constraint firstItem="wGb-b4-XwY" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="TMc-nw-xx4"/>
+                            <constraint firstItem="rQF-eF-kHs" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="XuJ-Pg-lQG"/>
+                            <constraint firstItem="rQF-eF-kHs" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="155" id="fui-dl-A1m"/>
                             <constraint firstItem="fEM-jC-Dbd" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="oIX-Jb-uj9"/>
                             <constraint firstItem="wGb-b4-XwY" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="50" id="pKe-kN-BCa"/>
                             <constraint firstItem="wGb-b4-XwY" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="rcu-mL-0LP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="TMc-nw-xx4"/>
+                                <exclude reference="pKe-kN-BCa"/>
                                 <exclude reference="rcu-mL-0LP"/>
+                                <exclude reference="1gw-cd-T9C"/>
+                                <exclude reference="oIX-Jb-uj9"/>
+                                <exclude reference="XuJ-Pg-lQG"/>
+                                <exclude reference="fui-dl-A1m"/>
                             </mask>
                         </variation>
                     </view>
