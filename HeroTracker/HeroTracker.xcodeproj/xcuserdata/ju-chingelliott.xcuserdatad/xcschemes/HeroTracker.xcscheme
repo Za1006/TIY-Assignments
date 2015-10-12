@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAFE3C0F1BCC29F500B66EC8"
+               BlueprintIdentifier = "AAFE3C2D1BCC2B3A00B66EC8"
                BuildableName = "HeroTracker.app"
                BlueprintName = "HeroTracker"
                ReferencedContainer = "container:HeroTracker.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAFE3C0F1BCC29F500B66EC8"
+            BlueprintIdentifier = "AAFE3C2D1BCC2B3A00B66EC8"
             BuildableName = "HeroTracker.app"
             BlueprintName = "HeroTracker"
             ReferencedContainer = "container:HeroTracker.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAFE3C0F1BCC29F500B66EC8"
+            BlueprintIdentifier = "AAFE3C2D1BCC2B3A00B66EC8"
             BuildableName = "HeroTracker.app"
             BlueprintName = "HeroTracker"
             ReferencedContainer = "container:HeroTracker.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAFE3C0F1BCC29F500B66EC8"
+            BlueprintIdentifier = "AAFE3C2D1BCC2B3A00B66EC8"
             BuildableName = "HeroTracker.app"
             BlueprintName = "HeroTracker"
             ReferencedContainer = "container:HeroTracker.xcodeproj">
