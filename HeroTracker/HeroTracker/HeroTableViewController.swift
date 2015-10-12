@@ -8,9 +8,11 @@
 
 import UIKit
 
-class HeroTableViewController: UITableViewController {
+class HeroTableViewController: UITableViewController
+{
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations

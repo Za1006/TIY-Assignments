@@ -61,11 +61,11 @@
 				AAFE3C311BCC2B3A00B66EC8 /* AppDelegate.swift */,
 				AAFE3C431BCC2D5700B66EC8 /* HeroTableViewController.swift */,
 				AAFE3C451BCC2F6600B66EC8 /* Hero.swift */,
+				AAFE3C471BCC346400B66EC8 /* HeroDetailViewController .swift */,
 				AAFE3C351BCC2B3A00B66EC8 /* Main.storyboard */,
 				AAFE3C381BCC2B3A00B66EC8 /* Assets.xcassets */,
 				AAFE3C3A1BCC2B3A00B66EC8 /* LaunchScreen.storyboard */,
 				AAFE3C3D1BCC2B3A00B66EC8 /* Info.plist */,
-				AAFE3C471BCC346400B66EC8 /* HeroDetailViewController .swift */,
 			);
 			path = HeroTracker;
 			sourceTree = "<group>";
