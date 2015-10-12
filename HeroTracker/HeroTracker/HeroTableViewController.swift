@@ -14,6 +14,10 @@ class HeroTableViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        title = "Heros"
+        
+        loadHeroes()
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -39,15 +43,15 @@ class HeroTableViewController: UITableViewController
         return 0
     }
 
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("HeroCell", forIndexPath: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,5 +97,14 @@ class HeroTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func loadHeroes()
+    {
+        do
+        {
+            let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
+            let dataFromFile = NSData(contentsOfFile: filePath!)
+            let 
+        }
+    }
 }

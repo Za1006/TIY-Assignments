@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Hero Table View Controller-->
+        <!--S.H.I.E.L.D. Hero Tracker-->
         <scene sceneID="tEq-pn-5P7">
             <objects>
-                <tableViewController id="OQN-9J-JzD" customClass="HeroTableViewController" customModule="HeroTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="S.H.I.E.L.D. Hero Tracker" id="OQN-9J-JzD" customClass="HeroTableViewController" customModule="HeroTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VuV-eZ-C1F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,8 +69,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-jC-Dbd">
-                                <rect key="frame" x="279" y="188" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-b4-XwY">
+                                <rect key="frame" x="91" y="114" width="52" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -83,8 +83,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-b4-XwY">
-                                <rect key="frame" x="101" y="93" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="homeWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-jC-Dbd">
+                                <rect key="frame" x="72" y="165" width="90" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -93,6 +93,18 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fEM-jC-Dbd" firstAttribute="top" secondItem="wGb-b4-XwY" secondAttribute="bottom" constant="30" id="1gw-cd-T9C"/>
+                            <constraint firstItem="wGb-b4-XwY" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="TMc-nw-xx4"/>
+                            <constraint firstItem="fEM-jC-Dbd" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="oIX-Jb-uj9"/>
+                            <constraint firstItem="wGb-b4-XwY" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="50" id="pKe-kN-BCa"/>
+                            <constraint firstItem="wGb-b4-XwY" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="rcu-mL-0LP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rcu-mL-0LP"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIG-1r-hEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
