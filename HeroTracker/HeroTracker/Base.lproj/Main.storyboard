@@ -69,22 +69,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-b4-XwY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-b4-XwY">
                                 <rect key="frame" x="91" y="114" width="52" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="homeWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-jC-Dbd">
-                                <rect key="frame" x="72" y="165" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="powers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-eF-kHs">
+                                <rect key="frame" x="87" y="219" width="61" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="powers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-eF-kHs">
-                                <rect key="frame" x="87" y="219" width="61" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="homeWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-jC-Dbd">
+                                <rect key="frame" x="72" y="165" width="90" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -95,12 +95,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fEM-jC-Dbd" firstAttribute="top" secondItem="wGb-b4-XwY" secondAttribute="bottom" constant="30" id="1gw-cd-T9C"/>
+                            <constraint firstAttribute="trailing" secondItem="wGb-b4-XwY" secondAttribute="trailing" constant="457" id="4Kv-7P-WbN"/>
+                            <constraint firstAttribute="trailing" secondItem="fEM-jC-Dbd" secondAttribute="trailing" constant="438" id="A36-Bw-Hlr"/>
+                            <constraint firstItem="fEM-jC-Dbd" firstAttribute="top" secondItem="wGb-b4-XwY" secondAttribute="bottom" constant="30" id="B3X-gK-s11"/>
+                            <constraint firstItem="BpD-LI-xCZ" firstAttribute="top" secondItem="rQF-eF-kHs" secondAttribute="bottom" constant="360" id="L1u-Zp-fph"/>
+                            <constraint firstItem="rQF-eF-kHs" firstAttribute="leading" secondItem="isn-21-u4M" secondAttribute="leading" constant="87" id="Mec-u9-3dd"/>
+                            <constraint firstItem="fEM-jC-Dbd" firstAttribute="leading" secondItem="isn-21-u4M" secondAttribute="leading" constant="72" id="Nys-xh-THP"/>
+                            <constraint firstItem="rQF-eF-kHs" firstAttribute="top" secondItem="fEM-jC-Dbd" secondAttribute="bottom" constant="33" id="QXK-0u-hmN"/>
                             <constraint firstItem="wGb-b4-XwY" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="TMc-nw-xx4"/>
                             <constraint firstItem="rQF-eF-kHs" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="XuJ-Pg-lQG"/>
                             <constraint firstItem="rQF-eF-kHs" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="155" id="fui-dl-A1m"/>
+                            <constraint firstItem="rQF-eF-kHs" firstAttribute="top" secondItem="fEM-jC-Dbd" secondAttribute="bottom" constant="33" id="ghR-cb-U0u"/>
+                            <constraint firstItem="fEM-jC-Dbd" firstAttribute="top" secondItem="wGb-b4-XwY" secondAttribute="bottom" constant="30" id="koH-e6-jbk"/>
+                            <constraint firstItem="fEM-jC-Dbd" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="101" id="lIL-rD-ay0"/>
                             <constraint firstItem="fEM-jC-Dbd" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="oIX-Jb-uj9"/>
                             <constraint firstItem="wGb-b4-XwY" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="50" id="pKe-kN-BCa"/>
                             <constraint firstItem="wGb-b4-XwY" firstAttribute="centerX" secondItem="isn-21-u4M" secondAttribute="centerX" id="rcu-mL-0LP"/>
+                            <constraint firstAttribute="trailing" secondItem="rQF-eF-kHs" secondAttribute="trailing" constant="452" id="uaY-4D-c5j"/>
+                            <constraint firstItem="wGb-b4-XwY" firstAttribute="top" secondItem="AMc-CS-70j" secondAttribute="bottom" constant="50" id="wNr-9K-nHd"/>
+                            <constraint firstItem="wGb-b4-XwY" firstAttribute="leading" secondItem="isn-21-u4M" secondAttribute="leading" constant="91" id="zYU-M6-qDk"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -108,12 +121,19 @@
                                 <exclude reference="pKe-kN-BCa"/>
                                 <exclude reference="rcu-mL-0LP"/>
                                 <exclude reference="1gw-cd-T9C"/>
+                                <exclude reference="koH-e6-jbk"/>
+                                <exclude reference="lIL-rD-ay0"/>
                                 <exclude reference="oIX-Jb-uj9"/>
                                 <exclude reference="XuJ-Pg-lQG"/>
                                 <exclude reference="fui-dl-A1m"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="heroName" destination="wGb-b4-XwY" id="f2q-0M-QAG"/>
+                        <outlet property="homeWorld" destination="fEM-jC-Dbd" id="8a5-OI-V4a"/>
+                        <outlet property="powers" destination="rQF-eF-kHs" id="69C-wf-9xy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIG-1r-hEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

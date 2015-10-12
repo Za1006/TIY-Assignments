@@ -10,8 +10,9 @@ import UIKit
 
 class HeroDetailViewController: UIViewController
 {
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var homeworldLabel: UILabel!
-    @IBOutlet var powerLabel: UILabel!
+    @IBOutlet weak var heroName: UILabel!
+    @IBOutlet weak var homeWorld: UILabel!
+    @IBOutlet weak var powers: UILabel!
+    
 }
 
