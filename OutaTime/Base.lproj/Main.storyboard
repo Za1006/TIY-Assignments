@@ -80,7 +80,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
-                                    <segue destination="Vjd-lc-soN" kind="show" id="EKr-BI-xGf"/>
+                                    <segue destination="Vjd-lc-soN" kind="show" id="G9W-yX-7tJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAd-f6-T1z">
