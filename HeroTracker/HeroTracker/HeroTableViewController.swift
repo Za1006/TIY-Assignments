@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeroTableViewController: UITableViewController
+class HeroTableViewController: UITableViewController, UIImage
 {
     var heroes = Array<Hero>()
     override func viewDidLoad()
