@@ -25,6 +25,7 @@ class HeroTableViewController: UITableViewController
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    @IBOutlet weak var HeroCell: UITableViewCell!
 
     override func didReceiveMemoryWarning()
     {
@@ -123,15 +124,11 @@ class HeroTableViewController: UITableViewController
                 heroes.append(aHero)
             }
             heroes.sortInPlace({ $0.name < $1.name})
-            
-            }
-              catch let error as NSError
-            {
-                    print(error)
-            }
-            }
-            
-            
         }
-
+        catch let error as NSError
+        {
+                    print(error)
+        }      
+    }
+}
 

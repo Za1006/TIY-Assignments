@@ -50,6 +50,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="S.H.I.E.L.D. Hero Tracker" id="g11-sM-n2t"/>
+                    <connections>
+                        <outlet property="HeroCell" destination="kmc-Q9-1ud" id="RNT-ps-lTL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOR-lc-j44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
