@@ -14,5 +14,8 @@ class HeroDetailViewController: UIViewController
     @IBOutlet weak var homeWorld: UILabel!
     @IBOutlet weak var powers: UILabel!
     
+    
+    
+    
 }
 
