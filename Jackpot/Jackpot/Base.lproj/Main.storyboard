@@ -35,5 +35,36 @@
             </objects>
             <point key="canvasLocation" x="1103" y="387"/>
         </scene>
+        <!--Jackpot Picker View Controller-->
+        <scene sceneID="mEJ-r7-VI3">
+            <objects>
+                <viewController id="dlg-kD-mNj" customClass="JackpotPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="85b-Dr-zcN"/>
+                        <viewControllerLayoutGuide type="bottom" id="hO0-Xd-Y0V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1lL-0v-52N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IA6-Ah-ZJR" customClass="JackpotPickerViewController">
+                                <rect key="frame" x="7" y="179" width="587" height="216"/>
+                                <animations/>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IA6-Ah-ZJR" firstAttribute="top" secondItem="85b-Dr-zcN" secondAttribute="bottom" constant="159" id="M3v-lb-1Qy"/>
+                            <constraint firstItem="IA6-Ah-ZJR" firstAttribute="leading" secondItem="1lL-0v-52N" secondAttribute="leading" constant="7" id="VbN-jE-ccs"/>
+                            <constraint firstItem="hO0-Xd-Y0V" firstAttribute="top" secondItem="IA6-Ah-ZJR" secondAttribute="bottom" constant="205" id="fLd-3I-I4W"/>
+                            <constraint firstAttribute="trailing" secondItem="IA6-Ah-ZJR" secondAttribute="trailing" constant="6" id="o72-na-Icm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfa-Ye-QXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1759" y="387"/>
+        </scene>
     </scenes>
 </document>

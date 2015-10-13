@@ -8,7 +8,9 @@
 
 import UIKit
 
-class JackpotTableViewController: UITableViewController {
+class JackpotTableViewController: UITableViewController
+
+{
 
     override func viewDidLoad() {
         super.viewDidLoad()
