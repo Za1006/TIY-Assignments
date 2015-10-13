@@ -168,9 +168,12 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="homeWorld" destination="fEM-jC-Dbd" id="8a5-OI-V4a"/>
-                        <outlet property="name" destination="wGb-b4-XwY" id="MvZ-BO-DYX"/>
-                        <outlet property="powers" destination="rQF-eF-kHs" id="69C-wf-9xy"/>
+                        <outlet property="homeWorld" destination="fEM-jC-Dbd" id="X7m-GJ-ajb"/>
+                        <outlet property="homeWorldLabel" destination="fEM-jC-Dbd" id="48I-bc-kbr"/>
+                        <outlet property="name" destination="wGb-b4-XwY" id="cir-qF-asa"/>
+                        <outlet property="nameLabel" destination="wGb-b4-XwY" id="cvC-n9-Js5"/>
+                        <outlet property="powers" destination="rQF-eF-kHs" id="kAa-aH-Ztd"/>
+                        <outlet property="powersLabel" destination="rQF-eF-kHs" id="jxa-1p-ckL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aIG-1r-hEy" userLabel="First Responder" sceneMemberID="firstResponder"/>

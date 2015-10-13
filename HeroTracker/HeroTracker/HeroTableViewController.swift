@@ -67,7 +67,9 @@ class HeroTableViewController: UITableViewController
         navigationController?.pushViewController(detailVC, animated: true)
         
     }
-
+// instead of doing the segue use the func above by creating a viewController but not connecting it to the TableViewController
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -102,6 +104,7 @@ class HeroTableViewController: UITableViewController
         return true
     }
     */
+//    MARK: Navigation 
 
 
     
@@ -119,16 +122,16 @@ class HeroTableViewController: UITableViewController
                 let aHero = Hero(dictionary: heroDictionary as! NSDictionary)
                 heroes.append(aHero)
             }
-            heroes.sortInPlace({ $0.heroName < $1.heroName})
-            {
-                
+            heroes.sortInPlace({ $0.name < $1.name})
+            
+            }
               catch let error as NSError
-                {
+            {
                     print(error)
-                }
+            }
             }
             
             
         }
-    }
-}
+
+

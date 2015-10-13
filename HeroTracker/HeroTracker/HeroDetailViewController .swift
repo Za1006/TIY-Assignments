@@ -10,19 +10,27 @@ import UIKit
 
 class HeroDetailViewController: UIViewController
 {
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var homeWorld: UILabel!
-    @IBOutlet weak var powers: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var homeWorldLabel: UILabel!
+    @IBOutlet weak var powersLabel: UILabel!
     var hero: Hero?
     
-    override func viewDidload()
+    override func viewDidLoad()
     {
-        super.viewDidLoad()
+    
+     super.viewDidLoad()
+    
         nameLabel.text = hero!.name
         homeWorldLabel.text = "from \(hero!.homeWorld)"
-        powerLabel.text = 
+        powersLabel.text = hero?.powers
+        let f = NSDateFormatter()
+        f.dateStyle = NSDateFormatterStyle.ShortStyle
     }
-    
+    override func didReceiveMemoryWarning()
+    {
+        
+    }
     
     
 }
