@@ -58,7 +58,15 @@ class HeroTableViewController: UITableViewController
         return cell
         
     }
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let selectedHero = heroes[indexPath.row]
+        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
+        detailVC.hero = selectedHero
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -95,15 +103,8 @@ class HeroTableViewController: UITableViewController
     }
     */
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     
     private func loadHeroes()
     {

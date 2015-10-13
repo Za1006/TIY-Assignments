@@ -13,7 +13,15 @@ class HeroDetailViewController: UIViewController
     @IBOutlet weak var heroName: UILabel!
     @IBOutlet weak var homeWorld: UILabel!
     @IBOutlet weak var powers: UILabel!
+    var hero: Hero?
     
+    override func viewDidload()
+    {
+        super.viewDidLoad()
+        heroNameLabel.text = hero!.name
+        homeWorldLabel.text = "from \(hero!.homeWorld)
+        powerLabel.text = 
+    }
     
     
     
