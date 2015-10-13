@@ -168,8 +168,8 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="heroName" destination="wGb-b4-XwY" id="f2q-0M-QAG"/>
                         <outlet property="homeWorld" destination="fEM-jC-Dbd" id="8a5-OI-V4a"/>
+                        <outlet property="name" destination="wGb-b4-XwY" id="MvZ-BO-DYX"/>
                         <outlet property="powers" destination="rQF-eF-kHs" id="69C-wf-9xy"/>
                     </connections>
                 </viewController>

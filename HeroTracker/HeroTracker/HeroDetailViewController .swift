@@ -10,7 +10,7 @@ import UIKit
 
 class HeroDetailViewController: UIViewController
 {
-    @IBOutlet weak var heroName: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var homeWorld: UILabel!
     @IBOutlet weak var powers: UILabel!
     var hero: Hero?
@@ -18,8 +18,8 @@ class HeroDetailViewController: UIViewController
     override func viewDidload()
     {
         super.viewDidLoad()
-        heroNameLabel.text = hero!.name
-        homeWorldLabel.text = "from \(hero!.homeWorld)
+        nameLabel.text = hero!.name
+        homeWorldLabel.text = "from \(hero!.homeWorld)"
         powerLabel.text = 
     }
     
