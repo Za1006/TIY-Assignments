@@ -16,7 +16,6 @@ class HeroTableViewController: UITableViewController
         super.viewDidLoad()
       title = "S.H.I.E.L.D. Hero Tracker"
 
-        
         loadHeroes()
 
 
@@ -34,23 +33,24 @@ class HeroTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+       
         return heroes.count
     }
 
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCellWithIdentifier("HeroCell", forIndexPath: indexPath)
 
         // Configure the cell...
         let aHero = heroes[indexPath.row]
-//      cell.textLabel?.text = heroes[indextPath.row]
         cell.textLabel?.text = aHero.heroName
         cell.detailTextLabel?.text = aHero.homeWorld
         cell.detailTextLabel?.text = aHero.powers
@@ -106,19 +106,27 @@ class HeroTableViewController: UITableViewController
     }
     */
     
-    func loadHeroes()
+    private func loadHeroes()
     {
         do
         {
             let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
             let dataFromFile = NSData(contentsOfFile: filePath!)
-            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options:[]) as! NSArray
             
             for heroDictionary in heroData
             {
                 let aHero = Hero(dictionary: heroDictionary as! NSDictionary)
                 heroes.append(aHero)
             }
+            heroes.sortInPlace({ $0.heroName < $1.heroName})
+            {
+                catch let error as NSError
+                {
+                    print(error)
+                }
+            }
+            
             
         }
     }
