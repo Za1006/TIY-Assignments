@@ -51,6 +51,8 @@ class HeroTableViewController: UITableViewController
         // Configure the cell...
         let aHero = heroes[indexPath.row]
         cell.textLabel?.text = aHero.heroName
+        cell.detailTextLabel?.text = aHero.homeWorld
+        cell.detailTextLabel?.text = aHero.powers
         
 
         return cell
@@ -109,9 +111,14 @@ class HeroTableViewController: UITableViewController
         {
             let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
             let dataFromFile = NSData(contentsOfFile: filePath!)
-            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: [] as! NSArray
+            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
             
-            for heroDictionary in
+            for heroDictionary in heroData
+            {
+                let aHero = Hero(dictionary: heroDictionary as! NSDictionary)
+                heroes.append(aHero)
+            }
+            
         }
     }
 }
