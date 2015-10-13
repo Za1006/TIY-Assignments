@@ -52,7 +52,7 @@ class HeroTableViewController: UITableViewController
 
         // Configure the cell...
         let aHero = heroes[indexPath.row]
-        cell.textLabel?.text = aHero.heroName
+        cell.textLabel?.text = aHero.name
         cell.detailTextLabel?.text = aHero.homeWorld
 
         return cell
