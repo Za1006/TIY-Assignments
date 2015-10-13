@@ -26,7 +26,8 @@ class HeroTableViewController: UITableViewController
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -53,8 +54,6 @@ class HeroTableViewController: UITableViewController
         let aHero = heroes[indexPath.row]
         cell.textLabel?.text = aHero.heroName
         cell.detailTextLabel?.text = aHero.homeWorld
-        cell.detailTextLabel?.text = aHero.powers
-        
 
         return cell
         
@@ -121,7 +120,8 @@ class HeroTableViewController: UITableViewController
             }
             heroes.sortInPlace({ $0.heroName < $1.heroName})
             {
-                catch let error as NSError
+                
+              catch let error as NSError
                 {
                     print(error)
                 }
