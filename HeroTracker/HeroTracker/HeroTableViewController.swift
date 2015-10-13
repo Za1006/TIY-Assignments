@@ -50,6 +50,7 @@ class HeroTableViewController: UITableViewController
 
         // Configure the cell...
         let aHero = heroes[indexPath.row]
+//      cell.textLabel?.text = heroes[indextPath.row]
         cell.textLabel?.text = aHero.heroName
         cell.detailTextLabel?.text = aHero.homeWorld
         cell.detailTextLabel?.text = aHero.powers
