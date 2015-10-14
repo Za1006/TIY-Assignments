@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rns-8c-a6q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3HR-YE-FXV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Jackpot View Controller-->
-        <scene sceneID="r98-0R-Dwz">
-            <objects>
-                <viewController id="Rns-8c-a6q" customClass="JackpotViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="joi-5t-8xM"/>
-                        <viewControllerLayoutGuide type="bottom" id="QZX-Z1-lzO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0f9-cN-ZS9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-fy-QVW" customClass="AddUIbutton">
-                                <rect key="frame" x="277" y="48" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="CJh-fy-QVW" firstAttribute="leading" secondItem="0f9-cN-ZS9" secondAttribute="leadingMargin" constant="257" id="AEv-Zo-79q"/>
-                            <constraint firstItem="CJh-fy-QVW" firstAttribute="top" secondItem="joi-5t-8xM" secondAttribute="bottom" constant="28" id="Dzx-Uh-AWF"/>
-                            <constraint firstItem="QZX-Z1-lzO" firstAttribute="top" secondItem="CJh-fy-QVW" secondAttribute="bottom" constant="522" id="L9c-lG-7fr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CJh-fy-QVW" secondAttribute="trailing" constant="257" id="VXl-sf-CaG"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qQd-vf-pbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="459" y="387"/>
-        </scene>
         <!--Jackpot Table View Controller-->
         <scene sceneID="ga6-t7-jDs">
             <objects>
