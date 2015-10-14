@@ -11,7 +11,7 @@ import UIKit
 class JackpotTableViewController: UITableViewController
 {
     
-  var storeTicket = 
+      var storeTicket = Array<JackpotTicket>()
 
     override func viewDidLoad()
     {
@@ -43,7 +43,7 @@ class JackpotTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return ticket.count
+        return storeTicket.count
         
     }
 
@@ -53,9 +53,9 @@ class JackpotTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("JackpotCell", forIndexPath: indexPath)
 //        let ticket = tickets[indexPath.row]
 
-
-
         // Configure the cell...
+        let numbersInCell = storeTicket[indexPath.row]
+        cell.textLabel?.text = "\(numbersInCell.ticket)"
 
         return cell
     }
@@ -89,13 +89,14 @@ class JackpotTableViewController: UITableViewController
     }
     
 
-    /*
+    
     // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
 
     /*
     // MARK: - Navigation
@@ -109,8 +110,10 @@ class JackpotTableViewController: UITableViewController
     
     @IBAction func addTapped(sender: UIBarButtonItem)
     {
-        
+        let newPath = NSIndexPath(forRow: storeTicket.count, inSection: 0)
+        storeTicket.append(JackpotTicket())
+        tableView.insertRowsAtIndexPaths([newPath], withRowAnimation: .Top)
     }
-    
-
 }
+
+
