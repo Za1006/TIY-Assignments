@@ -11,8 +11,7 @@ import UIKit
 class JackpotTableViewController: UITableViewController
 {
     
-    var ticket = [JackpotTicket]()
-
+  var storeTicket = 
 
     override func viewDidLoad()
     {
