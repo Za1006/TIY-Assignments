@@ -8,16 +8,14 @@
 
 import Foundation
 
-class tickets
+class JackpotTicket
 {
-    var lottoTicket: Int
+    var ticket = Array<Int>()
     
-    init(lottoTicker: NSArray)
+    init(ticket: Array<Int>)
     {
-        lottoTicket = 
-        
-        
-        
+        self.ticket = ticket
     }
 }
+
     

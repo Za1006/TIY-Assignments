@@ -15,8 +15,6 @@ class JackpotTableViewController: UITableViewController
         super.viewDidLoad()
         
         
-        title = "Tickets"
-        
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -33,6 +31,10 @@ class JackpotTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
+    @IBAction func generator(sender: UIBarButtonItem)
+    {
+        
+    }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 0
@@ -40,7 +42,7 @@ class JackpotTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return tickets.count
+        return 0
     }
 
     
