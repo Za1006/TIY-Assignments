@@ -1,5 +1,5 @@
 //
-//  JackpotPicker.swift
+//  JackpotViewController.swift
 //  Jackpot
 //
 //  Created by Elizabeth Yeh on 10/13/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JackpotPickerViewController: UIViewController, UIPickerViewDelegate
+class JackpotViewController: UIViewController
 {
     
 }
