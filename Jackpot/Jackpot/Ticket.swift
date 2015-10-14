@@ -8,8 +8,14 @@
 
 import Foundation
 
-class Ticket
+class tickets
 {
+    var lottoTicket: Int
     
+    init(dictionary: NSDictionary)
+    {
+        lottoTicket = dictionary["lottoTick"] as! Int
+        
+    }
 }
     

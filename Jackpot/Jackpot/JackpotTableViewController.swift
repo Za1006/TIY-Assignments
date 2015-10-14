@@ -13,6 +13,14 @@ class JackpotTableViewController: UITableViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var tickets = Array<Tickets>()
+
+        
+        title = "Tickets"
+        
+        loadJackpotList()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,17 +36,17 @@ class JackpotTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return tickets.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
@@ -46,7 +54,7 @@ class JackpotTableViewController: UITableViewController
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,5 +100,7 @@ class JackpotTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

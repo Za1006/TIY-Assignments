@@ -7,15 +7,15 @@
         <!--Jackpot Table View Controller-->
         <scene sceneID="ga6-t7-jDs">
             <objects>
-                <tableViewController id="3HR-YE-FXV" customClass="JackpotTableViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3HR-YE-FXV" customClass="JackpotTableViewController" customModule="Jackpot" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cjh-ec-NW7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" textLabel="DXz-gD-oli" detailTextLabel="vhD-Pb-QGJ" style="IBUITableViewCellStyleValue1" id="QUV-on-rnn">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" textLabel="DXz-gD-oli" detailTextLabel="SBo-2g-RCg" style="IBUITableViewCellStyleValue1" id="QUV-on-rnn">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QUV-on-rnn" id="Qjq-Kt-rDu">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -29,8 +29,8 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhD-Pb-QGJ">
-                                            <rect key="frame" x="529" y="12" width="56" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SBo-2g-RCg">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -48,11 +48,11 @@
                             <outlet property="delegate" destination="3HR-YE-FXV" id="KKp-0c-Xyn"/>
                         </connections>
                     </tableView>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" id="Dbo-vP-UhD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQf-hy-m3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103" y="387"/>
+            <point key="canvasLocation" x="1861" y="379"/>
         </scene>
     </scenes>
 </document>
