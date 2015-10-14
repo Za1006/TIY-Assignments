@@ -12,6 +12,7 @@
 		AA08536D1BCD7FB600D93383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA08536C1BCD7FB600D93383 /* Assets.xcassets */; };
 		AA0853701BCD7FB600D93383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA08536E1BCD7FB600D93383 /* LaunchScreen.storyboard */; };
 		AA97B1E01BCEB58E0007D1F3 /* JackpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AA97B1E21BCEE22C0007D1F3 /* JackpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		AADD6E4E1BCE78B900CE96FB /* JackpotTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		AA08536F1BCD7FB600D93383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA0853711BCD7FB600D93383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewController.swift; sourceTree = "<group>"; };
+		AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewCell.swift; sourceTree = "<group>"; };
 		AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTicket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 			children = (
 				AA0853651BCD7FB600D93383 /* AppDelegate.swift */,
 				AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */,
+				AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */,
 				AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */,
 				AA0853691BCD7FB600D93383 /* Main.storyboard */,
 				AA08536C1BCD7FB600D93383 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA97B1E21BCEE22C0007D1F3 /* JackpotTableViewCell.swift in Sources */,
 				AA0853661BCD7FB600D93383 /* AppDelegate.swift in Sources */,
 				AA97B1E01BCEB58E0007D1F3 /* JackpotTableViewController.swift in Sources */,
 				AADD6E4E1BCE78B900CE96FB /* JackpotTicket.swift in Sources */,

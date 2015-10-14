@@ -16,6 +16,8 @@ class JackpotTicket
     {
         self.ticket = ticket
     }
+    
+    
 }
 
     

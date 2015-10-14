@@ -10,9 +10,14 @@ import UIKit
 
 class JackpotTableViewController: UITableViewController
 {
+    
+    var ticket = [JackpotTicket]()
 
-    override func viewDidLoad() {
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
         
         
         
@@ -31,25 +36,23 @@ class JackpotTableViewController: UITableViewController
 
     // MARK: - Table view data source
 
-    @IBAction func generator(sender: UIBarButtonItem)
-    {
-        
-    }
+ 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 0
+        return ticket.count
+        
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("JackpotCell", forIndexPath: indexPath)
-//        let aTicket = tickets[indexPath.row]
+//        let ticket = tickets[indexPath.row]
 
 
 
@@ -79,12 +82,13 @@ class JackpotTableViewController: UITableViewController
     }
     */
 
-    /*
+    
     // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath)
+    {
 
     }
-    */
+    
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -104,6 +108,10 @@ class JackpotTableViewController: UITableViewController
     }
     */
     
+    @IBAction func addTapped(sender: UIBarButtonItem)
+    {
+        
+    }
     
 
 }

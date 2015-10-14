@@ -14,23 +14,23 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" textLabel="DXz-gD-oli" detailTextLabel="SBo-2g-RCg" style="IBUITableViewCellStyleValue1" id="QUV-on-rnn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" textLabel="DXz-gD-oli" detailTextLabel="SBo-2g-RCg" style="IBUITableViewCellStyleValue1" id="QUV-on-rnn" customClass="JackpotTableViewCell" customModule="Jackpot">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QUV-on-rnn" id="Qjq-Kt-rDu">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DXz-gD-oli">
-                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DXz-gD-oli">
+                                            <rect key="frame" x="15" y="12" width="67" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SBo-2g-RCg">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Payout" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SBo-2g-RCg">
+                                            <rect key="frame" x="535" y="12" width="50" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -41,6 +41,10 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="numbersLabel" destination="DXz-gD-oli" id="qtN-J6-WgB"/>
+                                    <outlet property="payOutLabel" destination="SBo-2g-RCg" id="swc-ac-RVa"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -51,7 +55,7 @@
                     <navigationItem key="navigationItem" id="Dbo-vP-UhD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEm-yP-cTB">
                             <connections>
-                                <action selector="generator:" destination="3HR-YE-FXV" id="ClA-pE-axS"/>
+                                <action selector="addTapped:" destination="3HR-YE-FXV" id="xSK-gb-iT7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
