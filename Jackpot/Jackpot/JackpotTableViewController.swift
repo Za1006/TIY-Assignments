@@ -14,12 +14,9 @@ class JackpotTableViewController: UITableViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var tickets = Array<Tickets>()
-
         
         title = "Tickets"
         
-        loadJackpotList()
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -38,7 +35,7 @@ class JackpotTableViewController: UITableViewController
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -47,8 +44,12 @@ class JackpotTableViewController: UITableViewController
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("JackpotCell", forIndexPath: indexPath)
+//        let aTicket = tickets[indexPath.row]
+
+
 
         // Configure the cell...
 

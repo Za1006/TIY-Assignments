@@ -12,9 +12,11 @@ class tickets
 {
     var lottoTicket: Int
     
-    init(dictionary: NSDictionary)
+    init(lottoTicker: NSArray)
     {
-        lottoTicket = dictionary["lottoTick"] as! Int
+        lottoTicket = 
+        
+        
         
     }
 }
