@@ -10,9 +10,18 @@ import UIKit
 
 //protocol
 
-class WinnerTicketViewController: UIPickerView,UIPickerViewDelegate, UIPickerViewDataSource
+class winnerTicketViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
-//    IBOutlet picker
+@IBAction func checkTickets(sender: UIButton)
+{
+    
+}
+
+    @IBAction func cancelButtone(sender: UIButton)
+    {
+        
+    }
+    
 }
 
 // MARK: - Action Handlers

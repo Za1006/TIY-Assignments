@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Jackpot" id="Dbo-vP-UhD">
                         <barButtonItem key="leftBarButtonItem" title="Check Tickets" id="ahJ-wp-0Q6">
                             <connections>
-                                <segue destination="990-ng-GB2" kind="show" id="JQ7-J3-D4g"/>
+                                <segue destination="wO9-SN-Hcy" kind="show" id="owf-9q-EXa"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEm-yP-cTB">
@@ -70,75 +70,67 @@
             </objects>
             <point key="canvasLocation" x="2587" y="379"/>
         </scene>
-        <!--Winner Picker View Controller-->
-        <scene sceneID="Myg-g3-4BQ">
+        <!--Winner Ticket View Controller-->
+        <scene sceneID="lDH-NT-EFd">
             <objects>
-                <viewController id="990-ng-GB2" customClass="winnerPickerViewController" customModule="jackPot" sceneMemberID="viewController">
+                <viewController id="wO9-SN-Hcy" customClass="winnerTicketViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fdz-kk-QPT"/>
-                        <viewControllerLayoutGuide type="bottom" id="Kmp-ob-eXq"/>
+                        <viewControllerLayoutGuide type="top" id="4Am-Ey-djA"/>
+                        <viewControllerLayoutGuide type="bottom" id="aKU-ZT-CAM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l6E-eB-2zb">
+                    <view key="view" contentMode="scaleToFill" id="1wE-Yi-u8J">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Abi-Gi-1Yj" customClass="WinnerPickerViewController" customModule="Jackpot">
-                                <rect key="frame" x="10" y="169" width="580" height="212"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-Q2-sq6">
+                                <rect key="frame" x="246" y="445" width="109" height="33"/>
                                 <animations/>
-                                <accessibility key="accessibilityConfiguration" identifier="WinningPickerView"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-NQ-nqy">
-                                <rect key="frame" x="244" y="389" width="113" height="30"/>
-                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Check Tickets"/>
+                                <connections>
+                                    <action selector="CheckTickets:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="5fQ-dQ-mUO"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKF-IK-U9w">
-                                <rect key="frame" x="507" y="540" width="54" height="30"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-0t-TpJ">
+                                <rect key="frame" x="-20" y="190" width="640" height="216"/>
                                 <animations/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-zR-Xc8">
+                                <rect key="frame" x="271" y="525" width="59" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtone:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="2fd-t3-lnd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8rV-NQ-nqy" secondAttribute="trailing" constant="277" id="0Y4-fs-bpH"/>
-                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="8rV-NQ-nqy" secondAttribute="bottom" constant="181" id="944-uW-TTq"/>
-                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="277" id="Gdi-6p-DBD"/>
-                            <constraint firstItem="Abi-Gi-1Yj" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="10" id="M2s-Qg-b6w"/>
-                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="8" id="OdE-hd-zrJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Abi-Gi-1Yj" secondAttribute="trailing" constant="10" id="OnO-vd-Yfg"/>
-                            <constraint firstItem="BKF-IK-U9w" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="507" id="OpM-yj-C03"/>
-                            <constraint firstItem="BKF-IK-U9w" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="159" id="USO-T3-cm0"/>
-                            <constraint firstAttribute="trailing" secondItem="Abi-Gi-1Yj" secondAttribute="trailing" constant="10" id="VGN-pM-jEs"/>
-                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="8" id="eWI-Et-17B"/>
-                            <constraint firstAttribute="trailing" secondItem="BKF-IK-U9w" secondAttribute="trailing" constant="39" id="fBD-To-yfv"/>
-                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="219" id="fnk-yJ-zO5"/>
-                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="BKF-IK-U9w" secondAttribute="bottom" constant="30" id="hND-zS-oiu"/>
-                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="8rV-NQ-nqy" secondAttribute="bottom" constant="181" id="iu2-fP-i1z"/>
-                            <constraint firstItem="Abi-Gi-1Yj" firstAttribute="top" secondItem="fdz-kk-QPT" secondAttribute="bottom" constant="105" id="j5w-Wc-sbD"/>
-                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="219" id="khf-jr-3Aj"/>
-                            <constraint firstItem="Abi-Gi-1Yj" firstAttribute="top" secondItem="fdz-kk-QPT" secondAttribute="bottom" constant="149" id="pCu-fk-FJu"/>
-                            <constraint firstAttribute="trailing" secondItem="8rV-NQ-nqy" secondAttribute="trailing" constant="243" id="u7w-pR-9N7"/>
-                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="244" id="vRi-Zo-Euk"/>
-                            <constraint firstItem="Abi-Gi-1Yj" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="10" id="vlD-ge-5ZH"/>
+                            <constraint firstAttribute="trailing" secondItem="kQY-0t-TpJ" secondAttribute="trailing" constant="-20" id="6HW-Gg-yRV"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="leading" secondItem="1wE-Yi-u8J" secondAttribute="leading" constant="-20" id="DhU-7n-xZJ"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="JDf-he-FXN"/>
+                            <constraint firstItem="n3t-Q2-sq6" firstAttribute="top" secondItem="kQY-0t-TpJ" secondAttribute="bottom" id="KCs-Wm-XBg"/>
+                            <constraint firstItem="n3t-Q2-sq6" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="OEB-II-8Ph"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" id="S7t-hn-xrU"/>
+                            <constraint firstItem="qce-zR-Xc8" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="X5v-Hl-awc"/>
+                            <constraint firstItem="qce-zR-Xc8" firstAttribute="top" secondItem="n3t-Q2-sq6" secondAttribute="bottom" constant="47" id="aaT-cu-NgH"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" constant="170" id="pAr-pc-0Mu"/>
+                            <constraint firstItem="n3t-Q2-sq6" firstAttribute="top" secondItem="kQY-0t-TpJ" secondAttribute="bottom" constant="39" id="xro-sO-4bA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="M2s-Qg-b6w"/>
-                                <exclude reference="VGN-pM-jEs"/>
-                                <exclude reference="pCu-fk-FJu"/>
-                                <exclude reference="0Y4-fs-bpH"/>
-                                <exclude reference="Gdi-6p-DBD"/>
-                                <exclude reference="eWI-Et-17B"/>
-                                <exclude reference="944-uW-TTq"/>
-                                <exclude reference="khf-jr-3Aj"/>
+                                <exclude reference="JDf-he-FXN"/>
+                                <exclude reference="S7t-hn-xrU"/>
+                                <exclude reference="KCs-Wm-XBg"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GrC-Jw-eH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heN-6I-xBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3247" y="379"/>
+            <point key="canvasLocation" x="3213" y="379"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SNx-xO-odX">
