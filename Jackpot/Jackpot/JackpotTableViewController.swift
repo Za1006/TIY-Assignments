@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JackpotTableViewController: UITableViewController
+class JackpotTableViewController: UITableViewController, 
 {
     
       var storeTicket = Array<JackpotTicket>()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class winnerPickerViewController: UIPickerView,UIPickerViewDelegate
+class WinnerPickerViewController: UIPickerView,UIPickerViewDelegate
 {
     
 }
