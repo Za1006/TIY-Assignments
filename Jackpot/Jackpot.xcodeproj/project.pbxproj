@@ -14,6 +14,7 @@
 		AA97B1E01BCEB58E0007D1F3 /* JackpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AA97B1E21BCEE22C0007D1F3 /* JackpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		AADD6E4E1BCE78B900CE96FB /* JackpotTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */; settings = {ASSET_TAGS = (); }; };
+		AAFC7A451BCF42B800A6D8DA /* winnerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC7A441BCF42B800A6D8DA /* winnerPickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewController.swift; sourceTree = "<group>"; };
 		AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewCell.swift; sourceTree = "<group>"; };
 		AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTicket.swift; sourceTree = "<group>"; };
+		AAFC7A441BCF42B800A6D8DA /* winnerPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winnerPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */,
 				AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */,
 				AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */,
+				AAFC7A441BCF42B800A6D8DA /* winnerPickerViewController.swift */,
 				AA0853691BCD7FB600D93383 /* Main.storyboard */,
 				AA08536C1BCD7FB600D93383 /* Assets.xcassets */,
 				AA08536E1BCD7FB600D93383 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAFC7A451BCF42B800A6D8DA /* winnerPickerViewController.swift in Sources */,
 				AA97B1E21BCEE22C0007D1F3 /* JackpotTableViewCell.swift in Sources */,
 				AA0853661BCD7FB600D93383 /* AppDelegate.swift in Sources */,
 				AA97B1E01BCEB58E0007D1F3 /* JackpotTableViewController.swift in Sources */,
