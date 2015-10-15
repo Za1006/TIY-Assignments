@@ -10,12 +10,16 @@ import UIKit
 
 //protocol
 
-class winnerTicketViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
+class WinnerTicketViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 {
-@IBAction func checkTickets(sender: UIButton)
-{
+
+    @IBOutlet weak var picker: UIPickerView!
+    var delegate:
     
-}
+    @IBAction func checkTickets(sender: UIButton)
+    {
+        
+    }
 
     @IBAction func cancelButtone(sender: UIButton)
     {

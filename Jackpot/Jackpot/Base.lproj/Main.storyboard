@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="2587" y="379"/>
         </scene>
-        <!--Winner Ticket View Controller-->
+        <!--Winning Ticket View Controller-->
         <scene sceneID="lDH-NT-EFd">
             <objects>
-                <viewController id="wO9-SN-Hcy" customClass="winnerTicketViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wO9-SN-Hcy" customClass="WinningTicketViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Am-Ey-djA"/>
                         <viewControllerLayoutGuide type="bottom" id="aKU-ZT-CAM"/>
@@ -82,25 +82,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-Q2-sq6">
-                                <rect key="frame" x="246" y="445" width="109" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-Q2-sq6">
+                                <rect key="frame" x="246" y="469" width="109" height="33"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Check Tickets"/>
                                 <connections>
                                     <action selector="CheckTickets:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="5fQ-dQ-mUO"/>
+                                    <action selector="checkTickets:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="d2h-la-Sir"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-0t-TpJ">
-                                <rect key="frame" x="-20" y="190" width="640" height="216"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-0t-TpJ">
+                                <rect key="frame" x="0.0" y="214" width="600" height="216"/>
                                 <animations/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-zR-Xc8">
-                                <rect key="frame" x="271" y="525" width="59" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-zR-Xc8">
+                                <rect key="frame" x="271" y="522" width="59" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
+                                    <action selector="cancel:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="I2v-ig-xOx"/>
                                     <action selector="cancelButtone:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="2fd-t3-lnd"/>
                                 </connections>
                             </button>
@@ -108,15 +110,15 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kQY-0t-TpJ" secondAttribute="trailing" constant="-20" id="6HW-Gg-yRV"/>
-                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="leading" secondItem="1wE-Yi-u8J" secondAttribute="leading" constant="-20" id="DhU-7n-xZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="kQY-0t-TpJ" secondAttribute="trailing" id="6HW-Gg-yRV"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="leading" secondItem="1wE-Yi-u8J" secondAttribute="leading" id="DhU-7n-xZJ"/>
                             <constraint firstItem="kQY-0t-TpJ" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="JDf-he-FXN"/>
                             <constraint firstItem="n3t-Q2-sq6" firstAttribute="top" secondItem="kQY-0t-TpJ" secondAttribute="bottom" id="KCs-Wm-XBg"/>
                             <constraint firstItem="n3t-Q2-sq6" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="OEB-II-8Ph"/>
                             <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" id="S7t-hn-xrU"/>
                             <constraint firstItem="qce-zR-Xc8" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="X5v-Hl-awc"/>
-                            <constraint firstItem="qce-zR-Xc8" firstAttribute="top" secondItem="n3t-Q2-sq6" secondAttribute="bottom" constant="47" id="aaT-cu-NgH"/>
-                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" constant="170" id="pAr-pc-0Mu"/>
+                            <constraint firstItem="qce-zR-Xc8" firstAttribute="top" secondItem="n3t-Q2-sq6" secondAttribute="bottom" constant="20" id="aaT-cu-NgH"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" constant="150" id="pAr-pc-0Mu"/>
                             <constraint firstItem="n3t-Q2-sq6" firstAttribute="top" secondItem="kQY-0t-TpJ" secondAttribute="bottom" constant="39" id="xro-sO-4bA"/>
                         </constraints>
                         <variation key="default">
@@ -127,6 +129,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="kQY-0t-TpJ" id="BR4-Rh-mdF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heN-6I-xBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
