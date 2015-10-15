@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JackpotTableViewController: UITableViewController, 
+class JackpotTableViewController: UITableViewController
 {
     
       var storeTicket = Array<JackpotTicket>()
@@ -28,7 +28,8 @@ class JackpotTableViewController: UITableViewController,
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -51,10 +52,10 @@ class JackpotTableViewController: UITableViewController,
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("JackpotCell", forIndexPath: indexPath)
-//        let ticket = tickets[indexPath.row]
 
         // Configure the cell...
         let numbersInCell = storeTicket[indexPath.row]
+//        cell.numbersLabel.text = aTicket.description()
         cell.textLabel?.text = "\(numbersInCell.ticket)"
 
         return cell
@@ -107,6 +108,7 @@ class JackpotTableViewController: UITableViewController,
         // Pass the selected object to the new view controller.
     }
     */
+//    MARK: - Action Handler
     
     @IBAction func addTapped(sender: UIBarButtonItem)
     {
@@ -114,6 +116,11 @@ class JackpotTableViewController: UITableViewController,
         storeTicket.append(JackpotTicket())
         tableView.insertRowsAtIndexPaths([newPath], withRowAnimation: .Top)
     }
+//    {
+//       let aTicket = Ticket()
+//       tickets.append(aTicket)
+//       self.tableView.reloadData()
+//    }
 }
 
 

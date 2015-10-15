@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Jackpot Table View Controller-->
+        <!--Jackpot-->
         <scene sceneID="ga6-t7-jDs">
             <objects>
                 <tableViewController id="3HR-YE-FXV" customClass="JackpotTableViewController" customModule="Jackpot" sceneMemberID="viewController">
@@ -44,7 +44,6 @@
                                 <connections>
                                     <outlet property="numbersLabel" destination="DXz-gD-oli" id="qtN-J6-WgB"/>
                                     <outlet property="payOutLabel" destination="SBo-2g-RCg" id="swc-ac-RVa"/>
-                                    <segue destination="990-ng-GB2" kind="show" id="Ldo-qm-KpO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,7 +52,12 @@
                             <outlet property="delegate" destination="3HR-YE-FXV" id="KKp-0c-Xyn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Dbo-vP-UhD">
+                    <navigationItem key="navigationItem" title="Jackpot" id="Dbo-vP-UhD">
+                        <barButtonItem key="leftBarButtonItem" title="Check Tickets" id="ahJ-wp-0Q6">
+                            <connections>
+                                <segue destination="990-ng-GB2" kind="show" id="JQ7-J3-D4g"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEm-yP-cTB">
                             <connections>
                                 <action selector="addTapped:" destination="3HR-YE-FXV" id="xSK-gb-iT7"/>
@@ -82,22 +86,40 @@
                                 <rect key="frame" x="10" y="169" width="580" height="212"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" identifier="WinningPickerView"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="990-ng-GB2" id="RPo-L1-Dye"/>
-                                    <outlet property="delegate" destination="990-ng-GB2" id="XyZ-Cv-aYQ"/>
-                                </connections>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-NQ-nqy">
+                                <rect key="frame" x="244" y="389" width="113" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Check Tickets"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKF-IK-U9w">
+                                <rect key="frame" x="507" y="540" width="54" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8rV-NQ-nqy" secondAttribute="trailing" constant="277" id="0Y4-fs-bpH"/>
+                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="8rV-NQ-nqy" secondAttribute="bottom" constant="181" id="944-uW-TTq"/>
+                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="277" id="Gdi-6p-DBD"/>
                             <constraint firstItem="Abi-Gi-1Yj" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="10" id="M2s-Qg-b6w"/>
+                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="8" id="OdE-hd-zrJ"/>
                             <constraint firstAttribute="trailing" secondItem="Abi-Gi-1Yj" secondAttribute="trailing" constant="10" id="OnO-vd-Yfg"/>
+                            <constraint firstItem="BKF-IK-U9w" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="507" id="OpM-yj-C03"/>
+                            <constraint firstItem="BKF-IK-U9w" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="159" id="USO-T3-cm0"/>
                             <constraint firstAttribute="trailing" secondItem="Abi-Gi-1Yj" secondAttribute="trailing" constant="10" id="VGN-pM-jEs"/>
+                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="8" id="eWI-Et-17B"/>
+                            <constraint firstAttribute="trailing" secondItem="BKF-IK-U9w" secondAttribute="trailing" constant="39" id="fBD-To-yfv"/>
                             <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="219" id="fnk-yJ-zO5"/>
+                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="BKF-IK-U9w" secondAttribute="bottom" constant="30" id="hND-zS-oiu"/>
+                            <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="8rV-NQ-nqy" secondAttribute="bottom" constant="181" id="iu2-fP-i1z"/>
                             <constraint firstItem="Abi-Gi-1Yj" firstAttribute="top" secondItem="fdz-kk-QPT" secondAttribute="bottom" constant="105" id="j5w-Wc-sbD"/>
                             <constraint firstItem="Kmp-ob-eXq" firstAttribute="top" secondItem="Abi-Gi-1Yj" secondAttribute="bottom" constant="219" id="khf-jr-3Aj"/>
                             <constraint firstItem="Abi-Gi-1Yj" firstAttribute="top" secondItem="fdz-kk-QPT" secondAttribute="bottom" constant="149" id="pCu-fk-FJu"/>
+                            <constraint firstAttribute="trailing" secondItem="8rV-NQ-nqy" secondAttribute="trailing" constant="243" id="u7w-pR-9N7"/>
+                            <constraint firstItem="8rV-NQ-nqy" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="244" id="vRi-Zo-Euk"/>
                             <constraint firstItem="Abi-Gi-1Yj" firstAttribute="leading" secondItem="l6E-eB-2zb" secondAttribute="leading" constant="10" id="vlD-ge-5ZH"/>
                         </constraints>
                         <variation key="default">
@@ -105,6 +127,10 @@
                                 <exclude reference="M2s-Qg-b6w"/>
                                 <exclude reference="VGN-pM-jEs"/>
                                 <exclude reference="pCu-fk-FJu"/>
+                                <exclude reference="0Y4-fs-bpH"/>
+                                <exclude reference="Gdi-6p-DBD"/>
+                                <exclude reference="eWI-Et-17B"/>
+                                <exclude reference="944-uW-TTq"/>
                                 <exclude reference="khf-jr-3Aj"/>
                             </mask>
                         </variation>

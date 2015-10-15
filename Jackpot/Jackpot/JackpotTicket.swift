@@ -33,8 +33,33 @@ class JackpotTicket
         
         } while !pickFound
     }
-    
+//    when need to run several times and not repeating = repeat,while.
+//     class Ticket
+//    {
+//      var winner: Bool
+//      var payOut: String
+//      private var picks = Set<Int>()
+//    when using set<Int>()...use object.insert(aPick); and ticket = Array<Int>(), use ticket.append(aPick)
+
+//
+//      init()
+//    {
+//      winner = false
+//      payout = ""
+//      for _ in 0...<6
+//    {
+//      createPick() made a function called pickFound
+//    }
+//    }
+//    }
+//    init(picksArray: Array<Int>)
+//    {
+//       winner = false
+//       payout = ""
+//       for i in 0..<picksArray.count
+//    }
     
 }
 
+//
     
