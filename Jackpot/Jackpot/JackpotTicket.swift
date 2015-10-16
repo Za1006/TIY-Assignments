@@ -10,7 +10,9 @@ import Foundation
 
 class JackpotTicket
 {
+    
     var ticket = Array<Int>()
+    
     
     init()
     {
@@ -18,6 +20,16 @@ class JackpotTicket
         {
             tappedAndAdd()
         }
+    }
+    init(picksArray: Array<Int>)
+    {
+        numbersInCell = false
+        payOut = ""
+        for i in 0..<picksArray.count
+        {
+            
+        }
+        
     }
     func tappedAndAdd()
     {
@@ -33,6 +45,16 @@ class JackpotTicket
         
         } while !pickFound
     }
+    func description() -> String
+    {
+        var numbers = ""
+        for ticket in storeTicket.sort()
+        {
+            numbers = numbers + "\(ticket)"
+        }
+        return numbers
+    }
+    
 //    when need to run several times and not repeating = repeat,while.
 //     class Ticket
 //    {

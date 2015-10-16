@@ -65,6 +65,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addButton" destination="gEm-yP-cTB" id="9Hf-3p-ua4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQf-hy-m3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +76,7 @@
         <!--Winning Ticket View Controller-->
         <scene sceneID="lDH-NT-EFd">
             <objects>
-                <viewController id="wO9-SN-Hcy" customClass="WinningTicketViewController" customModule="Jackpot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wO9-SN-Hcy" customClass="WinningTicketViewController" customModule="Jackpot" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Am-Ey-djA"/>
                         <viewControllerLayoutGuide type="bottom" id="aKU-ZT-CAM"/>

@@ -8,8 +8,15 @@
 
 import UIKit
 
-class JackpotTableViewController: UITableViewController
+protocol WinningTicketViewControllerDelegate
 {
+    func winningTicketWasAdded(ticket: JackpotTicket)
+}
+
+class JackpotTableViewController: UITableViewController,WinningTicketViewControllerDelegate
+{
+    
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
       var storeTicket = Array<JackpotTicket>()
 
@@ -55,8 +62,18 @@ class JackpotTableViewController: UITableViewController
 
         // Configure the cell...
         let numbersInCell = storeTicket[indexPath.row]
-//        cell.numbersLabel.text = aTicket.description()
-        cell.textLabel?.text = "\(numbersInCell.ticket)"
+        cell.numbersLabel.text = numbersInCell.description()
+//        cell.textLabel?.text = "\(numbersInCell.ticket)"
+        if numbersInCell.winner
+        {
+            cell.backgroundColor = UIColor.greenColor()
+            cell.payOutLabel.text = numbersInCell.payOut
+        }
+        else
+        {
+            cell.backgroundColor = UIColor.whiteColor()
+            cell.payOutLabel.text = ""
+        }
 
         return cell
     }
@@ -99,15 +116,27 @@ class JackpotTableViewController: UITableViewController
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.indentifier == "ShowWinningTicketSegue"
+        {
+            let winningTicketVC = segue.destinationViewController as! WinningTicketViewController
+            winningTicketVC.delegate = self
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+//    MARK: - Winning ticket view controller delegate
+    func winningTicketWasAdded(ticket: JackpotTicket)
+    {
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        checkForWinnersUsingTicket(JackpotTicket)
+    }
+
 //    MARK: - Action Handler
     
     @IBAction func addTapped(sender: UIBarButtonItem)
@@ -116,11 +145,16 @@ class JackpotTableViewController: UITableViewController
         storeTicket.append(JackpotTicket())
         tableView.insertRowsAtIndexPaths([newPath], withRowAnimation: .Top)
     }
-//    {
-//       let aTicket = Ticket()
-//       tickets.append(aTicket)
-//       self.tableView.reloadData()
-//    }
+
+//    MARK: - Private methods
+    func checkingForWinnersUsingTicket(winningTicket: JackpotTicket)
+    {
+        for ticket in jackpotTickets
+        {
+            JackpotTicket.compareWithTicket(winningTicket)
+        }
+        tableView.reloadData()
+    }
 }
 
 

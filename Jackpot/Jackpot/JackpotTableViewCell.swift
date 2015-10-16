@@ -18,12 +18,13 @@ class JackpotTableViewCell: UITableViewCell
     }
 
     @IBOutlet weak var numbersLabel: UILabel!
+    @IBOutlet weak var payOutLabel: UILabel!
+
     override func setSelected(selected: Bool, animated: Bool)
     {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    @IBOutlet weak var payOutLabel: UILabel!
 
 }
