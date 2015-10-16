@@ -12,22 +12,26 @@ class JackpotTicket
 {
     
     var ticket = Array<Int>()
-    
+    var winner = Bool()
+    var payOut: String
+    private var picks = Set<Int>()
     
     init()
     {
-        for _ in 1...6
+        winner = false
+        payOut = ""
+        for _ in 0..<6
         {
             tappedAndAdd()
         }
     }
     init(picksArray: Array<Int>)
     {
-        numbersInCell = false
+        winner = false
         payOut = ""
         for i in 0..<picksArray.count
         {
-            
+            picks.insert(picksArray[i])
         }
         
     }
@@ -48,13 +52,67 @@ class JackpotTicket
     func description() -> String
     {
         var numbers = ""
-        for ticket in storeTicket.sort()
+        for pick in picks.sort()
         {
-            numbers = numbers + "\(ticket)"
+            numbers = numbers + "\(pick)"
         }
         return numbers
     }
+    func picksArry() -> [Int]
+    {
+        var picksArray = [Int]()
+        
+        for pick in picks.sort()
+        {
+            picksArray.append(pick)
+        }
+        return picksArray
+    }
     
+    func compareWithTicket(anotherTicket: ticket)
+    {
+        let anotherTicketPicks = anotherTicket.picksArray()
+        var matchCount = 0
+        for aPossiblePick in anotherTicketPicks
+        {
+            if picks.contains(aPossiblePick)
+            {
+                matchCount++
+
+            }
+
+        }
+        switch matchCount
+        {
+        case 3:
+            
+            winner = true
+            payOut = "$1"
+            
+        case 4:
+            
+            winner = true
+            payOut = "$5"
+            
+        case 5:
+            
+            winner = true
+            payOut = "$20"
+            
+        case 6:
+            
+            winner = true
+            payOut = "$100"
+            
+        default:
+            
+            winner = false
+            payOut = ""
+            
+            
+        }
+
+    }
 //    when need to run several times and not repeating = repeat,while.
 //     class Ticket
 //    {

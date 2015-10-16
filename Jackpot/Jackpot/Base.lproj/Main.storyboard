@@ -91,7 +91,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Check Tickets"/>
                                 <connections>
-                                    <action selector="CheckTickets:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="5fQ-dQ-mUO"/>
                                     <action selector="checkTickets:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="d2h-la-Sir"/>
                                 </connections>
                             </button>

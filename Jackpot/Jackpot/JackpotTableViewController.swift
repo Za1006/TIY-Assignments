@@ -62,12 +62,12 @@ class JackpotTableViewController: UITableViewController,WinningTicketViewControl
 
         // Configure the cell...
         let numbersInCell = storeTicket[indexPath.row]
-        cell.numbersLabel.text = numbersInCell.description()
+        cell.numbersLabel.text = aTicket.description()
 //        cell.textLabel?.text = "\(numbersInCell.ticket)"
-        if numbersInCell.winner
+        if aTicket.winner
         {
             cell.backgroundColor = UIColor.greenColor()
-            cell.payOutLabel.text = numbersInCell.payOut
+            cell.payOutLabel.text = aTicket.payOut
         }
         else
         {
@@ -141,17 +141,18 @@ class JackpotTableViewController: UITableViewController,WinningTicketViewControl
     
     @IBAction func addTapped(sender: UIBarButtonItem)
     {
-        let newPath = NSIndexPath(forRow: storeTicket.count, inSection: 0)
+        _ = JackpotTicket()
+//        let newPath = NSIndexPath(forRow: storeTicket.count, inSection: 0)
         storeTicket.append(JackpotTicket())
-        tableView.insertRowsAtIndexPaths([newPath], withRowAnimation: .Top)
+        self.tableView.reloadData()
     }
 
 //    MARK: - Private methods
     func checkingForWinnersUsingTicket(winningTicket: JackpotTicket)
     {
-        for ticket in jackpotTickets
+        for ticket in tickets
         {
-            JackpotTicket.compareWithTicket(winningTicket)
+            ticket.compareWithTicket(winningTicket)
         }
         tableView.reloadData()
     }
