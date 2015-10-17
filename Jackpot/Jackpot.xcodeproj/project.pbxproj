@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		AA42B04D1BCD7B1B0008A3B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA42B04C1BCD7B1B0008A3B6 /* AppDelegate.swift */; };
 		AA42B04F1BCD7B1B0008A3B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA42B04E1BCD7B1B0008A3B6 /* ViewController.swift */; };
 		AA42B0521BCD7B1B0008A3B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA42B0501BCD7B1B0008A3B6 /* Main.storyboard */; };
@@ -26,6 +27,33 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		AA42B0461BCD7B1B0008A3B6 /* Frameworks */ = {
+=======
+		AA0853661BCD7FB600D93383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0853651BCD7FB600D93383 /* AppDelegate.swift */; };
+		AA08536B1BCD7FB600D93383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA0853691BCD7FB600D93383 /* Main.storyboard */; };
+		AA08536D1BCD7FB600D93383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA08536C1BCD7FB600D93383 /* Assets.xcassets */; };
+		AA0853701BCD7FB600D93383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA08536E1BCD7FB600D93383 /* LaunchScreen.storyboard */; };
+		AA97B1E01BCEB58E0007D1F3 /* JackpotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		AA97B1E21BCEE22C0007D1F3 /* JackpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AADD6E4E1BCE78B900CE96FB /* JackpotTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */; settings = {ASSET_TAGS = (); }; };
+		AAFC7A671BD0410C00A6D8DA /* WinningTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC7A661BD0410C00A6D8DA /* WinningTicketViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA0853621BCD7FB600D93383 /* Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jackpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0853651BCD7FB600D93383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA08536A1BCD7FB600D93383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA08536C1BCD7FB600D93383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA08536F1BCD7FB600D93383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA0853711BCD7FB600D93383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewController.swift; sourceTree = "<group>"; };
+		AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTableViewCell.swift; sourceTree = "<group>"; };
+		AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JackpotTicket.swift; sourceTree = "<group>"; };
+		AAFC7A661BD0410C00A6D8DA /* WinningTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinningTicketViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA08535F1BCD7FB600D93383 /* Frameworks */ = {
+>>>>>>> Jackpot
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +63,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
 		AA42B0401BCD7B1A0008A3B6 = {
 			isa = PBXGroup;
 			children = (
@@ -47,10 +76,25 @@
 			isa = PBXGroup;
 			children = (
 				AA42B0491BCD7B1B0008A3B6 /* Jackpot.app */,
+=======
+		AA0853591BCD7FB600D93383 = {
+			isa = PBXGroup;
+			children = (
+				AA0853641BCD7FB600D93383 /* Jackpot */,
+				AA0853631BCD7FB600D93383 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0853631BCD7FB600D93383 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0853621BCD7FB600D93383 /* Jackpot.app */,
+>>>>>>> Jackpot
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		AA42B04B1BCD7B1B0008A3B6 /* Jackpot */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +104,20 @@
 				AA42B0531BCD7B1B0008A3B6 /* Assets.xcassets */,
 				AA42B0551BCD7B1B0008A3B6 /* LaunchScreen.storyboard */,
 				AA42B0581BCD7B1B0008A3B6 /* Info.plist */,
+=======
+		AA0853641BCD7FB600D93383 /* Jackpot */ = {
+			isa = PBXGroup;
+			children = (
+				AA0853651BCD7FB600D93383 /* AppDelegate.swift */,
+				AA97B1DF1BCEB58E0007D1F3 /* JackpotTableViewController.swift */,
+				AA97B1E11BCEE22C0007D1F3 /* JackpotTableViewCell.swift */,
+				AADD6E4D1BCE78B900CE96FB /* JackpotTicket.swift */,
+				AAFC7A661BD0410C00A6D8DA /* WinningTicketViewController.swift */,
+				AA0853691BCD7FB600D93383 /* Main.storyboard */,
+				AA08536C1BCD7FB600D93383 /* Assets.xcassets */,
+				AA08536E1BCD7FB600D93383 /* LaunchScreen.storyboard */,
+				AA0853711BCD7FB600D93383 /* Info.plist */,
+>>>>>>> Jackpot
 			);
 			path = Jackpot;
 			sourceTree = "<group>";
@@ -67,6 +125,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+<<<<<<< HEAD
 		AA42B0481BCD7B1B0008A3B6 /* Jackpot */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA42B05B1BCD7B1B0008A3B6 /* Build configuration list for PBXNativeTarget "Jackpot" */;
@@ -74,6 +133,15 @@
 				AA42B0451BCD7B1B0008A3B6 /* Sources */,
 				AA42B0461BCD7B1B0008A3B6 /* Frameworks */,
 				AA42B0471BCD7B1B0008A3B6 /* Resources */,
+=======
+		AA0853611BCD7FB600D93383 /* Jackpot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0853741BCD7FB600D93383 /* Build configuration list for PBXNativeTarget "Jackpot" */;
+			buildPhases = (
+				AA08535E1BCD7FB600D93383 /* Sources */,
+				AA08535F1BCD7FB600D93383 /* Frameworks */,
+				AA0853601BCD7FB600D93383 /* Resources */,
+>>>>>>> Jackpot
 			);
 			buildRules = (
 			);
@@ -81,25 +149,41 @@
 			);
 			name = Jackpot;
 			productName = Jackpot;
+<<<<<<< HEAD
 			productReference = AA42B0491BCD7B1B0008A3B6 /* Jackpot.app */;
+=======
+			productReference = AA0853621BCD7FB600D93383 /* Jackpot.app */;
+>>>>>>> Jackpot
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
+<<<<<<< HEAD
 		AA42B0411BCD7B1A0008A3B6 /* Project object */ = {
+=======
+		AA08535A1BCD7FB600D93383 /* Project object */ = {
+>>>>>>> Jackpot
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
+<<<<<<< HEAD
 					AA42B0481BCD7B1B0008A3B6 = {
+=======
+					AA0853611BCD7FB600D93383 = {
+>>>>>>> Jackpot
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = HM7AP2V9SS;
 					};
 				};
 			};
+<<<<<<< HEAD
 			buildConfigurationList = AA42B0441BCD7B1A0008A3B6 /* Build configuration list for PBXProject "Jackpot" */;
+=======
+			buildConfigurationList = AA08535D1BCD7FB600D93383 /* Build configuration list for PBXProject "Jackpot" */;
+>>>>>>> Jackpot
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,17 +191,27 @@
 				en,
 				Base,
 			);
+<<<<<<< HEAD
 			mainGroup = AA42B0401BCD7B1A0008A3B6;
 			productRefGroup = AA42B04A1BCD7B1B0008A3B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AA42B0481BCD7B1B0008A3B6 /* Jackpot */,
+=======
+			mainGroup = AA0853591BCD7FB600D93383;
+			productRefGroup = AA0853631BCD7FB600D93383 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0853611BCD7FB600D93383 /* Jackpot */,
+>>>>>>> Jackpot
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+<<<<<<< HEAD
 		AA42B0471BCD7B1B0008A3B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,36 +219,71 @@
 				AA42B0571BCD7B1B0008A3B6 /* LaunchScreen.storyboard in Resources */,
 				AA42B0541BCD7B1B0008A3B6 /* Assets.xcassets in Resources */,
 				AA42B0521BCD7B1B0008A3B6 /* Main.storyboard in Resources */,
+=======
+		AA0853601BCD7FB600D93383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0853701BCD7FB600D93383 /* LaunchScreen.storyboard in Resources */,
+				AA08536D1BCD7FB600D93383 /* Assets.xcassets in Resources */,
+				AA08536B1BCD7FB600D93383 /* Main.storyboard in Resources */,
+>>>>>>> Jackpot
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+<<<<<<< HEAD
 		AA42B0451BCD7B1B0008A3B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AA42B04F1BCD7B1B0008A3B6 /* ViewController.swift in Sources */,
 				AA42B04D1BCD7B1B0008A3B6 /* AppDelegate.swift in Sources */,
+=======
+		AA08535E1BCD7FB600D93383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA97B1E21BCEE22C0007D1F3 /* JackpotTableViewCell.swift in Sources */,
+				AA0853661BCD7FB600D93383 /* AppDelegate.swift in Sources */,
+				AA97B1E01BCEB58E0007D1F3 /* JackpotTableViewController.swift in Sources */,
+				AADD6E4E1BCE78B900CE96FB /* JackpotTicket.swift in Sources */,
+				AAFC7A671BD0410C00A6D8DA /* WinningTicketViewController.swift in Sources */,
+>>>>>>> Jackpot
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+<<<<<<< HEAD
 		AA42B0501BCD7B1B0008A3B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AA42B0511BCD7B1B0008A3B6 /* Base */,
+=======
+		AA0853691BCD7FB600D93383 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA08536A1BCD7FB600D93383 /* Base */,
+>>>>>>> Jackpot
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		AA42B0551BCD7B1B0008A3B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AA42B0561BCD7B1B0008A3B6 /* Base */,
+=======
+		AA08536E1BCD7FB600D93383 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA08536F1BCD7FB600D93383 /* Base */,
+>>>>>>> Jackpot
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +291,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< HEAD
 		AA42B0591BCD7B1B0008A3B6 /* Debug */ = {
+=======
+		AA0853721BCD7FB600D93383 /* Debug */ = {
+>>>>>>> Jackpot
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,7 +339,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< HEAD
 		AA42B05A1BCD7B1B0008A3B6 /* Release */ = {
+=======
+		AA0853731BCD7FB600D93383 /* Release */ = {
+>>>>>>> Jackpot
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -243,7 +380,11 @@
 			};
 			name = Release;
 		};
+<<<<<<< HEAD
 		AA42B05C1BCD7B1B0008A3B6 /* Debug */ = {
+=======
+		AA0853751BCD7FB600D93383 /* Debug */ = {
+>>>>>>> Jackpot
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -254,7 +395,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< HEAD
 		AA42B05D1BCD7B1B0008A3B6 /* Release */ = {
+=======
+		AA0853761BCD7FB600D93383 /* Release */ = {
+>>>>>>> Jackpot
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -268,15 +413,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+<<<<<<< HEAD
 		AA42B0441BCD7B1A0008A3B6 /* Build configuration list for PBXProject "Jackpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA42B0591BCD7B1B0008A3B6 /* Debug */,
 				AA42B05A1BCD7B1B0008A3B6 /* Release */,
+=======
+		AA08535D1BCD7FB600D93383 /* Build configuration list for PBXProject "Jackpot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0853721BCD7FB600D93383 /* Debug */,
+				AA0853731BCD7FB600D93383 /* Release */,
+>>>>>>> Jackpot
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+<<<<<<< HEAD
 		AA42B05B1BCD7B1B0008A3B6 /* Build configuration list for PBXNativeTarget "Jackpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -288,4 +442,18 @@
 /* End XCConfigurationList section */
 	};
 	rootObject = AA42B0411BCD7B1A0008A3B6 /* Project object */;
+=======
+		AA0853741BCD7FB600D93383 /* Build configuration list for PBXNativeTarget "Jackpot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0853751BCD7FB600D93383 /* Debug */,
+				AA0853761BCD7FB600D93383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA08535A1BCD7FB600D93383 /* Project object */;
+>>>>>>> Jackpot
 }

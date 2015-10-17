@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oCD-AC-cmy">
+>>>>>>> Jackpot
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
+<<<<<<< HEAD
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,6 +26,161 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+=======
+        <!--Jackpot-->
+        <scene sceneID="ga6-t7-jDs">
+            <objects>
+                <tableViewController id="3HR-YE-FXV" customClass="JackpotTableViewController" customModule="Jackpot" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cjh-ec-NW7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" textLabel="DXz-gD-oli" detailTextLabel="SBo-2g-RCg" style="IBUITableViewCellStyleValue1" id="QUV-on-rnn" customClass="JackpotTableViewCell" customModule="Jackpot">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QUV-on-rnn" id="Qjq-Kt-rDu">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DXz-gD-oli">
+                                            <rect key="frame" x="15" y="12" width="67" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Payout" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SBo-2g-RCg">
+                                            <rect key="frame" x="535" y="12" width="50" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="numbersLabel" destination="DXz-gD-oli" id="f3H-hP-6uW"/>
+                                    <outlet property="payOutLabel" destination="SBo-2g-RCg" id="ULI-wy-chs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3HR-YE-FXV" id="7gi-KG-cMD"/>
+                            <outlet property="delegate" destination="3HR-YE-FXV" id="KKp-0c-Xyn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Jackpot" id="Dbo-vP-UhD">
+                        <barButtonItem key="leftBarButtonItem" title="Check Tickets" id="ahJ-wp-0Q6">
+                            <connections>
+                                <segue destination="wO9-SN-Hcy" kind="show" id="hOL-Ep-HMY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEm-yP-cTB">
+                            <connections>
+                                <action selector="addTapped:" destination="3HR-YE-FXV" id="xSK-gb-iT7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addButton" destination="gEm-yP-cTB" id="9Hf-3p-ua4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQf-hy-m3x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2587" y="379"/>
+        </scene>
+        <!--Winning Ticket View Controller-->
+        <scene sceneID="lDH-NT-EFd">
+            <objects>
+                <viewController id="wO9-SN-Hcy" customClass="WinningTicketViewController" customModule="Jackpot" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Am-Ey-djA"/>
+                        <viewControllerLayoutGuide type="bottom" id="aKU-ZT-CAM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1wE-Yi-u8J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-Q2-sq6">
+                                <rect key="frame" x="246" y="469" width="109" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Check Tickets"/>
+                                <connections>
+                                    <action selector="checkTickets:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="d2h-la-Sir"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQY-0t-TpJ">
+                                <rect key="frame" x="0.0" y="214" width="600" height="216"/>
+                                <animations/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-zR-Xc8">
+                                <rect key="frame" x="271" y="522" width="59" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="I2v-ig-xOx"/>
+                                    <action selector="cancelButtone:" destination="wO9-SN-Hcy" eventType="touchUpInside" id="2fd-t3-lnd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kQY-0t-TpJ" secondAttribute="trailing" id="6HW-Gg-yRV"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="leading" secondItem="1wE-Yi-u8J" secondAttribute="leading" id="DhU-7n-xZJ"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="JDf-he-FXN"/>
+                            <constraint firstItem="n3t-Q2-sq6" firstAttribute="top" secondItem="kQY-0t-TpJ" secondAttribute="bottom" id="KCs-Wm-XBg"/>
+                            <constraint firstItem="n3t-Q2-sq6" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="OEB-II-8Ph"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" id="S7t-hn-xrU"/>
+                            <constraint firstItem="qce-zR-Xc8" firstAttribute="centerX" secondItem="1wE-Yi-u8J" secondAttribute="centerX" id="X5v-Hl-awc"/>
+                            <constraint firstItem="qce-zR-Xc8" firstAttribute="top" secondItem="n3t-Q2-sq6" secondAttribute="bottom" constant="20" id="aaT-cu-NgH"/>
+                            <constraint firstItem="kQY-0t-TpJ" firstAttribute="top" secondItem="4Am-Ey-djA" secondAttribute="bottom" constant="150" id="pAr-pc-0Mu"/>
+                            <constraint firstItem="n3t-Q2-sq6" firstAttribute="top" secondItem="kQY-0t-TpJ" secondAttribute="bottom" constant="39" id="xro-sO-4bA"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JDf-he-FXN"/>
+                                <exclude reference="S7t-hn-xrU"/>
+                                <exclude reference="KCs-Wm-XBg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="kQY-0t-TpJ" id="BR4-Rh-mdF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="heN-6I-xBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3213" y="379"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SNx-xO-odX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCD-AC-cmy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rSF-tf-C7L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3HR-YE-FXV" kind="relationship" relationship="rootViewController" id="wWO-Kr-Fgj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sn5-XZ-hiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861" y="379"/>
+>>>>>>> Jackpot
         </scene>
     </scenes>
 </document>

@@ -14,7 +14,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "AA42B0481BCD7B1B0008A3B6"
+=======
+               BlueprintIdentifier = "AA0853611BCD7FB600D93383"
+>>>>>>> Jackpot
                BuildableName = "Jackpot.app"
                BlueprintName = "Jackpot"
                ReferencedContainer = "container:Jackpot.xcodeproj">
@@ -32,7 +36,11 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
+<<<<<<< HEAD
             BlueprintIdentifier = "AA42B0481BCD7B1B0008A3B6"
+=======
+            BlueprintIdentifier = "AA0853611BCD7FB600D93383"
+>>>>>>> Jackpot
             BuildableName = "Jackpot.app"
             BlueprintName = "Jackpot"
             ReferencedContainer = "container:Jackpot.xcodeproj">
@@ -55,7 +63,11 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+<<<<<<< HEAD
             BlueprintIdentifier = "AA42B0481BCD7B1B0008A3B6"
+=======
+            BlueprintIdentifier = "AA0853611BCD7FB600D93383"
+>>>>>>> Jackpot
             BuildableName = "Jackpot.app"
             BlueprintName = "Jackpot"
             ReferencedContainer = "container:Jackpot.xcodeproj">
@@ -74,7 +86,11 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
+<<<<<<< HEAD
             BlueprintIdentifier = "AA42B0481BCD7B1B0008A3B6"
+=======
+            BlueprintIdentifier = "AA0853611BCD7FB600D93383"
+>>>>>>> Jackpot
             BuildableName = "Jackpot.app"
             BlueprintName = "Jackpot"
             ReferencedContainer = "container:Jackpot.xcodeproj">

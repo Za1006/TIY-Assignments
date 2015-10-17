@@ -12,7 +12,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+<<<<<<< HEAD
 		<key>AA42B0481BCD7B1B0008A3B6</key>
+=======
+		<key>AA0853611BCD7FB600D93383</key>
+>>>>>>> Jackpot
 		<dict>
 			<key>primary</key>
 			<true/>
