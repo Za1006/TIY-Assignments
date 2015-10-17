@@ -69,7 +69,7 @@ class JackpotTicket
         return picksArray
     }
     
-    func compareWithTicket(anotherTicket: ticket)
+    func compareWithTicket(anotherTicket: JackpotTicket)
     {
         let anotherTicketPicks = anotherTicket.picksArray()
         var matchCount = 0

@@ -26,7 +26,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Payout" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SBo-2g-RCg">
@@ -42,8 +42,8 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="numbersLabel" destination="DXz-gD-oli" id="qtN-J6-WgB"/>
-                                    <outlet property="payOutLabel" destination="SBo-2g-RCg" id="swc-ac-RVa"/>
+                                    <outlet property="numbersLabel" destination="DXz-gD-oli" id="f3H-hP-6uW"/>
+                                    <outlet property="payOutLabel" destination="SBo-2g-RCg" id="ULI-wy-chs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="Jackpot" id="Dbo-vP-UhD">
                         <barButtonItem key="leftBarButtonItem" title="Check Tickets" id="ahJ-wp-0Q6">
                             <connections>
-                                <segue destination="wO9-SN-Hcy" kind="show" id="owf-9q-EXa"/>
+                                <segue destination="wO9-SN-Hcy" kind="show" id="hOL-Ep-HMY"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gEm-yP-cTB">

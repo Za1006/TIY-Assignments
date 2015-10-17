@@ -61,8 +61,8 @@ class JackpotTableViewController: UITableViewController,WinningTicketViewControl
         let cell = tableView.dequeueReusableCellWithIdentifier("JackpotCell", forIndexPath: indexPath)
 
         // Configure the cell...
-        let numbersInCell = storeTicket[indexPath.row]
-        cell.numbersLabel.text = aTicket.description()
+        let aTicket = storeTicket[indexPath.row]
+//        cell.numbersLabel.text = aTicket.description()
 //        cell.textLabel?.text = "\(numbersInCell.ticket)"
         if aTicket.winner
         {
@@ -134,7 +134,7 @@ class JackpotTableViewController: UITableViewController,WinningTicketViewControl
     func winningTicketWasAdded(ticket: JackpotTicket)
     {
         navigationController?.dismissViewControllerAnimated(true, completion: nil)
-        checkForWinnersUsingTicket(JackpotTicket)
+        checkForWinnersUsingTicket(ticket)
     }
 
 //    MARK: - Action Handler
