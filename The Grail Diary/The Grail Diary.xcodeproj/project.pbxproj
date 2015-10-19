@@ -14,6 +14,7 @@
 		AA090D0D1BD55E2100F6C368 /* FamousSitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA090D0C1BD55E2100F6C368 /* FamousSitesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AA090D0F1BD55EBF00F6C368 /* SiteNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA090D0E1BD55EBF00F6C368 /* SiteNameCell.swift */; settings = {ASSET_TAGS = (); }; };
 		AA090D111BD565F100F6C368 /* SITE.json in Resources */ = {isa = PBXBuildFile; fileRef = AA090D101BD565F100F6C368 /* SITE.json */; settings = {ASSET_TAGS = (); }; };
+		AA090D131BD576FB00F6C368 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA090D121BD576FB00F6C368 /* Place.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AA090D0C1BD55E2100F6C368 /* FamousSitesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamousSitesTableViewController.swift; sourceTree = "<group>"; };
 		AA090D0E1BD55EBF00F6C368 /* SiteNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteNameCell.swift; sourceTree = "<group>"; };
 		AA090D101BD565F100F6C368 /* SITE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SITE.json; sourceTree = "<group>"; };
+		AA090D121BD576FB00F6C368 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AA090CFA1BD55D6000F6C368 /* AppDelegate.swift */,
 				AA090D0C1BD55E2100F6C368 /* FamousSitesTableViewController.swift */,
 				AA090D0E1BD55EBF00F6C368 /* SiteNameCell.swift */,
+				AA090D121BD576FB00F6C368 /* Place.swift */,
 				AA090CFE1BD55D6000F6C368 /* Main.storyboard */,
 				AA090D011BD55D6000F6C368 /* Assets.xcassets */,
 				AA090D031BD55D6000F6C368 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				AA090CFB1BD55D6000F6C368 /* AppDelegate.swift in Sources */,
 				AA090D0F1BD55EBF00F6C368 /* SiteNameCell.swift in Sources */,
 				AA090D0D1BD55E2100F6C368 /* FamousSitesTableViewController.swift in Sources */,
+				AA090D131BD576FB00F6C368 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

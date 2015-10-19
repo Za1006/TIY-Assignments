@@ -11,6 +11,14 @@ import UIKit
 class SiteNameCell: UITableViewCell
 {
 
+    @IBOutlet weak var nameOfSite: UILabel!
+    
+    @IBOutlet weak var locationOfSite: UILabel!
+    
+    @IBOutlet weak var historyOfSite: UILabel!
+    
+    @IBOutlet weak var attributeOfSite: UILabel!
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
