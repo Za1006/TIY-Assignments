@@ -10,11 +10,15 @@ import UIKit
 
 class FamousSitesTableViewController: UITableViewController
 {
-    
+    var places = Array<Place>()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        title = "Famouse Places"
+        
+//        loadSITEList()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,9 +48,17 @@ class FamousSitesTableViewController: UITableViewController
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SiteNameCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SiteNameCell", forIndexPath: indexPath) as! SiteNameCell
+        
+// Configure the cell...
+        let aPlace = Places[indexPath.row]
+//     cell.nameOfSite.text = "\(indexPath.row)"
+        cell.locationOfSite.text = "locationOfSite\(indexPath.row)"
+        cell.historyOfSite.text = ""
 
-        // Configure the cell...
+        
+
+
 
         return cell
     }
@@ -96,5 +108,18 @@ class FamousSitesTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
+//    func loadSITEList()
+//    {
+//        do
+//        {
+//            let filePath = NSBundle.mainBundle().pathForResource("SITE", ofType: "json")
+//            let dataFromFile = NSData(contentsOfFile: filePath!)
+//            let placeData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+//            for placeDictionay in placeData
+//            {
+//                let aPlace = Place(dictionary: placeDictionay as! NSDictionary)
+//                places.append(aPlace)
+//      }
 
-}
+    }
+
