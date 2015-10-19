@@ -13,6 +13,7 @@
 		AA090D051BD55D6000F6C368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA090D031BD55D6000F6C368 /* LaunchScreen.storyboard */; };
 		AA090D0D1BD55E2100F6C368 /* FamousSitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA090D0C1BD55E2100F6C368 /* FamousSitesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		AA090D0F1BD55EBF00F6C368 /* SiteNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA090D0E1BD55EBF00F6C368 /* SiteNameCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AA090D111BD565F100F6C368 /* SITE.json in Resources */ = {isa = PBXBuildFile; fileRef = AA090D101BD565F100F6C368 /* SITE.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AA090D061BD55D6000F6C368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA090D0C1BD55E2100F6C368 /* FamousSitesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamousSitesTableViewController.swift; sourceTree = "<group>"; };
 		AA090D0E1BD55EBF00F6C368 /* SiteNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteNameCell.swift; sourceTree = "<group>"; };
+		AA090D101BD565F100F6C368 /* SITE.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SITE.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		AA090CF91BD55D6000F6C368 /* The Grail Diary */ = {
 			isa = PBXGroup;
 			children = (
+				AA090D101BD565F100F6C368 /* SITE.json */,
 				AA090CFA1BD55D6000F6C368 /* AppDelegate.swift */,
 				AA090D0C1BD55E2100F6C368 /* FamousSitesTableViewController.swift */,
 				AA090D0E1BD55EBF00F6C368 /* SiteNameCell.swift */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA090D111BD565F100F6C368 /* SITE.json in Resources */,
 				AA090D051BD55D6000F6C368 /* LaunchScreen.storyboard in Resources */,
 				AA090D021BD55D6000F6C368 /* Assets.xcassets in Resources */,
 				AA090D001BD55D6000F6C368 /* Main.storyboard in Resources */,
