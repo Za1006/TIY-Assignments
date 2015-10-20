@@ -62,10 +62,10 @@
 		AAE786891BD6CB6A0090E0D9 /* To-Do-List */ = {
 			isa = PBXGroup;
 			children = (
+				AAE7868A1BD6CB6A0090E0D9 /* AppDelegate.swift */,
 				AAE786A11BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift */,
 				AAE786A21BD6CD600090E0D9 /* ListToDo.swift */,
 				AAE786A51BD6D6350090E0D9 /* ListToDoCell.swift */,
-				AAE7868A1BD6CB6A0090E0D9 /* AppDelegate.swift */,
 				AAE7869F1BD6CBF70090E0D9 /* ListToDoTableViewController.swift */,
 				AAE7868E1BD6CB6A0090E0D9 /* Main.storyboard */,
 				AAE786941BD6CB6A0090E0D9 /* Assets.xcassets */,
