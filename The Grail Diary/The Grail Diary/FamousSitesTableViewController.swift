@@ -10,7 +10,11 @@ import UIKit
 
 class FamousSitesTableViewController: UITableViewController
 {
-    var places = Array<Place>()
+    var place = Array<FamousPlaces>()
+    var name: String = ""
+    var location: String = ""
+    var history: String = ""
+    var attribute: String = ""
 
     override func viewDidLoad()
     {
@@ -18,7 +22,7 @@ class FamousSitesTableViewController: UITableViewController
         
         title = "Famouse Places"
         
-//        loadSITEList()
+        loadSITEList()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,28 +45,44 @@ class FamousSitesTableViewController: UITableViewController
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return place.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCellWithIdentifier("SiteNameCell", forIndexPath: indexPath) as! SiteNameCell
         
-// Configure the cell...
-        let aPlace = Places[indexPath.row]
-//     cell.nameOfSite.text = "\(indexPath.row)"
-        cell.locationOfSite.text = "locationOfSite\(indexPath.row)"
-        cell.historyOfSite.text = ""
-
+        let placeSite = place[indexPath.row]
         
-
-
+        cell.nameOfSite.text = placeSite.siteName
+        cell.locationOfSite.text = "location: " + placeSite.siteLocation
+        cell.historyOfSite.text = "history: " + placeSite.siteHistory
+        cell.attributeOfSite.text = "attribute: " + placeSite.siteAttribute
 
         return cell
     }
     
+        func loadSITEList()
+        {
+            do
+            {
+                let filePath = NSBundle.mainBundle().pathForResource("SITE", ofType: "json")
+                let dataFromFile = NSData(contentsOfFile: filePath!)
+                let placeData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+                for placeDictionay in placeData
+                {
+                    let placeSite = FamousPlaces(dictionary: placeDictionay as! NSDictionary)
+                    place.append(placeSite)
+                }
+//                catch let error as NSError
+//                {
+//                    print(error)
+//                }
+                
 
     /*
     // Override to support conditional editing of the table view.
@@ -108,18 +128,8 @@ class FamousSitesTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
-//    func loadSITEList()
-//    {
-//        do
-//        {
-//            let filePath = NSBundle.mainBundle().pathForResource("SITE", ofType: "json")
-//            let dataFromFile = NSData(contentsOfFile: filePath!)
-//            let placeData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
-//            for placeDictionay in placeData
-//            {
-//                let aPlace = Place(dictionary: placeDictionay as! NSDictionary)
-//                places.append(aPlace)
-//      }
+
 
     }
-
+}
+}

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Place
+class FamousPlaces
 {
     var siteName: String
     var siteLocation: String
