@@ -7,22 +7,22 @@
         <!--To Do Table View Controller-->
         <scene sceneID="9SO-pY-bzV">
             <objects>
-                <tableViewController id="olN-rW-ILN" customClass="ToDoTableViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="olN-rW-ILN" customClass="ToDoTableViewController" customModule="To_Do" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="POr-UK-mIi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xZh-CK-s1h">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="xZh-CK-s1h" customClass="ToDoCell" customModule="To_Do" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xZh-CK-s1h" id="XbP-th-929">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-jM-Imj">
-                                            <rect key="frame" x="448" y="11" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-jM-Imj">
+                                            <rect key="frame" x="443" y="11" width="47" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,9 +31,12 @@
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEr-Xh-mtp">
                                             <rect key="frame" x="536" y="6" width="51" height="31"/>
                                             <animations/>
+                                            <connections>
+                                                <action selector="switchbutton:" destination="xZh-CK-s1h" eventType="valueChanged" id="mIn-qs-0g0"/>
+                                            </connections>
                                         </switch>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-wg-sbx">
-                                            <rect key="frame" x="15" y="7" width="425" height="30"/>
+                                            <rect key="frame" x="15" y="7" width="420" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -51,6 +54,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="countLabel" destination="8BI-jM-Imj" id="ve2-Kc-Mre"/>
+                                    <outlet property="switch" destination="rEr-Xh-mtp" id="fuh-4b-wnf"/>
+                                    <outlet property="titleTextField" destination="6v6-wg-sbx" id="MHB-nV-P1j"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
