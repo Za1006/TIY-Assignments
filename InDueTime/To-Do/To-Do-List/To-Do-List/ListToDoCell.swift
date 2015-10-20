@@ -15,7 +15,7 @@ class ListToDoCell: UITableViewCell
     
     @IBOutlet weak var countLabel: UILabel!
     
-    @IBOutlet weak var `switch`: UISwitch!
+    @IBOutlet weak var checkButton: UIButton!
     
     override func awakeFromNib()
     {

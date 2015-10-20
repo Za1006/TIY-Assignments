@@ -21,7 +21,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-XC-ZLQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbr-XC-ZLQ">
                                             <rect key="frame" x="452" y="11" width="47" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,38 +29,31 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Counter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCf-s7-Aur">
-                                            <rect key="frame" x="8" y="13" width="520" height="17"/>
+                                            <rect key="frame" x="8" y="13" width="88" height="17"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGb-ME-d2Y">
-                                            <rect key="frame" x="536" y="6" width="51" height="31"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-Vs-eGz">
+                                            <rect key="frame" x="539" y="7" width="46" height="30"/>
                                             <animations/>
-                                        </switch>
+                                            <state key="normal" title="Button"/>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstItem="jCf-s7-Aur" firstAttribute="centerY" secondItem="Lqd-Vs-eGz" secondAttribute="centerY" id="Gin-2Q-dnd"/>
                                         <constraint firstItem="jCf-s7-Aur" firstAttribute="centerY" secondItem="1Wu-Yf-Vku" secondAttribute="centerY" id="RWO-xs-XfG"/>
                                         <constraint firstItem="jCf-s7-Aur" firstAttribute="leading" secondItem="1Wu-Yf-Vku" secondAttribute="leading" constant="8" id="Rx8-WP-5dT"/>
-                                        <constraint firstItem="YGb-ME-d2Y" firstAttribute="centerY" secondItem="1Wu-Yf-Vku" secondAttribute="centerY" id="ePE-Tf-oDz"/>
-                                        <constraint firstItem="YGb-ME-d2Y" firstAttribute="leading" secondItem="jCf-s7-Aur" secondAttribute="trailing" constant="8" id="fhw-Ca-Spj"/>
-                                        <constraint firstItem="qbr-XC-ZLQ" firstAttribute="centerY" secondItem="YGb-ME-d2Y" secondAttribute="centerY" id="jK5-dR-46C"/>
-                                        <constraint firstItem="YGb-ME-d2Y" firstAttribute="leading" secondItem="qbr-XC-ZLQ" secondAttribute="trailing" constant="37" id="mMk-y2-2av"/>
-                                        <constraint firstAttribute="trailing" secondItem="YGb-ME-d2Y" secondAttribute="trailing" constant="15" id="pId-Na-AvD"/>
-                                        <constraint firstItem="YGb-ME-d2Y" firstAttribute="leading" secondItem="jCf-s7-Aur" secondAttribute="trailing" constant="8" id="vcf-E8-UQk"/>
+                                        <constraint firstItem="Lqd-Vs-eGz" firstAttribute="centerY" secondItem="1Wu-Yf-Vku" secondAttribute="centerY" id="fz0-0L-UC2"/>
+                                        <constraint firstAttribute="trailing" secondItem="Lqd-Vs-eGz" secondAttribute="trailing" constant="15" id="g7o-Wf-8S2"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="fhw-Ca-Spj"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="checkButton" destination="Lqd-Vs-eGz" id="GXG-Uh-Sap"/>
                                     <outlet property="countLabel" destination="qbr-XC-ZLQ" id="FcM-cV-T0a"/>
                                     <outlet property="currentTitle" destination="jCf-s7-Aur" id="S80-xy-WqL"/>
-                                    <outlet property="switch" destination="YGb-ME-d2Y" id="cTB-V1-fKF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
