@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  InDueTime
+//  To-Do
 //
 //  Created by Elizabeth Yeh on 10/20/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
