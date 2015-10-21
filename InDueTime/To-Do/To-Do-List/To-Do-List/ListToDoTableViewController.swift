@@ -144,22 +144,19 @@ class ListToDoTableViewController: UITableViewController
     tableView.reloadData()
 }
     
-    @IBAction func checkButton(sender: DLRadioButton)
+    @IBAction func button(sender: UIButton)
     {
-        
-    }
     
-//@IBAction func checkButtonValueChanged(sender: UIButton)
-//    {
-//        let contentView = sender.superview
-//        let cell = contentView?.superview as! ListToDoCell
-//        let indextPath = tableView.indexPathForCell(cell)
-//        let aListToDo = listToDo[indextPath!.row]
-//        let countAsInt = Int16()
-//        aListToDo.count = countAsInt
-//        cell.countLabel.text = "\(countAsInt)"
-//        saveContext()
-//
+        let contentView = sender.superview
+        let cell = contentView?.superview as! ListToDoCell
+        let indextPath = tableView.indexPathForCell(cell)
+        let aListToDo = listToDo[indextPath!.row]
+        let countAsInt = Int16()
+        aListToDo.count = countAsInt
+        cell.countLabel.text = "\(countAsInt)"
+        saveContext()
+    }
+
     }
 //    MARK: - Private
     func saveContext()
@@ -175,4 +172,3 @@ class ListToDoTableViewController: UITableViewController
             abort()
         }
     }
-}

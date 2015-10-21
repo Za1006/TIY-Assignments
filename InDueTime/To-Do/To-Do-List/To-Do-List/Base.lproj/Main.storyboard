@@ -34,34 +34,21 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-Vs-eGz" customClass="DLRadioButton">
-                                            <rect key="frame" x="531" y="5" width="54" height="34"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-wt-ab4">
+                                            <rect key="frame" x="539" y="7" width="46" height="30"/>
                                             <animations/>
                                             <state key="normal" title="Button"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
-                                                    <real key="value" value="-1"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
-                                                    <real key="value" value="-1"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
-                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isIconSquare" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="checkButton:" destination="lSa-87-yoQ" eventType="touchUpInside" id="jQ7-TM-892"/>
+                                                <action selector="button:" destination="lSa-87-yoQ" eventType="touchUpInside" id="fAD-jz-qdO"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="jCf-s7-Aur" firstAttribute="centerY" secondItem="Lqd-Vs-eGz" secondAttribute="centerY" id="Gin-2Q-dnd"/>
                                         <constraint firstItem="jCf-s7-Aur" firstAttribute="centerY" secondItem="1Wu-Yf-Vku" secondAttribute="centerY" id="RWO-xs-XfG"/>
+                                        <constraint firstAttribute="trailing" secondItem="FWv-wt-ab4" secondAttribute="trailing" constant="15" id="Riy-sd-PTw"/>
                                         <constraint firstItem="jCf-s7-Aur" firstAttribute="leading" secondItem="1Wu-Yf-Vku" secondAttribute="leading" constant="8" id="Rx8-WP-5dT"/>
-                                        <constraint firstItem="Lqd-Vs-eGz" firstAttribute="centerY" secondItem="1Wu-Yf-Vku" secondAttribute="centerY" id="fz0-0L-UC2"/>
-                                        <constraint firstAttribute="trailing" secondItem="Lqd-Vs-eGz" secondAttribute="trailing" constant="15" id="g7o-Wf-8S2"/>
+                                        <constraint firstItem="FWv-wt-ab4" firstAttribute="centerY" secondItem="1Wu-Yf-Vku" secondAttribute="centerY" id="y9U-dI-GkY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
