@@ -1,0 +1,63 @@
+[
+    {
+        "name": "The Greate Wall of China",
+        "location": "China",
+        "history": "is a series of fortifications made of stone, brick, tamped earth, wood, and other materials, generally built along an east-to-west line across the historical northern borders of China",
+        "attribute":"The Great Wall stretches from Dandong in the east, to Lop Lake in the west, along an arc that roughly delineates the southern edge of Inner Mongolia",
+ 
+    },
+    {
+      "name": "The Statue of Liberty",
+      "location": "New York City, US",
+      "history": "The copper statue, designed by Frédéric Auguste Bartholdi, a French sculptor, was built by Gustave Eiffel and dedicated on October 28, 1886. It was a gift to the United States from the people of France.",
+      "attribute":"On June 17, 1885, the French steamer Isère, laden with the Statue of Liberty, reached the New York port safely. New Yorkers displayed their new-found enthusiasm for the statue, as the French vessel arrived with the crates holding the disassembled statue on board.",
+    },
+    {
+        "name": "The Pyramids of Giza",
+        "location": "Egypt",
+        "history": "It is the oldest of the Seven Wonders of the Ancient World, and the only one to remain largely intact.",
+        "attribute":"Today tourists enter the Great Pyramid via the Robbers' Tunnel, a tunnel created around AD 820 by Caliph al-Ma'mun's workmen using a battering ram.",
+    },
+    {
+        "name": "Machu Picchu",
+        "location": "Peru",
+        "history": "It is situated on a mountain ridge above the Sacred Valley which is 80 kilometres (50 mi) northwest of Cuzco and through which the Urubamba River flows.",
+        "attribute":"Machu Picchu was built in the classical Inca style, with polished dry-stone walls. Its three primary structures are the Inti Watana, the Temple of the Sun, and the Room of the Three Windows.",
+    },
+    {
+        "name": "Big Ben",
+        "location": "London",
+        "history": "is the nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower.",
+        "attribute":"The clock dials are set in an iron frame 23 feet (7.0 m) in diameter, supporting 312 pieces of opal glass, rather like a stained-glass window.",
+    },
+    {
+        "name": "The Leaning Tower of Pisa",
+        "location": "Italy",
+        "history": "The tower's tilt began during construction, caused by an inadequate foundation on ground too soft on one side to properly support the structure's weight. ",
+        "attribute":"Prior to restoration work performed between 1990 and 2001, the tower leaned at an angle of 5.5 degrees,but the tower now leans at about 3.99 degrees.This means that the top of the tower is displaced horizontally 3.9 metres (12 ft 10 in) from the centre.",
+    },
+    {
+         "name": "Acropolis of Athens",
+         "location": "Greece",
+         "history": "The word acropolis comes from the Greek words ἄκρον (akron, "edge, extremity") and πόλις (polis, "city").",
+         "attribute":"Every four years, the Athenians held a festival called the Panathenaea that rivaled the Olympic Games in popularity. During the festival, a procession (believed to be depicted on the Parthenon frieze) traveled through the city via the Panathenaic Way and culminated on the Acropolis.",
+    },
+    {
+         "name": "Mount Fuji",
+         "location": "Japan",
+         "history": "Mount Fuji lies about 100 kilometres (60 mi) south-west of Tokyo, and can be seen from there on a clear day.",
+         "attribute":"Mount Fuji is an attractive volcanic cone and a frequent subject of Japanese art especially after 1600, when Edo (now Tokyo) became the actual capital and people saw the mountain while traveling on the Tōkaidō road",
+ },
+    {
+         "name": "The Mount Rushmore",
+         "location": "South Dakota, US",
+         "history": "Sculpted by Danish-American Gutzon Borglum and his son, Lincoln Borglum, Mount Rushmore features 60-foot (18 m) sculptures of the heads of four United States presidents: George Washington (1732–1799), Thomas Jefferson (1743–1826), Theodore Roosevelt (1858–1919), and Abraham Lincoln (1809–1865).",
+         "attribute":"Originally known to the Lakota Sioux as Six Grandfathers, the mountain was renamed after Charles E. Rushmore, a prominent New York lawyer, during an expedition in 1885.",
+    },
+    {
+          "name": "The Louvre",
+          "location": "Paris, France",
+          "history": "one of the world's largest museums and a historic monument in Paris, France.",
+          "attribute":"The museum opened on 10 August 1793, the first anniversary of the monarchy's demise. The public was given free access on three days per week, which was perceived as a major accomplishment and was generally appreciated.",
+ },
+    ]
