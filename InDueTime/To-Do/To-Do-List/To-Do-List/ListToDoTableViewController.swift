@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListToDoTableViewController: UITableViewController
 {
@@ -38,7 +39,8 @@ class ListToDoTableViewController: UITableViewController
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         // #warning Incomplete implementation, return the number of rows
         return listToDo.count
     }
@@ -77,12 +79,15 @@ class ListToDoTableViewController: UITableViewController
 
     
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete
+        {
+                    let aListToDo = listToDo[indexPath.row]
+                    listToDo.removeAtIndex(indexPath.row)
+                    managedObjectContext.deleteObject(aListToDo)
+                    saveContext()
+                    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }    
     }
 
@@ -122,12 +127,52 @@ class ListToDoTableViewController: UITableViewController
             let contentView = textField.superview
             let cell = contentView?.superview as! ListToDoCell
             let indextPath = tableView.indexPathForCell(cell)
-            let aListToDo = listToDos[indextPath!.row]
+            let aListToDo = listToDo[indextPath!.row]
             aListToDo.title = textField.text
             textField.resignFirstResponder()
             saveContext()
         }
         
-        return rc
+    return rc
+}
+
+// MARK: - Action Handlers
+@IBAction func addCounter(sender: UIBarButtonItem)
+{
+    let aListToDo = NSEntityDescription.insertNewObjectForEntityForName("ListToDo", inManagedObjectContext: managedObjectContext) as! ListToDo
+    listToDo.append(aListToDo)
+    tableView.reloadData()
+}
     
+    @IBAction func checkButton(sender: DLRadioButton)
+    {
+        
+    }
+    
+//@IBAction func checkButtonValueChanged(sender: UIButton)
+//    {
+//        let contentView = sender.superview
+//        let cell = contentView?.superview as! ListToDoCell
+//        let indextPath = tableView.indexPathForCell(cell)
+//        let aListToDo = listToDo[indextPath!.row]
+//        let countAsInt = Int16()
+//        aListToDo.count = countAsInt
+//        cell.countLabel.text = "\(countAsInt)"
+//        saveContext()
+//
+    }
+//    MARK: - Private
+    func saveContext()
+    {
+        do
+        {
+           try managedObjectContext.save()
+        }
+        catch
+        {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror),\(nserror.userInfo)")
+            abort()
+        }
+    }
 }

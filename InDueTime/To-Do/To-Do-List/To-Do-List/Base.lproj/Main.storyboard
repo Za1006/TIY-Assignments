@@ -34,10 +34,25 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-Vs-eGz">
-                                            <rect key="frame" x="539" y="7" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-Vs-eGz" customClass="DLRadioButton">
+                                            <rect key="frame" x="531" y="5" width="54" height="34"/>
                                             <animations/>
                                             <state key="normal" title="Button"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="iconStrokeWidth">
+                                                    <real key="value" value="-1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                    <real key="value" value="-1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                    <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isIconSquare" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="checkButton:" destination="lSa-87-yoQ" eventType="touchUpInside" id="jQ7-TM-892"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <animations/>
@@ -51,7 +66,6 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="checkButton" destination="Lqd-Vs-eGz" id="GXG-Uh-Sap"/>
                                     <outlet property="countLabel" destination="qbr-XC-ZLQ" id="FcM-cV-T0a"/>
                                     <outlet property="currentTitle" destination="jCf-s7-Aur" id="S80-xy-WqL"/>
                                 </connections>
@@ -62,7 +76,13 @@
                             <outlet property="delegate" destination="lSa-87-yoQ" id="iTd-3Q-FGa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="mAK-Kd-WeV"/>
+                    <navigationItem key="navigationItem" id="mAK-Kd-WeV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Ad-yn-TKj">
+                            <connections>
+                                <action selector="addCounter:" destination="lSa-87-yoQ" id="rZH-4p-bBP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZd-dR-jWn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

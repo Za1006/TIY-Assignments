@@ -16,6 +16,7 @@
 		AAE786A31BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A11BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		AAE786A41BD6CD600090E0D9 /* ListToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A21BD6CD600090E0D9 /* ListToDo.swift */; settings = {ASSET_TAGS = (); }; };
 		AAE786A61BD6D6350090E0D9 /* ListToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A51BD6D6350090E0D9 /* ListToDoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		AAE786A91BD710DB0090E0D9 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A81BD710DB0090E0D9 /* DLRadioButton.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		AAE786A11BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ListToDo+CoreDataProperties.swift"; path = "../ListToDo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AAE786A21BD6CD600090E0D9 /* ListToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListToDo.swift; path = ../ListToDo.swift; sourceTree = "<group>"; };
 		AAE786A51BD6D6350090E0D9 /* ListToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListToDoCell.swift; sourceTree = "<group>"; };
+		AAE786A71BD710DA0090E0D9 /* To-Do-List-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "To-Do-List-Bridging-Header.h"; sourceTree = "<group>"; };
+		AAE786A81BD710DB0090E0D9 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		AAE786AA1BD710EA0090E0D9 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		AAE786891BD6CB6A0090E0D9 /* To-Do-List */ = {
 			isa = PBXGroup;
 			children = (
+				AAE786AA1BD710EA0090E0D9 /* DLRadioButton.h */,
+				AAE786A81BD710DB0090E0D9 /* DLRadioButton.m */,
 				AAE7868A1BD6CB6A0090E0D9 /* AppDelegate.swift */,
 				AAE786A11BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift */,
 				AAE786A21BD6CD600090E0D9 /* ListToDo.swift */,
@@ -72,6 +78,7 @@
 				AAE786961BD6CB6A0090E0D9 /* LaunchScreen.storyboard */,
 				AAE786991BD6CB6A0090E0D9 /* Info.plist */,
 				AAE786911BD6CB6A0090E0D9 /* To_Do_List.xcdatamodeld */,
+				AAE786A71BD710DA0090E0D9 /* To-Do-List-Bridging-Header.h */,
 			);
 			path = "To-Do-List";
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		AAE7867F1BD6CB6A0090E0D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
@@ -149,6 +157,7 @@
 			files = (
 				AAE786A01BD6CBF70090E0D9 /* ListToDoTableViewController.swift in Sources */,
 				AAE786A61BD6D6350090E0D9 /* ListToDoCell.swift in Sources */,
+				AAE786A91BD710DB0090E0D9 /* DLRadioButton.m in Sources */,
 				AAE786931BD6CB6A0090E0D9 /* To_Do_List.xcdatamodeld in Sources */,
 				AAE786A41BD6CD600090E0D9 /* ListToDo.swift in Sources */,
 				AAE7868B1BD6CB6A0090E0D9 /* AppDelegate.swift in Sources */,
@@ -263,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "To-Do-List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "To-Do-List/To-Do-List-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -274,10 +286,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "To-Do-List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.To-Do-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "To-Do-List/To-Do-List-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -300,6 +314,7 @@
 				AAE7869E1BD6CB6A0090E0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
