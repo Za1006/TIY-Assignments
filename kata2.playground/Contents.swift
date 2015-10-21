@@ -16,16 +16,32 @@ import UIKit
 var eggAge = 0
 var baconAge = 0
 
-func youCanHaveBreakfast(eggAge: Int, baconAgee: Int) -> String
-    {
-        var whatToEat = "you can cook bacon and eggs"
-
+func whenToThrowOut(eggAge: Int, baconAge: Int) -> String
+{
+    var whatToEat = "breakfast for you"
+    
     if eggAge <= 21 && baconAge <= 7
     {
         whatToEat = "you can cook bacon and eggs"
     }
-        
+    else
+    {
+        if eggAge >= 21
+        {
+            whatToEat = "you can cook bacon, throw out eggs"
+        }
+    }
+    else
+    {
+        if baconAge >= 7
+        {
+            whatToEat = "you can cook eggs, throw out bacon"
+        }
+    }
+    return whatToEat
 }
+
+
 
 //: ## Question 3
 //: ### Difference of Square of Sums and Sum of Squares
