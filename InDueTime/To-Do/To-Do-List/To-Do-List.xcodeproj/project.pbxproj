@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA0160741BD825360068BBC9 /* checked_checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0160721BD825360068BBC9 /* checked_checkbox.png */; settings = {ASSET_TAGS = (); }; };
+		AA0160751BD825360068BBC9 /* checkbox_full.png in Resources */ = {isa = PBXBuildFile; fileRef = AA0160731BD825360068BBC9 /* checkbox_full.png */; settings = {ASSET_TAGS = (); }; };
 		AAE7868B1BD6CB6A0090E0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE7868A1BD6CB6A0090E0D9 /* AppDelegate.swift */; };
 		AAE786901BD6CB6A0090E0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE7868E1BD6CB6A0090E0D9 /* Main.storyboard */; };
 		AAE786931BD6CB6A0090E0D9 /* To_Do_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAE786911BD6CB6A0090E0D9 /* To_Do_List.xcdatamodeld */; };
@@ -16,10 +18,11 @@
 		AAE786A31BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A11BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		AAE786A41BD6CD600090E0D9 /* ListToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A21BD6CD600090E0D9 /* ListToDo.swift */; settings = {ASSET_TAGS = (); }; };
 		AAE786A61BD6D6350090E0D9 /* ListToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A51BD6D6350090E0D9 /* ListToDoCell.swift */; settings = {ASSET_TAGS = (); }; };
-		AAE786A91BD710DB0090E0D9 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE786A81BD710DB0090E0D9 /* DLRadioButton.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA0160721BD825360068BBC9 /* checked_checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked_checkbox.png; sourceTree = "<group>"; };
+		AA0160731BD825360068BBC9 /* checkbox_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_full.png; sourceTree = "<group>"; };
 		AAE786871BD6CB6A0090E0D9 /* To-Do-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE7868A1BD6CB6A0090E0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAE7868F1BD6CB6A0090E0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,8 +35,6 @@
 		AAE786A21BD6CD600090E0D9 /* ListToDo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListToDo.swift; path = ../ListToDo.swift; sourceTree = "<group>"; };
 		AAE786A51BD6D6350090E0D9 /* ListToDoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListToDoCell.swift; sourceTree = "<group>"; };
 		AAE786A71BD710DA0090E0D9 /* To-Do-List-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "To-Do-List-Bridging-Header.h"; sourceTree = "<group>"; };
-		AAE786A81BD710DB0090E0D9 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
-		AAE786AA1BD710EA0090E0D9 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +67,8 @@
 		AAE786891BD6CB6A0090E0D9 /* To-Do-List */ = {
 			isa = PBXGroup;
 			children = (
-				AAE786AA1BD710EA0090E0D9 /* DLRadioButton.h */,
-				AAE786A81BD710DB0090E0D9 /* DLRadioButton.m */,
+				AA0160721BD825360068BBC9 /* checked_checkbox.png */,
+				AA0160731BD825360068BBC9 /* checkbox_full.png */,
 				AAE7868A1BD6CB6A0090E0D9 /* AppDelegate.swift */,
 				AAE786A11BD6CD600090E0D9 /* ListToDo+CoreDataProperties.swift */,
 				AAE786A21BD6CD600090E0D9 /* ListToDo.swift */,
@@ -142,7 +143,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA0160741BD825360068BBC9 /* checked_checkbox.png in Resources */,
 				AAE786981BD6CB6A0090E0D9 /* LaunchScreen.storyboard in Resources */,
+				AA0160751BD825360068BBC9 /* checkbox_full.png in Resources */,
 				AAE786951BD6CB6A0090E0D9 /* Assets.xcassets in Resources */,
 				AAE786901BD6CB6A0090E0D9 /* Main.storyboard in Resources */,
 			);
@@ -157,7 +160,6 @@
 			files = (
 				AAE786A01BD6CBF70090E0D9 /* ListToDoTableViewController.swift in Sources */,
 				AAE786A61BD6D6350090E0D9 /* ListToDoCell.swift in Sources */,
-				AAE786A91BD710DB0090E0D9 /* DLRadioButton.m in Sources */,
 				AAE786931BD6CB6A0090E0D9 /* To_Do_List.xcdatamodeld in Sources */,
 				AAE786A41BD6CD600090E0D9 /* ListToDo.swift in Sources */,
 				AAE7868B1BD6CB6A0090E0D9 /* AppDelegate.swift in Sources */,
