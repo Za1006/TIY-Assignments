@@ -17,7 +17,14 @@ class ListToDoTableViewController: UITableViewController
     {
         super.viewDidLoad()
         title = "List To Do"
-
+        
+//         let fetchRequest = NSFetchRequest(entityName: "ListToDo")
+//        do
+//        {
+//           let fetchResult = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ListToDo]
+//            listToDo = fetchResults!
+//        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -62,7 +69,7 @@ class ListToDoTableViewController: UITableViewController
             
         }
         cell.countLabel.text = "\(aListToDo.count)"
-//        cell.checkButton.value =
+//        cell.checkButton.count = Double(listToDo.count)
 
         return cell
     }
