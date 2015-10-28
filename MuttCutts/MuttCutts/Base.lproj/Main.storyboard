@@ -31,15 +31,54 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZOn-5k-pvB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xP-vo-iNz"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xP-vo-iNz">
+                            <connections>
+                                <action selector="addCityButton:" destination="BYZ-38-t0r" id="b0A-Z2-sSW"/>
+                                <segue destination="Sim-OU-5bU" kind="popoverPresentation" identifier="ShowCityPopoverSegue" popoverAnchorBarButtonItem="3xP-vo-iNz" id="WFd-QL-aHR">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addCityButton" destination="3xP-vo-iNz" id="YEY-wj-NDv"/>
                         <outlet property="mapView" destination="W6D-3g-z9S" id="PtF-1N-rBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294" y="1047"/>
+            <point key="canvasLocation" x="996" y="1103"/>
+        </scene>
+        <!--Map Table View Controller-->
+        <scene sceneID="5oP-s3-ybR">
+            <objects>
+                <tableViewController id="Sim-OU-5bU" customClass="MapTableViewController" customModule="MuttCutts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qgL-Go-lhb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" id="CmG-nn-LCs">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CmG-nn-LCs" id="QlV-M8-AIw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Sim-OU-5bU" id="SIp-0R-zyE"/>
+                            <outlet property="delegate" destination="Sim-OU-5bU" id="Hm6-8D-SVG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nR5-Zs-IIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="1098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A7X-ex-ehB">
@@ -58,7 +97,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="139-Zf-0rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576" y="1047"/>
+            <point key="canvasLocation" x="316" y="1098"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA66187B1BE11FEA006C359A /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66187A1BE11FEA006C359A /* MapTableViewController.swift */; };
 		AAF34D771BE106ED00CDA0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF34D761BE106ED00CDA0A4 /* AppDelegate.swift */; };
 		AAF34D791BE106ED00CDA0A4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF34D781BE106ED00CDA0A4 /* MapViewController.swift */; };
 		AAF34D7C1BE106ED00CDA0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF34D7A1BE106ED00CDA0A4 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA66187A1BE11FEA006C359A /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewController.swift; sourceTree = "<group>"; };
 		AAF34D731BE106ED00CDA0A4 /* MuttCutts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuttCutts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF34D761BE106ED00CDA0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF34D781BE106ED00CDA0A4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				AAF34D761BE106ED00CDA0A4 /* AppDelegate.swift */,
 				AAF34D781BE106ED00CDA0A4 /* MapViewController.swift */,
+				AA66187A1BE11FEA006C359A /* MapTableViewController.swift */,
 				AAF34D7A1BE106ED00CDA0A4 /* Main.storyboard */,
 				AAF34D7D1BE106ED00CDA0A4 /* Assets.xcassets */,
 				AAF34D7F1BE106ED00CDA0A4 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				AAF34D791BE106ED00CDA0A4 /* MapViewController.swift in Sources */,
 				AAF34D771BE106ED00CDA0A4 /* AppDelegate.swift in Sources */,
+				AA66187B1BE11FEA006C359A /* MapTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +290,7 @@
 				AAF34D871BE106ED00CDA0A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
