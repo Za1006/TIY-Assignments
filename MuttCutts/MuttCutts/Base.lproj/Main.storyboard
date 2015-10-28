@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2YD-ds-azy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -34,7 +36,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xP-vo-iNz">
                             <connections>
                                 <action selector="addCityButton:" destination="BYZ-38-t0r" id="b0A-Z2-sSW"/>
-                                <segue destination="Sim-OU-5bU" kind="popoverPresentation" identifier="ShowCityPopoverSegue" popoverAnchorBarButtonItem="3xP-vo-iNz" id="WFd-QL-aHR">
+                                <segue destination="1NG-X7-YQT" kind="popoverPresentation" identifier="ShowMapPopoverSegue" popoverAnchorBarButtonItem="3xP-vo-iNz" id="tQC-aQ-9gs">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -49,36 +51,71 @@
             </objects>
             <point key="canvasLocation" x="996" y="1103"/>
         </scene>
-        <!--Map Table View Controller-->
-        <scene sceneID="5oP-s3-ybR">
+        <!--Map Popover View Controller-->
+        <scene sceneID="IYt-WA-inQ">
             <objects>
-                <tableViewController id="Sim-OU-5bU" customClass="MapTableViewController" customModule="MuttCutts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qgL-Go-lhb">
+                <viewController id="1NG-X7-YQT" customClass="MapPopoverViewController" customModule="MuttCutts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8y-6L-Uul"/>
+                        <viewControllerLayoutGuide type="bottom" id="rDA-WS-6rE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Bh-mA-w63">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type A Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aig-j7-yqe">
+                                <rect key="frame" x="0.0" y="28" width="600" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type A Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xj8-Fx-wUz">
+                                <rect key="frame" x="0.0" y="60" width="600" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVp-3H-Wr6">
+                                <rect key="frame" x="0.0" y="109" width="600" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="SearchLocation:" destination="1NG-X7-YQT" eventType="touchUpInside" id="KHP-U6-hDc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" id="CmG-nn-LCs">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CmG-nn-LCs" id="QlV-M8-AIw">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Sim-OU-5bU" id="SIp-0R-zyE"/>
-                            <outlet property="delegate" destination="Sim-OU-5bU" id="Hm6-8D-SVG"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nR5-Zs-IIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="Xj8-Fx-wUz" firstAttribute="leading" secondItem="8Bh-mA-w63" secondAttribute="leading" id="0PM-Ca-o5H"/>
+                            <constraint firstItem="Xj8-Fx-wUz" firstAttribute="centerX" secondItem="8Bh-mA-w63" secondAttribute="centerX" id="Gs7-12-0XO"/>
+                            <constraint firstItem="hVp-3H-Wr6" firstAttribute="leading" secondItem="8Bh-mA-w63" secondAttribute="leading" id="Kqw-9L-0qR"/>
+                            <constraint firstAttribute="trailing" secondItem="Xj8-Fx-wUz" secondAttribute="trailing" id="MA1-fc-KhD"/>
+                            <constraint firstItem="hVp-3H-Wr6" firstAttribute="width" secondItem="8Bh-mA-w63" secondAttribute="height" multiplier="1:1" id="RvU-sT-2Ix"/>
+                            <constraint firstItem="hVp-3H-Wr6" firstAttribute="height" secondItem="Xj8-Fx-wUz" secondAttribute="height" id="VTx-Ld-5jB"/>
+                            <constraint firstItem="aig-j7-yqe" firstAttribute="centerX" secondItem="8Bh-mA-w63" secondAttribute="centerX" id="Wqy-hh-xqy"/>
+                            <constraint firstAttribute="trailing" secondItem="hVp-3H-Wr6" secondAttribute="trailing" id="gIL-cH-EdC"/>
+                            <constraint firstItem="aig-j7-yqe" firstAttribute="width" secondItem="8Bh-mA-w63" secondAttribute="height" multiplier="1:1" id="iGs-I2-89c"/>
+                            <constraint firstItem="hVp-3H-Wr6" firstAttribute="width" secondItem="8Bh-mA-w63" secondAttribute="width" id="mho-7K-RV0"/>
+                            <constraint firstItem="hVp-3H-Wr6" firstAttribute="top" secondItem="Xj8-Fx-wUz" secondAttribute="bottom" constant="19" id="sgc-pF-RBR"/>
+                            <constraint firstItem="aig-j7-yqe" firstAttribute="top" secondItem="8Bh-mA-w63" secondAttribute="topMargin" constant="28" id="uzq-0K-7v0"/>
+                            <constraint firstItem="hVp-3H-Wr6" firstAttribute="centerX" secondItem="8Bh-mA-w63" secondAttribute="centerX" id="zvU-Ac-OVH"/>
+                            <constraint firstItem="Xj8-Fx-wUz" firstAttribute="top" secondItem="aig-j7-yqe" secondAttribute="bottom" constant="2" id="zwb-cI-RCQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RvU-sT-2Ix"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="FirstUITextField" destination="aig-j7-yqe" id="Fj8-I9-fno"/>
+                        <outlet property="SecondUITextField" destination="Xj8-Fx-wUz" id="sgR-zA-haT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gu3-IQ-I0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="1098"/>
+            <point key="canvasLocation" x="1636" y="1103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A7X-ex-ehB">
