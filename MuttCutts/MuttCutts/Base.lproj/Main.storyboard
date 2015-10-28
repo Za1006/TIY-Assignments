@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2YD-ds-azy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2YD-ds-azy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -30,7 +30,9 @@
                             <constraint firstItem="W6D-3g-z9S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xie-Eq-XJ5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZOn-5k-pvB"/>
+                    <navigationItem key="navigationItem" id="ZOn-5k-pvB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3xP-vo-iNz"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="W6D-3g-z9S" id="PtF-1N-rBb"/>
                     </connections>
