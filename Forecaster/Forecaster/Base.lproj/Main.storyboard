@@ -74,6 +74,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="4EK-qZ-LdI" id="ANo-0u-fiQ"/>
+                        <outlet property="currentTempLabel" destination="9nz-du-M02" id="3kI-QC-TDS"/>
+                        <outlet property="summaryLabel" destination="tdA-k9-iTA" id="YOi-2J-hGG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPI-zH-JMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -105,6 +110,9 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="hal-2b-aWS" firstAttribute="leading" secondItem="HOm-E1-LlQ" secondAttribute="leadingMargin" constant="218" id="4gn-1H-XH6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="861-HF-Xwu" secondAttribute="trailing" constant="247" id="51w-eN-Ect"/>

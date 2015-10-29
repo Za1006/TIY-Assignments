@@ -13,6 +13,9 @@ class ForecasterModalViewController: UIViewController
 
     override func viewDidLoad()
     {
+        
+        title = "Add City"
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
