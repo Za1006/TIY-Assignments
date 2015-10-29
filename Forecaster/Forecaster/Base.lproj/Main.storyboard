@@ -23,21 +23,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EK-qZ-LdI">
-                                            <rect key="frame" x="20" y="28" width="433" height="20"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdA-k9-iTA">
-                                            <rect key="frame" x="20" y="82" width="433" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CurrentTemp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nz-du-M02">
-                                            <rect key="frame" x="453" y="13" width="101" height="97"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="CurrentTemp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nz-du-M02">
+                                            <rect key="frame" x="470" y="13" width="101" height="97"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -46,18 +33,16 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="tdA-k9-iTA" firstAttribute="top" secondItem="4EK-qZ-LdI" secondAttribute="bottom" constant="34" id="0os-RC-Bt9"/>
-                                        <constraint firstItem="4EK-qZ-LdI" firstAttribute="top" secondItem="ERn-DZ-1Hd" secondAttribute="topMargin" constant="20" id="8F3-7G-SvR"/>
-                                        <constraint firstItem="4EK-qZ-LdI" firstAttribute="centerX" secondItem="ERn-DZ-1Hd" secondAttribute="centerX" id="8xP-kn-ccS"/>
                                         <constraint firstItem="9nz-du-M02" firstAttribute="top" secondItem="ERn-DZ-1Hd" secondAttribute="top" constant="13" id="Mwz-VN-DmC"/>
-                                        <constraint firstItem="9nz-du-M02" firstAttribute="leading" secondItem="tdA-k9-iTA" secondAttribute="trailing" id="QVB-PP-ZDR"/>
                                         <constraint firstItem="9nz-du-M02" firstAttribute="centerY" secondItem="ERn-DZ-1Hd" secondAttribute="centerY" id="Qub-Uf-YZM"/>
-                                        <constraint firstItem="4EK-qZ-LdI" firstAttribute="leading" secondItem="ERn-DZ-1Hd" secondAttribute="leading" constant="20" id="UyA-8i-0da"/>
                                         <constraint firstItem="9nz-du-M02" firstAttribute="leading" secondItem="ERn-DZ-1Hd" secondAttribute="leading" constant="453" id="VWt-SH-sGO"/>
-                                        <constraint firstItem="9nz-du-M02" firstAttribute="leading" secondItem="4EK-qZ-LdI" secondAttribute="trailing" id="WQm-Ff-ba1"/>
-                                        <constraint firstItem="tdA-k9-iTA" firstAttribute="centerX" secondItem="ERn-DZ-1Hd" secondAttribute="centerX" id="w7t-57-K3o"/>
-                                        <constraint firstItem="tdA-k9-iTA" firstAttribute="leading" secondItem="ERn-DZ-1Hd" secondAttribute="leadingMargin" constant="12" id="x2K-MW-XDW"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Mwz-VN-DmC"/>
+                                            <exclude reference="VWt-SH-sGO"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
@@ -75,9 +60,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cityNameLabel" destination="4EK-qZ-LdI" id="ANo-0u-fiQ"/>
                         <outlet property="currentTempLabel" destination="9nz-du-M02" id="3kI-QC-TDS"/>
-                        <outlet property="summaryLabel" destination="tdA-k9-iTA" id="YOi-2J-hGG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPI-zH-JMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
