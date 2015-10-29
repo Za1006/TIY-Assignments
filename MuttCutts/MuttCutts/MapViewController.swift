@@ -34,8 +34,7 @@ class MapViewController: UIViewController, UIPopoverControllerDelegate
         func geocoder(location: String)
         {
             geocoder.geocodeAddressString(location, completionHandler:
-            {
-                (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
             
             if let placemark = placemarks?[0]
             {
@@ -61,7 +60,7 @@ class MapViewController: UIViewController, UIPopoverControllerDelegate
                 let destVC = segue.destinationViewController as!
                 destVC.popoverPresentationController?.delegate = self
                 destVC.delegate = self
-                destVC.preferredContentSize = CGSizeMake(220.0, 100)
+                destVC.preferredContentSize = CGSizeMake(220, 100)
             }
         }
         func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) ->  UIModalPresentationStyle
@@ -70,4 +69,5 @@ class MapViewController: UIViewController, UIPopoverControllerDelegate
         }
 
     }
+  }
 }

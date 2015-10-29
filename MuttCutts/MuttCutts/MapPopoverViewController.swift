@@ -17,7 +17,7 @@ class MapPopoverViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func SearchLocation(sender: UIButton)
     {
-        if FirstUITextField
+        
     }
     
     var delegate: MapPopoverViewControllerDelegate?
