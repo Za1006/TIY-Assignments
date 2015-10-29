@@ -10,22 +10,21 @@ import UIKit
 
 class ForecasterTableViewController: UITableViewController
 {
+    
 
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var currentTempLabel: UILabel!
     
     
-    
+    var cities = Array<String>()
     override func viewDidLoad()
     {
-        
+        super.viewDidLoad()
         
         title = "Cities"
-        super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
    
 
@@ -46,7 +45,7 @@ class ForecasterTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return cities.count
     }
 
     
@@ -54,9 +53,26 @@ class ForecasterTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath)
 
         // Configure the cell...
+        let aCity = cities[indexPath.row]
+        cell.textLabel?.text = aCity
+        cell.detailTextLabel?.text = aCity
+        
+
 
         return cell
     }
+    
+//    Pushing the detailView without a segue...
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+//    {
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        let selectedHero = heroes[indexPath.row]
+//        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
+//        detailVC.hero = selectedHero
+//        navigationController?.pushViewController(detailVC, animated: true)
+//        
+//    }
     
 
     /*

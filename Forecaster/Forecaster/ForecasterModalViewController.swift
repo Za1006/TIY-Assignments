@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ForecasterModalViewController: UIViewController
+class ForecasterModalViewController: UIViewController, UITextFieldDelegate 
 {
 
+    @IBOutlet weak var zipcodeTextField: UITextField!
+    
+    @IBAction func findCityButton(sender: UIButton)
+    {
+        
+    }
+    
     override func viewDidLoad()
     {
         
@@ -27,6 +34,10 @@ class ForecasterModalViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancelButton(sender: UIBarButtonItem)
+    {
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -37,5 +48,8 @@ class ForecasterModalViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
+//    MARK: - UITextField Delegate
+    
 
 }
