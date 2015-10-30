@@ -13,6 +13,8 @@
 		AA6618951BE279CF006C359A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6618931BE279CF006C359A /* LaunchScreen.storyboard */; };
 		AA66189D1BE27A79006C359A /* ForecasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */; };
 		AA66189F1BE2827B006C359A /* ForecasterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */; };
+		AAFFD16A1BE30B1E0091C0ED /* ForecasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFD1691BE30B1E0091C0ED /* ForecasterCell.swift */; };
+		AAFFD16C1BE30B810091C0ED /* Forecaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFD16B1BE30B810091C0ED /* Forecaster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AA6618961BE279CF006C359A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterTableViewController.swift; sourceTree = "<group>"; };
 		AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterModalViewController.swift; sourceTree = "<group>"; };
+		AAFFD1691BE30B1E0091C0ED /* ForecasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterCell.swift; sourceTree = "<group>"; };
+		AAFFD16B1BE30B810091C0ED /* Forecaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecaster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				AA66188A1BE279CF006C359A /* AppDelegate.swift */,
+				AAFFD1691BE30B1E0091C0ED /* ForecasterCell.swift */,
+				AAFFD16B1BE30B810091C0ED /* Forecaster.swift */,
 				AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */,
 				AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */,
 				AA66188E1BE279CF006C359A /* Main.storyboard */,
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAFFD16C1BE30B810091C0ED /* Forecaster.swift in Sources */,
 				AA66189F1BE2827B006C359A /* ForecasterModalViewController.swift in Sources */,
+				AAFFD16A1BE30B1E0091C0ED /* ForecasterCell.swift in Sources */,
 				AA66188B1BE279CF006C359A /* AppDelegate.swift in Sources */,
 				AA66189D1BE27A79006C359A /* ForecasterTableViewController.swift in Sources */,
 			);
@@ -291,6 +299,7 @@
 				AA66189B1BE279CF006C359A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

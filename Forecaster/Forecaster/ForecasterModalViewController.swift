@@ -13,7 +13,7 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
 
     @IBOutlet weak var zipcodeTextField: UITextField!
     
-    @IBAction func findCityButton(sender: UIButton)
+    @IBAction func 找城市Button(sender: UIButton)
     {
         
     }
@@ -21,7 +21,7 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
     override func viewDidLoad()
     {
         
-        title = "Add City"
+        title = "改變城市"
         
         super.viewDidLoad()
 
@@ -36,7 +36,10 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func cancelButton(sender: UIBarButtonItem)
     {
-        
+        if zipcodeTextField != nil
+        {
+            return
+        }
     }
 
     /*
@@ -50,6 +53,20 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
     */
     
 //    MARK: - UITextField Delegate
-    
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        var rc = false
+        if textField != ""
+        {
+            if textField == zipcodeTextField
+            {
+                zipcodeTextField.becomeFirstResponder()
+            }
+            else if textField != zipcodeTextField
+            {
+                rc = false
+            }
+        }
+        return rc
+  }
 }

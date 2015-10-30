@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G74-zY-35d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jWy-fS-Kwq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,20 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="861-HF-Xwu">
+                                <rect key="frame" x="267" y="130" width="66" height="30"/>
+                                <animations/>
+                                <state key="normal" title="找城市"/>
+                                <connections>
+                                    <action selector="findCityButton:" destination="pEr-XJ-8BF" eventType="touchUpInside" id="F18-Db-zdb"/>
+                                    <action selector="找城市Button:" destination="pEr-XJ-8BF" eventType="touchUpInside" id="GQ8-3J-4oG"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hal-2b-aWS">
                                 <rect key="frame" x="238" y="78" width="125" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="861-HF-Xwu">
-                                <rect key="frame" x="267" y="130" width="66" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Find City"/>
-                                <connections>
-                                    <action selector="findCityButton:" destination="pEr-XJ-8BF" eventType="touchUpInside" id="F18-Db-zdb"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,7 +52,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hwX-Q8-qTc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="N9N-Zo-nbX">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="N9N-Zo-nbX">
                             <connections>
                                 <action selector="cancelButton:" destination="pEr-XJ-8BF" id="9wL-pb-ahJ"/>
                             </connections>
@@ -62,45 +64,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTK-xg-jrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416" y="358"/>
+            <point key="canvasLocation" x="755" y="405"/>
         </scene>
         <!--Forecaster Table View Controller-->
-        <scene sceneID="sDd-qA-cgB">
+        <scene sceneID="v7x-JN-3tW">
             <objects>
-                <tableViewController id="gn5-HV-UCj" customClass="ForecasterTableViewController" customModule="Forecaster" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hqv-p7-3F3">
+                <tableViewController id="r8d-54-1OW" customClass="ForecasterTableViewController" customModule="Forecaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="k0p-PO-0rY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecasterCell" rowHeight="96" id="r6M-cA-sG7">
-                                <rect key="frame" x="0.0" y="92" width="600" height="96"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecasterCell" id="bu3-Kc-tJH">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r6M-cA-sG7" id="Ypi-gQ-8OW">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bu3-Kc-tJH" id="ELc-Jg-Zz3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sm-D4-GxL">
+                                            <rect key="frame" x="31" y="8" width="34" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前溫度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-qE-btA">
+                                            <rect key="frame" x="502" y="8" width="74" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="8" id="ERo-9g-p6w"/>
+                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="height" multiplier="1:1" id="J5e-nl-5xz"/>
+                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="31" id="PYk-D6-dzN"/>
+                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="width" id="XsX-uD-1A5"/>
+                                        <constraint firstItem="3RK-qE-btA" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="8" id="Y1o-NO-zZh"/>
+                                        <constraint firstAttribute="trailing" secondItem="3RK-qE-btA" secondAttribute="trailing" constant="24" id="fgS-IH-fUw"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Sm-D4-GxL" secondAttribute="trailing" constant="522" id="nLi-ku-Igd"/>
+                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="centerX" secondItem="ELc-Jg-Zz3" secondAttribute="centerX" id="wUr-AR-PNX"/>
+                                        <constraint firstItem="3RK-qE-btA" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="502" id="ygq-4G-B1t"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="gn5-HV-UCj" id="OoE-41-JhV"/>
-                            <outlet property="delegate" destination="gn5-HV-UCj" id="PoB-qP-TEM"/>
+                            <outlet property="dataSource" destination="r8d-54-1OW" id="nsz-d2-L3Z"/>
+                            <outlet property="delegate" destination="r8d-54-1OW" id="jd2-QA-mHJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9JV-Ox-XFO">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="boL-cK-Xjm">
+                    <navigationItem key="navigationItem" id="iPH-gE-5gz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vgr-TQ-6cX">
                             <connections>
-                                <segue destination="shw-bO-jCR" kind="show" identifier="AddCityCell" id="x8r-yw-qxk"/>
+                                <segue destination="shw-bO-jCR" kind="show" id="tbr-Vf-0H1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cityLabel" destination="6Sm-D4-GxL" id="k1y-PH-eKl"/>
+                        <outlet property="currentTempLabel" destination="3RK-qE-btA" id="bCb-Dl-vPd"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yp7-D4-V0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMV-yh-AIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85" y="353"/>
+            <point key="canvasLocation" x="45" y="405"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="01T-H0-TaC">
@@ -119,26 +152,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JX3-v9-sZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="358"/>
+            <point key="canvasLocation" x="45" y="1050"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Fmv-2R-gKq">
+        <scene sceneID="D6J-25-DzM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G74-zY-35d" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jWy-fS-Kwq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lKi-ks-fKQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uaq-jS-Z0K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="gn5-HV-UCj" kind="relationship" relationship="rootViewController" id="1cW-9x-win"/>
+                        <segue destination="r8d-54-1OW" kind="relationship" relationship="rootViewController" id="egv-Bf-vvR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HfZ-9f-GdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNe-pk-wr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-641" y="353"/>
+            <point key="canvasLocation" x="-620" y="405"/>
         </scene>
     </scenes>
 </document>
