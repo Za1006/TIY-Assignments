@@ -11,19 +11,15 @@ import UIKit
 class ForecasterTableViewController: UITableViewController
 {
     
-
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var summaryLabel: UILabel!
-    @IBOutlet weak var currentTempLabel: UILabel!
     
     
-    var cities = Array<String>()
+    var weather = Array<Weather>()
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        title = "Cities"
-
+        title = "城市"
+        loadWeather()
 
     }
    
@@ -39,13 +35,13 @@ class ForecasterTableViewController: UITableViewController
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return cities.count
+        return weather.count
     }
 
     
@@ -53,9 +49,10 @@ class ForecasterTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath)
 
         // Configure the cell...
-        let aCity = cities[indexPath.row]
-        cell.textLabel?.text = aCity
-        cell.detailTextLabel?.text = aCity
+        let aWeather = weather[indexPath.row]
+        cell.cityLabel.text = aWeather.city
+        cell.summaryLabel.text = aWeather.lat
+        cell.currentTempLabel.text = weather.lng
         
 
 
@@ -119,5 +116,13 @@ class ForecasterTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
+    func loadWeather()
+    {
+//         do
+//         {
+//            let filePath = NSBundle.mainBundle().pathForResource(weathers, ofType: <#T##String?#>)
+//        }
+    }
+    
 
 }
