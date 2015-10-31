@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -65,6 +66,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTK-xg-jrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755" y="405"/>
+        </scene>
+        <!--Forecast Detail View-->
+        <scene sceneID="DL4-Ei-lWB">
+            <objects>
+                <viewController id="f6Z-xU-JWh" customClass="ForecastDetailView" customModule="Forecaster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fde-C2-OW0"/>
+                        <viewControllerLayoutGuide type="bottom" id="lM4-sk-8Zq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7XB-CR-P0o">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cv7-ol-VEM">
+                                <rect key="frame" x="0.0" y="329" width="600" height="226"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="226" id="MIf-0e-b6M"/>
+                                    <constraint firstAttribute="width" constant="600" id="hY5-rb-Yzl"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cv7-ol-VEM" firstAttribute="width" secondItem="7XB-CR-P0o" secondAttribute="width" id="2gL-Wh-xZT"/>
+                            <constraint firstItem="cv7-ol-VEM" firstAttribute="width" secondItem="7XB-CR-P0o" secondAttribute="height" multiplier="1:1" id="8uw-Xv-77x"/>
+                            <constraint firstItem="cv7-ol-VEM" firstAttribute="top" secondItem="7XB-CR-P0o" secondAttribute="topMargin" constant="329" id="9IF-Cy-1pw"/>
+                            <constraint firstItem="cv7-ol-VEM" firstAttribute="centerY" secondItem="7XB-CR-P0o" secondAttribute="centerYWithinMargins" constant="18" id="Hpu-kU-CKo"/>
+                            <constraint firstItem="cv7-ol-VEM" firstAttribute="top" secondItem="7XB-CR-P0o" secondAttribute="topMargin" constant="329" id="Kso-9T-swU"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cv7-ol-VEM" secondAttribute="bottom" constant="45" id="k0c-CD-99M"/>
+                            <constraint firstItem="cv7-ol-VEM" firstAttribute="centerX" secondItem="7XB-CR-P0o" secondAttribute="centerX" id="wku-EZ-CFS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9IF-Cy-1pw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w39-R9-osl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="1117"/>
         </scene>
         <!--Forecaster Table View Controller-->
         <scene sceneID="v7x-JN-3tW">

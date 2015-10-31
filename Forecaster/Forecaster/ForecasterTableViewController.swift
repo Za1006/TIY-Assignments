@@ -14,7 +14,7 @@ class ForecasterTableViewController: UITableViewController
    
     var 城市 = ""
     var 目前的溫度 = ""
-    var weathers = Array<Weather>()
+    var forecast = Array<Forecast>()
     
     override func viewDidLoad()
     {
@@ -43,7 +43,7 @@ class ForecasterTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return weathers.count
+        return forecast.count
     
     }
 
@@ -52,18 +52,23 @@ class ForecasterTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath) as! ForecasterCell
 
         // Configure the cell...
-        let aWeather = weathers[indexPath.row]
-        if aWeather.城市 == ""
+        let aForecast = forecast[indexPath.row]
+        if aForecast.城市 == ""
         {
-            weathers.removeAtIndex(indexPath.row)
+            forecast.removeAtIndex(indexPath.row)
             tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
-        else if aWeather.城市 != ""
-        {
-//            cell.城市Label.text = aWeather.城市 + "," + aWeather.state
-//            cell.目前的溫度Label = String(aWeather? .summary
+//        else if aForecast.城市 != ""
+//        {
+//            cell.城市Label.text = aForecast.城市 + "," + aForecast.state
+//            cell.目前的溫度Label = String(aForecast? .summary
+//            if aForecast.weather?.temp != nil
+//            {
+//                cell.
+//            }
 //            
+////
         }
 //        cell.textLabel?.text = aWeather.城市
 //        cell.detailTextLabel?.text = aWeather.目前的溫度
@@ -80,16 +85,16 @@ class ForecasterTableViewController: UITableViewController
     }
     
    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-//    {
-//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-//        let selectedHero = heroes[indexPath.row]
-//        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
-//        detailVC.hero = selectedHero
-//        navigationController?.pushViewController(detailVC, animated: true)
-//        
-//    }
-//    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let selectLocatioin = weather[indexPath.row]
+        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("ForecastDetailViewController") as! ForecastDetailViewController
+        detailVC.aWeather = selectedLocation
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -135,13 +140,6 @@ class ForecasterTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
-    func loadWeather()
-    {
-//         do
-//         {
-//            let filePath = NSBundle.mainBundle().pathForResource(weathers, ofType: <#T##String?#>)
-//        }
-    }
-    
 
-}
+
+

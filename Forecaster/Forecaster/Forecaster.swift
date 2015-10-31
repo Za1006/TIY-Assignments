@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Weather
+class Forecast
 {
     let summary: String
     let temp: Double
@@ -49,8 +49,20 @@ class Weather
     //        self.image = image
 }
 
-static func weatherWithJSON(currently: NSDictionary) -> Weather
+func forecastWithJSON(currently: NSDictionary) -> Forecast
 {
-    var weather = Weather?()
-}
+    var forecast = Forecast?()
+    
+    let summary = currently["summary"] as! String
+    let image = currently["image"] as! String
+    let precipProbability = currently["precipProbability"] as! Double
+    let temp = currently["temperture"] as! Double
+    let apparentTemp = currently["apparentTemp"] as! Double
+    let humidity = currently["humidity"] as! Double
+    let moonphase = currently["moonphase"] as! Double
+    
+    forecast = Forecast(summary: summary, temp: temp, apparentTemp: apparentTemp, humidity: humidity, precipProbability: precipProbability, moonphase: moonphase, image: image)
+    
+    return forecast!
+    
 }
