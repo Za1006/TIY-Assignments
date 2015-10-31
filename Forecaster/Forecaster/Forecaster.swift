@@ -10,14 +10,14 @@ import Foundation
 
 struct Weather
 {
-    let city: String
-    let lat: String
+    let 城市: String
+    let 目前的溫度: String
     let lng: String
     
-    init(city: String, lat: String, lng: String)
+    init(城市: String, 目前的溫度: String, lng: String)
     {
-        self.city = city
-        self.lat = lat
+        self.城市 = 城市
+        self.目前的溫度 = 目前的溫度
         self.lng = lng
     }
     
@@ -28,15 +28,15 @@ struct Weather
 //        {
 //            for result in results
 //            {
-//                var city = result["formatted_address"] as? String
-//                if city == nil
+//                var 城市 = result["formatted_address"] as? String
+//                if 城市 == nil
 //                {
 //                    city = results("" , "") as? String
 //                }
-//                var lat = result["location"] as? String
-//                if lat == nil
+//                var 目前的溫度 = result["location"] as? String
+//                if 目前的溫度 == nil
 //                {
-//                    lat = results
+//                    目前的溫度 = results
 //                }
 //            }
 //        }

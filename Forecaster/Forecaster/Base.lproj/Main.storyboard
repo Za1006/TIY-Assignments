@@ -76,42 +76,84 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecasterCell" id="bu3-Kc-tJH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecasterCell" id="bu3-Kc-tJH" customClass="ForecasterCell" customModule="Forecaster" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bu3-Kc-tJH" id="ELc-Jg-Zz3">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sm-D4-GxL">
-                                            <rect key="frame" x="31" y="8" width="34" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前溫度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qem-dv-T9B">
+                                            <rect key="frame" x="510" y="8" width="82" height="25"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前溫度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-qE-btA">
-                                            <rect key="frame" x="502" y="8" width="74" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-gB-8GU">
+                                            <rect key="frame" x="8" y="7" width="82" height="29"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="FBw-PS-tB8"/>
+                                                <constraint firstAttribute="width" constant="50" id="Gtz-gu-Yc7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="FBw-PS-tB8"/>
+                                                    <exclude reference="Gtz-gu-Yc7"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="8" id="ERo-9g-p6w"/>
-                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="height" multiplier="1:1" id="J5e-nl-5xz"/>
-                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="31" id="PYk-D6-dzN"/>
-                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="width" id="XsX-uD-1A5"/>
-                                        <constraint firstItem="3RK-qE-btA" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="8" id="Y1o-NO-zZh"/>
-                                        <constraint firstAttribute="trailing" secondItem="3RK-qE-btA" secondAttribute="trailing" constant="24" id="fgS-IH-fUw"/>
-                                        <constraint firstAttribute="trailing" secondItem="6Sm-D4-GxL" secondAttribute="trailing" constant="522" id="nLi-ku-Igd"/>
-                                        <constraint firstItem="6Sm-D4-GxL" firstAttribute="centerX" secondItem="ELc-Jg-Zz3" secondAttribute="centerX" id="wUr-AR-PNX"/>
-                                        <constraint firstItem="3RK-qE-btA" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="502" id="ygq-4G-B1t"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qem-dv-T9B" secondAttribute="trailing" constant="8" id="3GM-3B-mt7"/>
+                                        <constraint firstItem="Qem-dv-T9B" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="8" id="68y-mI-D8e"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="9pT-gB-8GU" secondAttribute="trailing" constant="50" id="6RA-iN-1ux"/>
+                                        <constraint firstAttribute="trailing" secondItem="9pT-gB-8GU" secondAttribute="trailing" constant="50" id="79K-jU-W0u"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="height" multiplier="1:1" id="7Uc-bp-ehX"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="centerX" secondItem="ELc-Jg-Zz3" secondAttribute="centerX" id="7gD-xi-D0q"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="topMargin" constant="-1" id="8rz-hd-PCM"/>
+                                        <constraint firstAttribute="trailing" secondItem="9pT-gB-8GU" secondAttribute="trailing" constant="542" id="EsS-UK-2UP"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="height" multiplier="1:1" id="FqT-eZ-QKU"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="top" secondItem="Qem-dv-T9B" secondAttribute="bottom" constant="-15" id="GQ9-U8-bmS"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="width" id="Hp4-wv-B41"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="centerX" secondItem="ELc-Jg-Zz3" secondAttribute="centerX" id="Pq9-HR-fZl"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="8" id="XVt-bC-YvJ"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="height" multiplier="1:1" id="YOa-Oz-bWY"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="8" id="YuE-XC-tiK"/>
+                                        <constraint firstItem="Qem-dv-T9B" firstAttribute="leading" secondItem="ELc-Jg-Zz3" secondAttribute="leading" constant="509" id="a14-M1-eCB"/>
+                                        <constraint firstAttribute="bottom" secondItem="9pT-gB-8GU" secondAttribute="bottom" constant="14" id="cQW-F4-YFQ"/>
+                                        <constraint firstItem="Qem-dv-T9B" firstAttribute="centerX" secondItem="ELc-Jg-Zz3" secondAttribute="centerX" id="cTq-CY-iSA"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="9" id="eSX-kn-fb7"/>
+                                        <constraint firstItem="Qem-dv-T9B" firstAttribute="width" secondItem="ELc-Jg-Zz3" secondAttribute="height" multiplier="1:1" id="etx-tQ-qCM"/>
+                                        <constraint firstAttribute="bottom" secondItem="Qem-dv-T9B" secondAttribute="bottom" constant="50" id="k2r-2a-apf"/>
+                                        <constraint firstItem="9pT-gB-8GU" firstAttribute="top" secondItem="ELc-Jg-Zz3" secondAttribute="top" constant="8" id="t4H-J6-Yvp"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="79K-jU-W0u"/>
+                                            <exclude reference="7Uc-bp-ehX"/>
+                                            <exclude reference="EsS-UK-2UP"/>
+                                            <exclude reference="FqT-eZ-QKU"/>
+                                            <exclude reference="GQ9-U8-bmS"/>
+                                            <exclude reference="Pq9-HR-fZl"/>
+                                            <exclude reference="YuE-XC-tiK"/>
+                                            <exclude reference="cQW-F4-YFQ"/>
+                                            <exclude reference="eSX-kn-fb7"/>
+                                            <exclude reference="t4H-J6-Yvp"/>
+                                            <exclude reference="cTq-CY-iSA"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="城市Label" destination="9pT-gB-8GU" id="k44-pX-MO4"/>
+                                    <outlet property="目前的溫度Label" destination="Qem-dv-T9B" id="9zz-Im-sGE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -126,10 +168,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="cityLabel" destination="6Sm-D4-GxL" id="k1y-PH-eKl"/>
-                        <outlet property="currentTempLabel" destination="3RK-qE-btA" id="bCb-Dl-vPd"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMV-yh-AIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

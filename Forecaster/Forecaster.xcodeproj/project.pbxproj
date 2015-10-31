@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA327C9A1BE4370800E7B9B4 /* ForecasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA327C991BE4370800E7B9B4 /* ForecasterCell.swift */; };
 		AA66188B1BE279CF006C359A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66188A1BE279CF006C359A /* AppDelegate.swift */; };
 		AA6618901BE279CF006C359A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA66188E1BE279CF006C359A /* Main.storyboard */; };
 		AA6618921BE279CF006C359A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA6618911BE279CF006C359A /* Assets.xcassets */; };
 		AA6618951BE279CF006C359A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6618931BE279CF006C359A /* LaunchScreen.storyboard */; };
 		AA66189D1BE27A79006C359A /* ForecasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */; };
 		AA66189F1BE2827B006C359A /* ForecasterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */; };
-		AAFFD16A1BE30B1E0091C0ED /* ForecasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFD1691BE30B1E0091C0ED /* ForecasterCell.swift */; };
 		AAFFD16C1BE30B810091C0ED /* Forecaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFD16B1BE30B810091C0ED /* Forecaster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA327C991BE4370800E7B9B4 /* ForecasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterCell.swift; sourceTree = "<group>"; };
 		AA6618871BE279CE006C359A /* Forecaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA66188A1BE279CF006C359A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA66188F1BE279CF006C359A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		AA6618961BE279CF006C359A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterTableViewController.swift; sourceTree = "<group>"; };
 		AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterModalViewController.swift; sourceTree = "<group>"; };
-		AAFFD1691BE30B1E0091C0ED /* ForecasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasterCell.swift; sourceTree = "<group>"; };
 		AAFFD16B1BE30B810091C0ED /* Forecaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecaster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				AA66188A1BE279CF006C359A /* AppDelegate.swift */,
-				AAFFD1691BE30B1E0091C0ED /* ForecasterCell.swift */,
 				AAFFD16B1BE30B810091C0ED /* Forecaster.swift */,
+				AA327C991BE4370800E7B9B4 /* ForecasterCell.swift */,
 				AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */,
 				AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */,
 				AA66188E1BE279CF006C359A /* Main.storyboard */,
@@ -147,7 +147,7 @@
 			files = (
 				AAFFD16C1BE30B810091C0ED /* Forecaster.swift in Sources */,
 				AA66189F1BE2827B006C359A /* ForecasterModalViewController.swift in Sources */,
-				AAFFD16A1BE30B1E0091C0ED /* ForecasterCell.swift in Sources */,
+				AA327C9A1BE4370800E7B9B4 /* ForecasterCell.swift in Sources */,
 				AA66188B1BE279CF006C359A /* AppDelegate.swift in Sources */,
 				AA66189D1BE27A79006C359A /* ForecasterTableViewController.swift in Sources */,
 			);

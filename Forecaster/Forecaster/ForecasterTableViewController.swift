@@ -11,14 +11,16 @@ import UIKit
 class ForecasterTableViewController: UITableViewController
 {
     
+   
+    var 城市 = ""
+    var 目前的溫度 = ""
+    var weathers = Array<Weather>()
     
-    
-    var weather = Array<Weather>()
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        title = "城市"
+        title = "天氣"
         loadWeather()
 
     }
@@ -41,7 +43,8 @@ class ForecasterTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return weather.count
+        return weathers.count
+    
     }
 
     
@@ -49,18 +52,14 @@ class ForecasterTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath)
 
         // Configure the cell...
-        let aWeather = weather[indexPath.row]
-        cell.cityLabel.text = aWeather.city
-        cell.summaryLabel.text = aWeather.lat
-        cell.currentTempLabel.text = weather.lng
-        
-
+        let aWeather = weathers[indexPath.row]
+        cell.textLabel?.text = aWeather.城市
+        cell.detailTextLabel?.text = aWeather.目前的溫度
 
         return cell
     }
     
-//    Pushing the detailView without a segue...
-    
+   
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
 //    {
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -70,7 +69,7 @@ class ForecasterTableViewController: UITableViewController
 //        navigationController?.pushViewController(detailVC, animated: true)
 //        
 //    }
-    
+//    
 
     /*
     // Override to support conditional editing of the table view.
