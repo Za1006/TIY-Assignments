@@ -49,13 +49,33 @@ class ForecasterTableViewController: UITableViewController
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath) as! ForecasterCell
 
         // Configure the cell...
         let aWeather = weathers[indexPath.row]
-        cell.textLabel?.text = aWeather.城市
-        cell.detailTextLabel?.text = aWeather.目前的溫度
-
+        if aWeather.城市 == ""
+        {
+            weathers.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
+        else if aWeather.城市 != ""
+        {
+//            cell.城市Label.text = aWeather.城市 + "," + aWeather.state
+//            cell.目前的溫度Label = String(aWeather? .summary
+//            
+        }
+//        cell.textLabel?.text = aWeather.城市
+//        cell.detailTextLabel?.text = aWeather.目前的溫度
+        
+//        if indexPath.row % 2 == 0
+//        {
+//            cell.backgroundColor = UIColor.grayColor()
+//        }
+//        else
+//        {
+//            cell.backgroundColor = UIColor.whiteColor()
+//        }
         return cell
     }
     

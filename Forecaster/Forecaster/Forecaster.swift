@@ -8,37 +8,49 @@
 
 import Foundation
 
-struct Weather
+
+class Weather
 {
-    let 城市: String
-    let 目前的溫度: String
-    let lng: String
+    let summary: String
+    let temp: Double
+    let apparentTemp: Double
+    let humidity: Double
+    let precipProbability: Double
+    let moonphase: Double
+    var image: String
     
-    init(城市: String, 目前的溫度: String, lng: String)
+    init(summary: String, temp: Double, apparentTemp: Double, humidity: Double, precipProbability: Double, moonphase: Double, image: String)
     {
-        self.城市 = 城市
-        self.目前的溫度 = 目前的溫度
-        self.lng = lng
+        self.summary = summary
+        self.temp = temp
+        self.apparentTemp = apparentTemp
+        self.humidity = humidity
+        self.precipProbability = precipProbability
+        self.moonphase = moonphase
+        self.image = image
     }
-    
-//    static func weatherInfoWithJSON(result: NSArray) -> [Weather]
-//    {
-//        var weathers = [Weather]()
-//        if result.count > 0
-//        {
-//            for result in results
-//            {
-//                var 城市 = result["formatted_address"] as? String
-//                if 城市 == nil
-//                {
-//                    city = results("" , "") as? String
-//                }
-//                var 目前的溫度 = result["location"] as? String
-//                if 目前的溫度 == nil
-//                {
-//                    目前的溫度 = results
-//                }
-//            }
-//        }
-//    }
+    //    let 摘要 : String
+    //    let 氣溫: Double
+    //    let 室外溫度: Double
+    //    let 濕氣: Double
+    //    let 月相: Double
+    //    let 有雨可能性: Double
+    //    var image: String
+    //
+    //
+    //    init (摘要: String, 氣溫: Double, 室外溫度: Double, 濕氣: Double, 月相: Double, 有雨可能性: Double, image: String)
+    //    {
+    //        self.摘要 = 摘要
+    //        self.氣溫 = 氣溫
+    //        self.室外溫度 = 室外溫度
+    //        self.濕氣 = 濕氣
+    //        self.月相 = 月相
+    //        self.有雨可能性 = 有雨可能性
+    //        self.image = image
+}
+
+static func weatherWithJSON(currently: NSDictionary) -> Weather
+{
+    var weather = Weather?()
+}
 }
