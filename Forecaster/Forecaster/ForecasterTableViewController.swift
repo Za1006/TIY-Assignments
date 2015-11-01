@@ -8,20 +8,25 @@
 
 import UIKit
 
+protocol ForecasterModalViewControllerDelegate
+{
+    func zipcodeWasChosen(zip: String)
+}
+
 class ForecasterTableViewController: UITableViewController
 {
     
-   
-    var 城市 = ""
-    var 目前的溫度 = ""
-    var forecast = Array<Forecast>()
+//   
+//    var 城市 = ""
+//    var 目前的溫度 = ""
+    
+    var cities = [City]()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         title = "天氣"
-        loadWeather()
 
     }
    
@@ -43,7 +48,7 @@ class ForecasterTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         // #warning Incomplete implementation, return the number of rows
-        return forecast.count
+        return cities.count
     
     }
 
@@ -52,48 +57,42 @@ class ForecasterTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecasterCell", forIndexPath: indexPath) as! ForecasterCell
 
         // Configure the cell...
-        let aForecast = forecast[indexPath.row]
-        if aForecast.城市 == ""
-        {
-            forecast.removeAtIndex(indexPath.row)
-            tableView.reloadData()
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        }
-//        else if aForecast.城市 != ""
-//        {
-//            cell.城市Label.text = aForecast.城市 + "," + aForecast.state
-//            cell.目前的溫度Label = String(aForecast? .summary
-//            if aForecast.weather?.temp != nil
-//            {
-//                cell.
-//            }
-//            
-////
-        }
-//        cell.textLabel?.text = aWeather.城市
-//        cell.detailTextLabel?.text = aWeather.目前的溫度
+        let aCity = cities[indexPath.row]
+        cell.城市Label.text = aCity.cityName
+        cell.目前的溫度Label.text = "--°F"
+        cell.摘要Label.text = ""
         
-//        if indexPath.row % 2 == 0
-//        {
-//            cell.backgroundColor = UIColor.grayColor()
-//        }
-//        else
-//        {
-//            cell.backgroundColor = UIColor.whiteColor()
-//        }
+        if aCity.currentWeather != nil
+        {
+            cell.目前的溫度Label.text = String(Int(aCity.currentWeather!.temp)) + "°F"
+            cell.摘要Label.text = String(aCity.currentWeather!.summary)
+            
+        }
+            
+        
+        
+        if indexPath.row % 2 == 0
+        {
+            cell.backgroundColor = UIColor.grayColor()
+        }
+        else
+        {
+            cell.backgroundColor = UIColor.whiteColor()
+        }
         return cell
     }
+
     
-   
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+  
+ override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let selectLocatioin = weather[indexPath.row]
+        let selectLocatioin = cities[indexPath.row]
         let detailVC = storyboard?.instantiateViewControllerWithIdentifier("ForecastDetailViewController") as! ForecastDetailViewController
-        detailVC.aWeather = selectedLocation
+        detailVC.city = selectedLocation
         navigationController?.pushViewController(detailVC, animated: true)
         
-    }
+    
     
 
     /*
@@ -142,4 +141,5 @@ class ForecasterTableViewController: UITableViewController
     */
 
 
-
+}
+}

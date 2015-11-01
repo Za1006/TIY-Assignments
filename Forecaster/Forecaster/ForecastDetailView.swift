@@ -7,10 +7,30 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class ForecastDetailView: UIViewController
 {
-
+    
+    var forcast = Forecast!()
+    
+    @IBOutlet weak var image: UIImageView!
+    
+    @IBOutlet weak var precipProLabel: UILabel!
+    
+   
+    @IBOutlet weak var apparentTempLabel: UILabel!
+    
+    @IBOutlet weak var tempLabel: UILabel!
+    
+    @IBOutlet weak var humidityLabel: UILabel!
+    
+    
+    @IBOutlet weak var moonPhaseLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

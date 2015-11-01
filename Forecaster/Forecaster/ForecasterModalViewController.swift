@@ -10,22 +10,43 @@ import UIKit
 
 class ForecasterModalViewController: UIViewController, UITextFieldDelegate 
 {
-
+    var delegate: ForecasterModalViewControllerDelegate?
+    
     @IBOutlet weak var zipcodeTextField: UITextField!
     
     @IBAction func 找城市Button(sender: UIButton)
     {
-        
+        if zipcode(zipcodeTextField.text!)
+        {
+            search(Int(zipcodeTextField.text!)!)
+        }
     }
-    
+    func zipcode(zip: String) -> Bool
+    {
+        var rc = false
+        if zip.characters.count == 5 && Int(zip) != nil
+        {
+            rc = true
+        }
+        else
+        {
+            zipcodeTextField.text = ""
+            zipcodeTextField.placeholder = "Zip Code Here"
+        }
+        return rc 
+    }
     override func viewDidLoad()
     {
         
         title = "改變城市"
         
         super.viewDidLoad()
+//        
+//        if zipcodeTextField.text! == ""
+//        {
+//            zipcodeTextField.becomeFirstResponder()
+//        }
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning()
@@ -41,32 +62,29 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
             return
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+// MARK: - UITextField Delegate:
     
-//    MARK: - UITextField Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         var rc = false
-        if textField != ""
+        if zipcode(textField.text!)
         {
-            if textField == zipcodeTextField
-            {
-                zipcodeTextField.becomeFirstResponder()
-            }
-            else if textField != zipcodeTextField
-            {
-                rc = false
-            }
+            search(Int(textField.text!)!)
+            rc = true
         }
         return rc
-  }
+    }
+    
+    func search(zip: Int)
+{
+    let zipCode = String(zip)
+    delegate?.zipcodeWasChosen(zipCode)
 }
+// MARK: - Navigation
+
+
+    
+}
+
+
+

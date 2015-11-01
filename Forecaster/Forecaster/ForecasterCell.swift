@@ -14,6 +14,7 @@ class ForecasterCell: UITableViewCell
     @IBOutlet weak var 城市Label: UILabel!
     @IBOutlet weak var 目前的溫度Label: UILabel!
     
+    @IBOutlet weak var 摘要Label: UILabel!
     override func awakeFromNib()
     {
         super.awakeFromNib()
