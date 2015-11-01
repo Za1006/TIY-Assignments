@@ -57,10 +57,7 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func cancelButton(sender: UIBarButtonItem)
     {
-        if zipcodeTextField != nil
-        {
-            return
-        }
+        dismissViewControllerAnimated(true, completion: nil)
     }
 // MARK: - UITextField Delegate:
     

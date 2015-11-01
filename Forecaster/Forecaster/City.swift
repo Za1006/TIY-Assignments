@@ -18,14 +18,14 @@ struct City
     {
         self.cityName = cityName
         self.location = location
-        
-        if forecast != nil
-        {
-            self.currentWeather = forecast!
-        }
-        else
-        {
-            self.currentWeather = nil
-        }
+//        
+//        if forecast != nil
+//        {
+//            self.currentWeather = forecast!
+//        }
+//        else
+//        {
+//            self.currentWeather = nil
+//        }
     }
 }

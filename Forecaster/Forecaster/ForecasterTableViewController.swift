@@ -14,6 +14,7 @@ protocol ForecasterModalViewControllerDelegate
 }
 
 class ForecasterTableViewController: UITableViewController
+    
 {
     
 //   
@@ -84,14 +85,14 @@ class ForecasterTableViewController: UITableViewController
 
     
   
- override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let selectLocatioin = cities[indexPath.row]
-        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("ForecastDetailViewController") as! ForecastDetailViewController
-        detailVC.city = selectedLocation
-        navigationController?.pushViewController(detailVC, animated: true)
-        
+// override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+//    {
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        let selectLocatioin = cities[indexPath.row]
+//        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("ForecastDetailViewController") as! ForecastDetailViewController
+//        detailVC.city = selectedLocation
+//        navigationController?.pushViewController(detailVC, animated: true)
+//        
     
     
 
@@ -130,16 +131,8 @@ class ForecasterTableViewController: UITableViewController
     }
     */
 
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
-}
+    
+    
 }
