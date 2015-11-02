@@ -42,23 +42,25 @@ class ForecasterModalViewController: UIViewController, UITextFieldDelegate
         
         super.viewDidLoad()
 //        
-//        if zipcodeTextField.text! == ""
-//        {
-//            zipcodeTextField.becomeFirstResponder()
-//        }
+        if zipcodeTextField.text! == ""
+        {
+            zipcodeTextField.becomeFirstResponder()
+        }
 
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func cancelButton(sender: UIBarButtonItem)
     {
         dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    
 // MARK: - UITextField Delegate:
     
     func textFieldShouldReturn(textField: UITextField) -> Bool

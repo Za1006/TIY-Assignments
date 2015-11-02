@@ -13,7 +13,12 @@ protocol ForecasterModalViewControllerDelegate
     func zipcodeWasChosen(zip: String)
 }
 
-class ForecasterTableViewController: UITableViewController
+protocol NeworkAPIControllerProtocol
+{
+//    func networkSearch(results: NSDictionary, location: Location)
+}
+
+class ForecasterTableViewController: UITableViewController, NeworkAPIControllerProtocol
     
 {
     
@@ -63,10 +68,10 @@ class ForecasterTableViewController: UITableViewController
         cell.目前的溫度Label.text = "--°F"
         cell.摘要Label.text = ""
         
-        if aCity.currentWeather != nil
+        if aCity.weather != nil
         {
-            cell.目前的溫度Label.text = String(Int(aCity.currentWeather!.temp)) + "°F"
-            cell.摘要Label.text = String(aCity.currentWeather!.summary)
+            cell.目前的溫度Label.text = String(Int(aCity.weather!.temp)) + "°F"
+            cell.摘要Label.text = String(aCity.weather!.summary)
             
         }
             
@@ -133,6 +138,17 @@ class ForecasterTableViewController: UITableViewController
 
     
     // MARK: - Navigation
-    
+//    func networkSearch(results: NSDictionary, location: Location)
+//    {
+//        dispatch_async(dispatch_get_main_queue(),
+//            {
+//                let forecast = Forecast.forecastWithJSON(results)
+//                
+//                for city in self.aCity
+//                {
+//                    
+//                }
+//        }
+//    }
     
 }

@@ -24,6 +24,7 @@
 		AAF1E15A1BE52732003A4937 /* sunnyThunderStorm.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF1E1521BE52732003A4937 /* sunnyThunderStorm.png */; };
 		AAF1E15B1BE52732003A4937 /* nightlyRainStorm.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF1E1531BE52732003A4937 /* nightlyRainStorm.png */; };
 		AAF1E15E1BE67A6B003A4937 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF1E15D1BE67A6B003A4937 /* City.swift */; };
+		AAF1E1601BE6AC5F003A4937 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF1E15F1BE6AC5F003A4937 /* APIController.swift */; };
 		AAFFD16C1BE30B810091C0ED /* Forecaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFD16B1BE30B810091C0ED /* Forecaster.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		AAF1E1521BE52732003A4937 /* sunnyThunderStorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunnyThunderStorm.png; sourceTree = "<group>"; };
 		AAF1E1531BE52732003A4937 /* nightlyRainStorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightlyRainStorm.png; sourceTree = "<group>"; };
 		AAF1E15D1BE67A6B003A4937 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		AAF1E15F1BE6AC5F003A4937 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		AAFFD16B1BE30B810091C0ED /* Forecaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecaster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				AAFFD16B1BE30B810091C0ED /* Forecaster.swift */,
 				AAF1E15D1BE67A6B003A4937 /* City.swift */,
 				AA327C991BE4370800E7B9B4 /* ForecasterCell.swift */,
+				AAF1E15F1BE6AC5F003A4937 /* APIController.swift */,
 				AA66189C1BE27A79006C359A /* ForecasterTableViewController.swift */,
 				AA66189E1BE2827B006C359A /* ForecasterModalViewController.swift */,
 				AA327C9F1BE513EA00E7B9B4 /* ForecastDetailViewController.swift */,
@@ -195,6 +198,7 @@
 				AA66189F1BE2827B006C359A /* ForecasterModalViewController.swift in Sources */,
 				AA327CA01BE513EA00E7B9B4 /* ForecastDetailViewController.swift in Sources */,
 				AA327C9A1BE4370800E7B9B4 /* ForecasterCell.swift in Sources */,
+				AAF1E1601BE6AC5F003A4937 /* APIController.swift in Sources */,
 				AA66188B1BE279CF006C359A /* AppDelegate.swift in Sources */,
 				AA66189D1BE27A79006C359A /* ForecasterTableViewController.swift in Sources */,
 				AAF1E15E1BE67A6B003A4937 /* City.swift in Sources */,

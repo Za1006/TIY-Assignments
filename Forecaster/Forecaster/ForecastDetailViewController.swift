@@ -49,9 +49,10 @@ class ForecastDetailViewController: UIViewController
         
     }
     
-//    override func performSegueWithIdentifier(identifier: String, sender: AnyObject?)
-//    {
-//        self.storyboard?.instantiateViewControllerWithIdentifier("ForecastDetail")
-//        self.navigationController?.pushViewController(ForecasterTableViewController, animated: true)
-//    }
+    override func performSegueWithIdentifier(identifier: String, sender: AnyObject?)
+    {
+            let ForecastDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("ForecastDetail")as! ForecastDetailViewController
+        
+        self.navigationController?.pushViewController(ForecastDetailVC, animated: true)
+    }
 }
