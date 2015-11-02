@@ -278,6 +278,7 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <color key="backgroundColor" red="0.86603397650000002" green="0.90084941279999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="SummaryLabel" destination="nEz-w5-NmW" id="v75-Lo-btU"/>
                                     <outlet property="城市Label" destination="9pT-gB-8GU" id="k44-pX-MO4"/>
