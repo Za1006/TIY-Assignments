@@ -75,6 +75,24 @@ NSInteger *currentSpeedTime;
        }
 }
 
+//- (void) destinationDateWasChosen:(dateChosen: NSDateFormatter *)
+
+- (void)startTimerCount
+{
+    
+}
+
+- (void)stopTimerCount
+{
+    
+}
+
+- (void)updatedSpeed
+{
+    
+}
+
+
 
 
 
