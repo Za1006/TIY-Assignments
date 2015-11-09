@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		AAF03D0E1BF10DEC00A45586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D0D1BF10DEC00A45586 /* main.m */; };
 		AAF03D111BF10DEC00A45586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D101BF10DEC00A45586 /* AppDelegate.m */; };
-		AAF03D141BF10DEC00A45586 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D131BF10DEC00A45586 /* ViewController.m */; };
 		AAF03D171BF10DEC00A45586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D151BF10DEC00A45586 /* Main.storyboard */; };
 		AAF03D191BF10DEC00A45586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D181BF10DEC00A45586 /* Assets.xcassets */; };
 		AAF03D1C1BF10DEC00A45586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D1A1BF10DEC00A45586 /* LaunchScreen.storyboard */; };
+		AAF03D241BF10E7800A45586 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D231BF10E7800A45586 /* digital-7.ttf */; };
+		AAF03D271BF111A700A45586 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D261BF111A700A45586 /* DatePickerViewController.m */; };
+		AAF03D2A1BF1125A00A45586 /* TimeCircuitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D291BF1125A00A45586 /* TimeCircuitsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,15 @@
 		AAF03D0D1BF10DEC00A45586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAF03D0F1BF10DEC00A45586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAF03D101BF10DEC00A45586 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AAF03D121BF10DEC00A45586 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AAF03D131BF10DEC00A45586 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AAF03D161BF10DEC00A45586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAF03D181BF10DEC00A45586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF03D1B1BF10DEC00A45586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF03D1D1BF10DEC00A45586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF03D231BF10E7800A45586 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		AAF03D251BF111A700A45586 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		AAF03D261BF111A700A45586 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		AAF03D281BF1125A00A45586 /* TimeCircuitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeCircuitsViewController.h; sourceTree = "<group>"; };
+		AAF03D291BF1125A00A45586 /* TimeCircuitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeCircuitsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +63,13 @@
 		AAF03D0B1BF10DEC00A45586 /* OutaTime Redux */ = {
 			isa = PBXGroup;
 			children = (
+				AAF03D231BF10E7800A45586 /* digital-7.ttf */,
 				AAF03D0F1BF10DEC00A45586 /* AppDelegate.h */,
 				AAF03D101BF10DEC00A45586 /* AppDelegate.m */,
-				AAF03D121BF10DEC00A45586 /* ViewController.h */,
-				AAF03D131BF10DEC00A45586 /* ViewController.m */,
+				AAF03D281BF1125A00A45586 /* TimeCircuitsViewController.h */,
+				AAF03D291BF1125A00A45586 /* TimeCircuitsViewController.m */,
+				AAF03D251BF111A700A45586 /* DatePickerViewController.h */,
+				AAF03D261BF111A700A45586 /* DatePickerViewController.m */,
 				AAF03D151BF10DEC00A45586 /* Main.storyboard */,
 				AAF03D181BF10DEC00A45586 /* Assets.xcassets */,
 				AAF03D1A1BF10DEC00A45586 /* LaunchScreen.storyboard */,
@@ -140,6 +148,7 @@
 				AAF03D1C1BF10DEC00A45586 /* LaunchScreen.storyboard in Resources */,
 				AAF03D191BF10DEC00A45586 /* Assets.xcassets in Resources */,
 				AAF03D171BF10DEC00A45586 /* Main.storyboard in Resources */,
+				AAF03D241BF10E7800A45586 /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF03D141BF10DEC00A45586 /* ViewController.m in Sources */,
+				AAF03D271BF111A700A45586 /* DatePickerViewController.m in Sources */,
 				AAF03D111BF10DEC00A45586 /* AppDelegate.m in Sources */,
 				AAF03D0E1BF10DEC00A45586 /* main.m in Sources */,
+				AAF03D2A1BF1125A00A45586 /* TimeCircuitsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
