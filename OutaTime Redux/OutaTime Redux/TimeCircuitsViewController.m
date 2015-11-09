@@ -48,8 +48,8 @@ NSInteger *currentSpeedTime;
     
     
     // Set the date format (mm, dd, yyyy)
-    NSString *formatString = [[NSDateFormatter dateWithFormatFromTemplate:@"MMMM ddyyyy"options:0 locale:[NSLocale currentLocale]];
-    
+//    NSString *formatString = [[NSDateFormatter dateWithFormatFromTemplate:@"MMMM ddyyyy"options:0 locale:[NSLocale currentLocale]];
+//    comments
 }
 
 - (void)didReceiveMemoryWarning
