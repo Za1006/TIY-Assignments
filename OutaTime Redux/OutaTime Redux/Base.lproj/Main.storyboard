@@ -199,6 +199,9 @@
                             <constraint firstItem="Qk4-ib-kYx" firstAttribute="top" secondItem="f5J-GL-MYD" secondAttribute="bottom" constant="177" id="qI0-ZW-9s1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TimeCircuitsDatePicker" destination="Qk4-ib-kYx" id="P18-X6-Ess"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpE-c8-gnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
