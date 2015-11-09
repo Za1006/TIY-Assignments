@@ -12,16 +12,25 @@
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *TimeCircuitsDatePicker;
 
+
 @end
 
 @implementation DatePickerViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
