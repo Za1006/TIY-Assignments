@@ -23,6 +23,7 @@ NSInteger *currentSpeedTime;
 @property (weak) IBOutlet UILabel *mphLabel;
 
 - (IBAction)travelBackButton:(UIButton *)sender;
+- (IBAction)setDesTimeButton:(UIButton *)sender;
 
 //functions for controlling moving methods
 - (void)startTimerCount;
@@ -60,14 +61,21 @@ NSInteger *currentSpeedTime;
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"ShowDatePickerSegue"])
+       {
+           NSLog(@"prepareForSegue: %@", segue.identifier);
+//           DatePickerViewController *datePickerVC = [[segue destinationViewController] visibleViewController];
+       }
 }
-*/
+
+
+
 
 @end

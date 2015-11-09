@@ -163,7 +163,7 @@
                         <outlet property="presentDateLabel" destination="kzf-mV-Zh4" id="g3r-mW-6Px"/>
                         <outlet property="presentTimeLabel" destination="czO-wT-tyS" id="iKw-BY-h41"/>
                         <outlet property="speedLabel" destination="GUg-gc-JJv" id="Ypj-B5-ZNv"/>
-                        <segue destination="iea-Bs-ipA" kind="show" identifier="TimeCircuitsSegue" id="Em4-6q-bxc"/>
+                        <segue destination="iea-Bs-ipA" kind="show" identifier="ShowDatePickerSegue" id="Em4-6q-bxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
