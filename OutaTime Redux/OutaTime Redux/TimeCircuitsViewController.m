@@ -51,7 +51,7 @@ NSInteger *currentSpeed;
     
     
     //setting the dateformatter to remember what the user picks as Date
-    dateFormatter = [[NSDateFormatter alloc] init];
+    NSdateFormatter = [[NSDateFormatter alloc] init];
     
     
     //setup for determining the date format
@@ -60,7 +60,7 @@ NSInteger *currentSpeed;
                                                               locale:[NSLocale currentLocale]];
     
     
-    [dateFormatter setDateFormat:formatString];
+    [NSDateFormatter setDateFormat:formatString];
     
     
     self.presentDateLabel.text = [NSDateFormatter stringFromDate:[NSDate date]];
@@ -109,7 +109,7 @@ NSInteger *currentSpeed;
 - (void)destinationDateWasChosen:(NSDate *)destinationDate
 {
     //setup destination label to the destination date with formatter object
-    self.destinationDateLabel.text = [dateFormatter stringFromDate:destinationDate];
+    self.destinationDateLabel.text = [NSDateFormatter stringFromDate:destinationDate];
 }
 
 //Action Handlers
@@ -127,14 +127,14 @@ NSInteger *currentSpeed;
     }
 }
 
-- (void)stopTimer
+- (void)stopTimerCount
 {
     [speedTimer invalidate];
     speedTimer = nil;
 }
 
 
-- (void)updateSpeedLabel
+- (void)updatedSpeed
 {
     if (currentSpeed < 88)
     {
