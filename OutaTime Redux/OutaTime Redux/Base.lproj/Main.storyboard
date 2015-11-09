@@ -163,7 +163,7 @@
                         <outlet property="presentDateLabel" destination="kzf-mV-Zh4" id="g3r-mW-6Px"/>
                         <outlet property="presentTimeLabel" destination="czO-wT-tyS" id="iKw-BY-h41"/>
                         <outlet property="speedLabel" destination="GUg-gc-JJv" id="Ypj-B5-ZNv"/>
-                        <segue destination="iea-Bs-ipA" kind="show" id="Em4-6q-bxc"/>
+                        <segue destination="iea-Bs-ipA" kind="show" identifier="TimeCircuitsSegue" id="Em4-6q-bxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-ib-kYx">
-                                <rect key="frame" x="34" y="197" width="533" height="180"/>
+                                <rect key="frame" x="34" y="241" width="533" height="136"/>
                                 <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="468787224.04437">
                                     <!--2015-11-09 18:40:24 +0000-->

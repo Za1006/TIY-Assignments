@@ -7,18 +7,49 @@
 //
 
 #import "TimeCircuitsViewController.h"
+NSTimer *NSspeedTimer;
+NSDateFormatter *NSdateFormatter;
+NSInteger *currentSpeedTime;
+
+
 
 @interface TimeCircuitsViewController ()
+
+@property (weak) IBOutlet UILabel *destinationDateLabel;
+@property (weak) IBOutlet UILabel *presentDateLabel;
+@property (weak) IBOutlet UILabel *lastTimeDepartDaletLabel;
+@property (weak) IBOutlet UILabel *mphLabel;
+
+- (IBAction)travelBackButton:(UIButton *)sender;
+
+//functions for controlling moving methods
+- (void)startTimerCount;
+- (void)stopTimerCount;
+- (void)updatedSpeed;
 
 
 @end
 
 @implementation TimeCircuitsViewController
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+    //setting label
+    self.title = @"OutaTime";
+    
+    
+    //setting the dateformatter to remember what the user picks as Date
+    NSdateFormatter = [[NSDateFormatter alloc] init];
+    
+    
+    // Set the date format (mm, dd, yyyy)
+    NSString *formatString = [[NSDateFormatter dateWithFormatFromTemplate:@"MMMM ddyyyy"options:0 locale:[NSLocale currentLocale]];
+    
 }
 
 - (void)didReceiveMemoryWarning
