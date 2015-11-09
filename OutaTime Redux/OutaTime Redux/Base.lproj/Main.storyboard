@@ -97,6 +97,7 @@
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
                                     <action selector="setDesTimeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzZ-9s-7e3"/>
+                                    <segue destination="iea-Bs-ipA" kind="show" identifier="ShowDatePickerSegue" id="gBD-7O-Cig"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,7 +164,6 @@
                         <outlet property="presentDateLabel" destination="kzf-mV-Zh4" id="g3r-mW-6Px"/>
                         <outlet property="presentTimeLabel" destination="czO-wT-tyS" id="iKw-BY-h41"/>
                         <outlet property="speedLabel" destination="GUg-gc-JJv" id="Ypj-B5-ZNv"/>
-                        <segue destination="iea-Bs-ipA" kind="show" identifier="ShowDatePickerSegue" id="Em4-6q-bxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-ib-kYx">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-ib-kYx">
                                 <rect key="frame" x="34" y="241" width="533" height="136"/>
                                 <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="468787224.04437">
@@ -201,6 +201,7 @@
                     </view>
                     <connections>
                         <outlet property="TimeCircuitsDatePicker" destination="Qk4-ib-kYx" id="P18-X6-Ess"/>
+                        <outlet property="datePicker" destination="Qk4-ib-kYx" id="B2V-6d-9ET"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpE-c8-gnO" userLabel="First Responder" sceneMemberID="firstResponder"/>

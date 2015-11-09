@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeCircuitsViewController.h"
 
 @interface DatePickerViewController : UIViewController
+
 //declare delgate for Datepicker
-//@property (strong, nonatomic) id<TimeCircuitsDatePicker> delegate;
+@property (strong, nonatomic) id<TimeCircuitsDatePickerDelegate> delegate;
 
 @end

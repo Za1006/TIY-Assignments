@@ -8,9 +8,13 @@
 
 #import "TimeCircuitsViewController.h"
 #import "DatePickerViewController.h"
-NSTimer *NSspeedTimer;
+
+//>>>>>>> Stashed changes
+NSTimer *speedTimer;
+
 NSDateFormatter *NSdateFormatter;
-NSInteger *currentSpeedTime;
+
+NSInteger *currentSpeed;
 
 
 
@@ -23,7 +27,7 @@ NSInteger *currentSpeedTime;
 @property (weak) IBOutlet UILabel *mphLabel;
 
 - (IBAction)travelBackButton:(UIButton *)sender;
-- (IBAction)setDesTimeButton:(UIButton *)sender;
+
 
 //functions for controlling moving methods
 - (void)startTimerCount;
@@ -47,7 +51,29 @@ NSInteger *currentSpeedTime;
     
     
     //setting the dateformatter to remember what the user picks as Date
-    NSdateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter = [[NSDateFormatter alloc] init];
+    
+    
+    //setup for determining the date format
+    NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"MMMM ddyyyy"
+                                                             options:0
+                                                              locale:[NSLocale currentLocale]];
+    
+    
+    [dateFormatter setDateFormat:formatString];
+    
+    
+    self.presentDateLabel.text = [NSDateFormatter stringFromDate:[NSDate date]];
+    
+    
+    // setup current speed of the 0mph label at start
+    currentSpeed = 0;
+    
+    //setup the interpolation of changing speed on the mph label
+    self.mphLabel.text = [NSString stringWithFormat:@"%ld MPH", (long)currentSpeed];
+    
+    //setup last time depart label to be same as storyboard
+    self.lastTimeDepartDaletLabel.text = @"--- -- ----";
     
     
     // Set the date format (mm, dd, yyyy)
@@ -61,37 +87,74 @@ NSInteger *currentSpeedTime;
     // Dispose of any resources that can be recreated.
 }
 
+//<<<<<<< Updated upstream
 
 
+//>>>>>>> Stashed changes
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+//prepare for segue function
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"ShowDatePickerSegue"])
+    if ([segue.identifier isEqualToString:@"ShowDatePickerSegue"])
        {
-           NSLog(@"prepareForSegue: %@", segue.identifier);
-//           DatePickerViewController *datePickerVC = [[segue destinationViewController] visibleViewController];
+           DatePickerViewController *datePickerVC = (DatePickerViewController *)[segue destinationViewController];
+           
+           //set delegte object
+           datePickerVC.delegate = self;
        }
 }
 
-//- (void) destinationDateWasChosen:(dateChosen: NSDateFormatter *)
+- (void)destinationDateWasChosen:(NSDate *)destinationDate
+{
+    //setup destination label to the destination date with formatter object
+    self.destinationDateLabel.text = [dateFormatter stringFromDate:destinationDate];
+}
+
+//Action Handlers
+
+- (IBAction)travelBackButton:(UIButton *)sender
+{
+    [self startTimerCount];
+}
 
 - (void)startTimerCount
 {
-    
+    if (!speedTimer)
+    {
+        speedTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updatedSpeed) userInfo:nil repeats:YES];
+    }
 }
 
-- (void)stopTimerCount
+- (void)stopTimer
 {
-    
+    [speedTimer invalidate];
+    speedTimer = nil;
 }
 
-- (void)updatedSpeed
+
+- (void)updateSpeedLabel
 {
-    
+    if (currentSpeed < 88)
+    {
+        currentSpeed = currentSpeed + 1;
+        self.mphLabel.text = [NSString stringWithFormat:@"%ld MPH", (long)currentSpeed];
+    }
+    else
+    {
+        [self stopTimerCount];
+        
+        self.lastTimeDepartDaletLabel.text = self.presentDateLabel.text;
+        
+        self.presentDateLabel.text = self.destinationDateLabel.text;
+        
+        self.destinationDateLabel.text = @"--- -- ----";
+        
+        currentSpeed = 0;
+        self.mphLabel.text = [NSString stringWithFormat:@"%ld MPH", (long)currentSpeed];
+    }
 }
-
 
 
 

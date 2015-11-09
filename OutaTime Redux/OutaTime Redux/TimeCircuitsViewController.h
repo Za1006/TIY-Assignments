@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimeCircuitsViewController : UIViewController
+@protocol TimeCircuitsDatePickerDelegate //
+
+- (void)destinationDateWasChosen:(NSDate *)destinationDate;
+
+@end
 
 
+
+
+@interface TimeCircuitsViewController : UIViewController <TimeCircuitsDatePickerDelegate>
 
 @end

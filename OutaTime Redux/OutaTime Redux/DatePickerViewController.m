@@ -10,8 +10,7 @@
 
 @interface DatePickerViewController ()
 
-@property (weak, nonatomic) IBOutlet UIDatePicker *TimeCircuitsDatePicker;
-
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -23,9 +22,12 @@
     // Do any additional setup after loading the view.
 }
 
-- (void) viewWillAppear:(BOOL)animated
+- (void) viewWillDisappear:(BOOL)animated
 {
-    [super viewWillAppear:YES];
+    [super viewWillDisappear:animated];
+    
+    //setup for the delegate to know a date was chosen from picker
+    [self.delegate destinationDateWasChosen:self.datePicker.date];
 
 }
 
