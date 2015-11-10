@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WinningTicketViewController.h
 //  JackpotObjectiveC
 //
 //  Created by Elizabeth Yeh on 11/10/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface WinningTicketViewController : UIViewController
 
 @end
-

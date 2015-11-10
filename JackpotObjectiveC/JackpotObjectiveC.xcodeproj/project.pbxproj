@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		AAF03D621BF2517A00A45586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D611BF2517A00A45586 /* main.m */; };
 		AAF03D651BF2517A00A45586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D641BF2517A00A45586 /* AppDelegate.m */; };
-		AAF03D681BF2517A00A45586 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D671BF2517A00A45586 /* ViewController.m */; };
 		AAF03D6B1BF2517A00A45586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D691BF2517A00A45586 /* Main.storyboard */; };
 		AAF03D6D1BF2517A00A45586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D6C1BF2517A00A45586 /* Assets.xcassets */; };
 		AAF03D701BF2517A00A45586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D6E1BF2517A00A45586 /* LaunchScreen.storyboard */; };
+		AAF03D791BF251DA00A45586 /* JackpotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D781BF251DA00A45586 /* JackpotTableViewController.m */; };
+		AAF03D7C1BF2534200A45586 /* WinningTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		AAF03D611BF2517A00A45586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAF03D631BF2517A00A45586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AAF03D641BF2517A00A45586 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AAF03D661BF2517A00A45586 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AAF03D671BF2517A00A45586 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AAF03D6A1BF2517A00A45586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAF03D6C1BF2517A00A45586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF03D6F1BF2517A00A45586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF03D711BF2517A00A45586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF03D771BF251DA00A45586 /* JackpotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JackpotTableViewController.h; sourceTree = "<group>"; };
+		AAF03D781BF251DA00A45586 /* JackpotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JackpotTableViewController.m; sourceTree = "<group>"; };
+		AAF03D7A1BF2534200A45586 /* WinningTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningTicketViewController.h; sourceTree = "<group>"; };
+		AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningTicketViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +63,10 @@
 			children = (
 				AAF03D631BF2517A00A45586 /* AppDelegate.h */,
 				AAF03D641BF2517A00A45586 /* AppDelegate.m */,
-				AAF03D661BF2517A00A45586 /* ViewController.h */,
-				AAF03D671BF2517A00A45586 /* ViewController.m */,
+				AAF03D771BF251DA00A45586 /* JackpotTableViewController.h */,
+				AAF03D781BF251DA00A45586 /* JackpotTableViewController.m */,
+				AAF03D7A1BF2534200A45586 /* WinningTicketViewController.h */,
+				AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */,
 				AAF03D691BF2517A00A45586 /* Main.storyboard */,
 				AAF03D6C1BF2517A00A45586 /* Assets.xcassets */,
 				AAF03D6E1BF2517A00A45586 /* LaunchScreen.storyboard */,
@@ -150,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF03D681BF2517A00A45586 /* ViewController.m in Sources */,
+				AAF03D791BF251DA00A45586 /* JackpotTableViewController.m in Sources */,
+				AAF03D7C1BF2534200A45586 /* WinningTicketViewController.m in Sources */,
 				AAF03D651BF2517A00A45586 /* AppDelegate.m in Sources */,
 				AAF03D621BF2517A00A45586 /* main.m in Sources */,
 			);
