@@ -27,6 +27,7 @@ NSInteger *currentSpeed;
 @property (weak) IBOutlet UILabel *mphLabel;
 
 - (IBAction)travelBackButton:(UIButton *)sender;
+- (IBAction)setDestinationTimeButton:(UIButton *)sender;
 
 
 //functions for controlling moving methods
@@ -54,11 +55,12 @@ NSInteger *currentSpeed;
     NSdateFormatter = [[NSDateFormatter alloc] init];
     
     
+    
     //setup for determining the date format
     NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"MMMM ddyyyy"
                                                              options:0
                                                               locale:[NSLocale currentLocale]];
-    
+  
     
     [NSDateFormatter setDateFormat:formatString];
     
@@ -118,6 +120,12 @@ NSInteger *currentSpeed;
 {
     [self startTimerCount];
 }
+
+- (IBAction)setDestinationTimeButton:(UIButton *)sender
+{
+    
+}
+
 
 - (void)startTimerCount
 {

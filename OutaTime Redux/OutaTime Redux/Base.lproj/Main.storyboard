@@ -87,6 +87,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="TRAVEL BACK"/>
                                 <connections>
+                                    <action selector="setDestinationTimeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OeZ-ST-S3s"/>
                                     <action selector="travelBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDW-LF-wyc"/>
                                 </connections>
                             </button>
@@ -96,6 +97,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
+                                    <action selector="SETdESTinationTimeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7t-03-fKe"/>
                                     <action selector="setDesTimeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzZ-9s-7e3"/>
                                     <segue destination="iea-Bs-ipA" kind="show" identifier="ShowDatePickerSegue" id="gBD-7O-Cig"/>
                                 </connections>
