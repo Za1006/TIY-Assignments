@@ -6,50 +6,64 @@
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-#import "JackpotTableViewController.h"
+#import "TicketTableViewController.h"
+#import "WinningTicketViewController.h"
+#import "TicketCell.h"
 
-@interface JackpotTableViewController ()
+
+@interface TicketTableViewController ()
+{
+    NSMutableArray *tickets;
+}
 
 @end
 
-@implementation JackpotTableViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+@implementation TicketTableViewController
+- (IBAction)addButton:(UIBarButtonItem *)sender {
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+   
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return tickets.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JackpotCell" forIndexPath:indexPath];
     
+    NSDictionary *aTicket = tickets[indexPath.row];
+    cell.textLabel.text = aTicket[@"numbers"];
+    if (tickets[indexPath.row][@"numbers"] )
+    {
+        
+    }
+
+
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,7 +99,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -93,6 +107,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+- (IBAction)createTicketButton:(UIBarButtonItem *)sender {
+}
+
 
 @end

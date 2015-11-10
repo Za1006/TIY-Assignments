@@ -8,7 +8,9 @@
 
 #import "WinningTicketViewController.h"
 
-@interface WinningTicketViewController ()
+@interface WinningTicketViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 @end
 
@@ -33,5 +35,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (IBAction)checkTicketButton:(UIButton *)sender {
+}
+
+- (IBAction)cancelButton:(UIButton *)sender {
+}
+
 
 @end

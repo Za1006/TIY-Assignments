@@ -1,5 +1,5 @@
 //
-//  Jackpot.m
+//  TicketCell.h
 //  JackpotObjectiveC
 //
 //  Created by Elizabeth Yeh on 11/10/15.
@@ -7,3 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+
+@interface TicketCell : NSObject
+
+@end

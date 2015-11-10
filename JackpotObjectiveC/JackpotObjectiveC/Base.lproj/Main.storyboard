@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Jackpot Table View Controller-->
+        <!--Ticket Table View Controller-->
         <scene sceneID="FOF-85-rKX">
             <objects>
-                <tableViewController id="fdB-Iy-SXo" customClass="JackpotTableViewController" sceneMemberID="viewController">
+                <tableViewController id="fdB-Iy-SXo" customClass="TicketTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3FH-rZ-9Em">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,12 +55,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="GxO-Eu-PX3">
-                        <barButtonItem key="leftBarButtonItem" title="Check Tickets" id="SBl-LI-cBI">
+                        <barButtonItem key="leftBarButtonItem" title="Create Tickets" id="SBl-LI-cBI">
                             <connections>
+                                <action selector="createTicketButton:" destination="fdB-Iy-SXo" id="meT-PM-8qE"/>
                                 <segue destination="suf-A5-bFw" kind="show" id="B5n-So-WcS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XYF-jE-QbA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XYF-jE-QbA">
+                            <connections>
+                                <action selector="addButton:" destination="fdB-Iy-SXo" id="ejc-qw-kjl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHy-sk-ezX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,12 +93,18 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Check Tickets"/>
+                                <connections>
+                                    <action selector="checkTicketButton:" destination="suf-A5-bFw" eventType="touchUpInside" id="pN6-pc-Byg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4D-fR-l4A">
                                 <rect key="frame" x="240" y="522" width="121" height="35"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="suf-A5-bFw" eventType="touchUpInside" id="l9W-LD-MDW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -109,6 +120,9 @@
                             <constraint firstItem="U4D-fR-l4A" firstAttribute="centerX" secondItem="PdC-HA-6Mh" secondAttribute="centerX" id="xVf-Xe-35t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="picker" destination="yv3-e0-xRP" id="ugb-Kk-zUA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RvB-Qr-gz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
