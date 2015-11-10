@@ -14,6 +14,8 @@
 		AAF03D701BF2517A00A45586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D6E1BF2517A00A45586 /* LaunchScreen.storyboard */; };
 		AAF03D791BF251DA00A45586 /* JackpotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D781BF251DA00A45586 /* JackpotTableViewController.m */; };
 		AAF03D7C1BF2534200A45586 /* WinningTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */; };
+		AAF03D7E1BF2652400A45586 /* JackpotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D7D1BF2652400A45586 /* JackpotCell.m */; };
+		AAF03D801BF2654800A45586 /* Jackpot.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D7F1BF2654800A45586 /* Jackpot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		AAF03D781BF251DA00A45586 /* JackpotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JackpotTableViewController.m; sourceTree = "<group>"; };
 		AAF03D7A1BF2534200A45586 /* WinningTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningTicketViewController.h; sourceTree = "<group>"; };
 		AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningTicketViewController.m; sourceTree = "<group>"; };
+		AAF03D7D1BF2652400A45586 /* JackpotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JackpotCell.m; sourceTree = "<group>"; };
+		AAF03D7F1BF2654800A45586 /* Jackpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jackpot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 			children = (
 				AAF03D631BF2517A00A45586 /* AppDelegate.h */,
 				AAF03D641BF2517A00A45586 /* AppDelegate.m */,
+				AAF03D7F1BF2654800A45586 /* Jackpot.m */,
+				AAF03D7D1BF2652400A45586 /* JackpotCell.m */,
 				AAF03D771BF251DA00A45586 /* JackpotTableViewController.h */,
 				AAF03D781BF251DA00A45586 /* JackpotTableViewController.m */,
 				AAF03D7A1BF2534200A45586 /* WinningTicketViewController.h */,
@@ -155,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF03D7E1BF2652400A45586 /* JackpotCell.m in Sources */,
 				AAF03D791BF251DA00A45586 /* JackpotTableViewController.m in Sources */,
 				AAF03D7C1BF2534200A45586 /* WinningTicketViewController.m in Sources */,
 				AAF03D651BF2517A00A45586 /* AppDelegate.m in Sources */,
+				AAF03D801BF2654800A45586 /* Jackpot.m in Sources */,
 				AAF03D621BF2517A00A45586 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +315,7 @@
 				AAF03D761BF2517A00A45586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
