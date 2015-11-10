@@ -21,10 +21,10 @@ NSInteger *currentSpeed;
 
 @interface TimeCircuitsViewController ()
 
-@property (nonatomic) IBOutlet UILabel *destinationDateLabel;
-@property (nonatomic) IBOutlet UILabel *presentDateLabel;
-@property (nonatomic) IBOutlet UILabel *lastTimeDepartDaletLabel;
-@property (nonatomic) IBOutlet UILabel *mphLabel;
+@property (weak, nonatomic) IBOutlet UILabel *destinationDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *presentDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastTimeDepartDaletLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mphLabel;
 
 - (IBAction)travelBackButton:(UIButton *)sender;
 - (IBAction)setDestinationTimeButton:(UIButton *)sender;
