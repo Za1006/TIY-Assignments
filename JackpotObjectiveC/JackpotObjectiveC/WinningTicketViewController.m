@@ -8,7 +8,7 @@
 
 #import "WinningTicketViewController.h"
 
-@interface WinningTicketViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface WinningTicketViewController () <UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
@@ -16,12 +16,14 @@
 
 @implementation WinningTicketViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -37,10 +39,14 @@
 */
 
 
-- (IBAction)checkTicketButton:(UIButton *)sender {
+- (IBAction)checkTicketButton:(UIButton *)sender
+{
+    
 }
 
-- (IBAction)cancelButton:(UIButton *)sender {
+- (IBAction)cancelButton:(UIButton *)sender
+{
+    
 }
 
 

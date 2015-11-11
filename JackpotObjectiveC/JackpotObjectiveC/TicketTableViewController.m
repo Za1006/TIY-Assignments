@@ -7,31 +7,31 @@
 //
 
 #import "TicketTableViewController.h"
+#import "Ticket.h"
 #import "WinningTicketViewController.h"
-#import "TicketCell.h"
 
 
 @interface TicketTableViewController ()
 {
     NSMutableArray *tickets;
+    NSMutableArray *winningTicket;
 }
 
 @end
 
 @implementation TicketTableViewController
-<<<<<<< Updated upstream
-//- (IBAction)addButton:(UIBarButtonItem *)sender {}
-=======
+
 - (IBAction)addButton:(UIBarButtonItem *)sender
 {
-    
+    [self addTicket];
 }
 
->>>>>>> Stashed changes
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    tickets = [[NSMutableArray alloc] init];
     tickets =[@[]mutableCopy];
    
 }
@@ -60,8 +60,22 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JackpotCell" forIndexPath:indexPath];
     
     NSString *aTicket = tickets[indexPath.row];
-    cell.numbersLabel.text = [aTicket description];
+    cell.textLabel.text = [aTicket winningTicket];
+    
+    if (aTicket.winner)
+    {
+        cell.backgroundColor = [UIColor greenColor];
+    }
+    else
+    {
+        cell.backgroundColor = [UIColor whiteColor];
+    }
     return cell;
+}
+
+-(void)addTicket
+{
+    
 }
 
 
@@ -103,14 +117,22 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-- (IBAction)createTicketButton:(UIBarButtonItem *)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue .identifier isEqualToString:@"ShowPickerSegue"])
+    {
+        WinningTicketViewController *winningVC = (WinningTicketViewController *)[segue destinationViewController];
+        winningVC.delegate = self;
+        
+    }
+    
 }
 
+- (IBAction)createTicketButton:(UIBarButtonItem *)sender
+{
+    
 }
+ 
+
 
 @end

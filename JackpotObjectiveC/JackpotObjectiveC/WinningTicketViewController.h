@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WinningTicketViewController : UIViewController
+@interface WinningTicketViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @end

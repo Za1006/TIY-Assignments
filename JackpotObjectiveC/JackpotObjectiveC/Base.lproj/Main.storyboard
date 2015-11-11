@@ -62,7 +62,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Create Tickets" id="SBl-LI-cBI">
                             <connections>
                                 <action selector="createTicketButton:" destination="fdB-Iy-SXo" id="meT-PM-8qE"/>
-                                <segue destination="suf-A5-bFw" kind="presentation" id="Ew0-6r-LaV"/>
+                                <segue destination="suf-A5-bFw" kind="presentation" identifier="ShowPickerSegue" id="Ew0-6r-LaV"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XYF-jE-QbA"/>

@@ -11,15 +11,11 @@
 @interface Ticket : NSObject
 
 @property (assign) BOOL winner;
+@property (nonatomic) NSArray *numbers;
 @property (nonatomic) NSString *payout;
-<<<<<<< Updated upstream
-@property(nonatomic)NSMutableArray *pick;
-//@property (nonatomic, assign) int *pick;
+@property (nonatomic) NSArray *winningNumbers;
+@property (nonatomic) NSArray *picks;
 
-+(instancetype)createQuickPick;
+-(NSString *)checkWinningTicket:(NSMutableArray *)winningNumbers;
 
-=======
-@property(nonatomic) NSMutableArray *pick;
-//@pppery (nonatomic) NSArray *pick;
->>>>>>> Stashed changes
 @end
