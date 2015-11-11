@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  VoltageBrain.m
 //  High-Voltage-Redux
 //
 //  Created by Elizabeth Yeh on 11/11/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "VoltageBrain.h"
 
-@interface ViewController : UIViewController
-
+@implementation VoltageBrain
 
 @end
-

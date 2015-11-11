@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		AA8170AA1BF3ACFB00769135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170A91BF3ACFB00769135 /* main.m */; };
 		AA8170AD1BF3ACFB00769135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170AC1BF3ACFB00769135 /* AppDelegate.m */; };
-		AA8170B01BF3ACFB00769135 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170AF1BF3ACFB00769135 /* ViewController.m */; };
 		AA8170B31BF3ACFB00769135 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8170B11BF3ACFB00769135 /* Main.storyboard */; };
 		AA8170B51BF3ACFB00769135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8170B41BF3ACFB00769135 /* Assets.xcassets */; };
 		AA8170B81BF3ACFB00769135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8170B61BF3ACFB00769135 /* LaunchScreen.storyboard */; };
+		AA8170C11BF3B8F400769135 /* VoltageCalculateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C01BF3B8F400769135 /* VoltageCalculateTableViewController.m */; };
+		AA8170C41BF3B92C00769135 /* VoltageTypesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C31BF3B92C00769135 /* VoltageTypesTableViewController.m */; };
+		AA8170C71BF3B96300769135 /* VoltageBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C61BF3B96300769135 /* VoltageBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		AA8170A91BF3ACFB00769135 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA8170AB1BF3ACFB00769135 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA8170AC1BF3ACFB00769135 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AA8170AE1BF3ACFB00769135 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AA8170AF1BF3ACFB00769135 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AA8170B21BF3ACFB00769135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA8170B41BF3ACFB00769135 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA8170B71BF3ACFB00769135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA8170B91BF3ACFB00769135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8170BF1BF3B8F400769135 /* VoltageCalculateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageCalculateTableViewController.h; sourceTree = "<group>"; };
+		AA8170C01BF3B8F400769135 /* VoltageCalculateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageCalculateTableViewController.m; sourceTree = "<group>"; };
+		AA8170C21BF3B92C00769135 /* VoltageTypesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageTypesTableViewController.h; sourceTree = "<group>"; };
+		AA8170C31BF3B92C00769135 /* VoltageTypesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageTypesTableViewController.m; sourceTree = "<group>"; };
+		AA8170C51BF3B96300769135 /* VoltageBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageBrain.h; sourceTree = "<group>"; };
+		AA8170C61BF3B96300769135 /* VoltageBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,12 @@
 			children = (
 				AA8170AB1BF3ACFB00769135 /* AppDelegate.h */,
 				AA8170AC1BF3ACFB00769135 /* AppDelegate.m */,
-				AA8170AE1BF3ACFB00769135 /* ViewController.h */,
-				AA8170AF1BF3ACFB00769135 /* ViewController.m */,
+				AA8170C51BF3B96300769135 /* VoltageBrain.h */,
+				AA8170C61BF3B96300769135 /* VoltageBrain.m */,
+				AA8170BF1BF3B8F400769135 /* VoltageCalculateTableViewController.h */,
+				AA8170C01BF3B8F400769135 /* VoltageCalculateTableViewController.m */,
+				AA8170C21BF3B92C00769135 /* VoltageTypesTableViewController.h */,
+				AA8170C31BF3B92C00769135 /* VoltageTypesTableViewController.m */,
 				AA8170B11BF3ACFB00769135 /* Main.storyboard */,
 				AA8170B41BF3ACFB00769135 /* Assets.xcassets */,
 				AA8170B61BF3ACFB00769135 /* LaunchScreen.storyboard */,
@@ -150,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8170B01BF3ACFB00769135 /* ViewController.m in Sources */,
+				AA8170C71BF3B96300769135 /* VoltageBrain.m in Sources */,
+				AA8170C11BF3B8F400769135 /* VoltageCalculateTableViewController.m in Sources */,
 				AA8170AD1BF3ACFB00769135 /* AppDelegate.m in Sources */,
+				AA8170C41BF3B92C00769135 /* VoltageTypesTableViewController.m in Sources */,
 				AA8170AA1BF3ACFB00769135 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +313,7 @@
 				AA8170BE1BF3ACFB00769135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
