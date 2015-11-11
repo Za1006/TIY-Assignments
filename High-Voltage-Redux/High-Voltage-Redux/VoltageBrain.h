@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VoltageCalculateTableViewController.h"
+
+
 
 @interface VoltageBrain : NSObject
+
+@property (nonatomic, weak) id <ElectricConvertionProtocol> delegate;
+
+
+@property (nonatomic) BOOL allvaluesFound;
+@property (nonatomic) NSString *ampsString;
+@property (nonatomic) NSString *ohmsString;
+@property (nonatomic) NSString *wattsString;
+@property (nonatomic) NSString *voltsString;
+
+
 
 @end

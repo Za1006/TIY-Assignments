@@ -6,22 +6,19 @@
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-#import "VoltageTypesTableViewController.h"
+#import "ValueTypesTableViewController.h"
 
-@interface VoltageTypesTableViewController ()
+@interface ValueTypesTableViewController ()
 
 @end
 
-@implementation VoltageTypesTableViewController
+@implementation ValueTypesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //_operatorList = [[NSMutableArray alloc] init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,25 +28,34 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _operatorList.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OperatorCell" forIndexPath:indexPath];
+    NSLog(@" asdasdad %@",_operatorList);
     // Configure the cell...
+    cell.textLabel.text = _operatorList[indexPath.row];
     
     return cell;
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSLog(@" you tapped: %@", _operatorList[indexPath.row]);
+    [self.delegate valueTypeWasChosen:_operatorList[indexPath.row]];
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

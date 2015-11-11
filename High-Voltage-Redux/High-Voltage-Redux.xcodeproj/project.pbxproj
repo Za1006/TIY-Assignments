@@ -13,8 +13,9 @@
 		AA8170B51BF3ACFB00769135 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8170B41BF3ACFB00769135 /* Assets.xcassets */; };
 		AA8170B81BF3ACFB00769135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8170B61BF3ACFB00769135 /* LaunchScreen.storyboard */; };
 		AA8170C11BF3B8F400769135 /* VoltageCalculateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C01BF3B8F400769135 /* VoltageCalculateTableViewController.m */; };
-		AA8170C41BF3B92C00769135 /* VoltageTypesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C31BF3B92C00769135 /* VoltageTypesTableViewController.m */; };
+		AA8170C41BF3B92C00769135 /* ValueTypesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C31BF3B92C00769135 /* ValueTypesTableViewController.m */; };
 		AA8170C71BF3B96300769135 /* VoltageBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C61BF3B96300769135 /* VoltageBrain.m */; };
+		AA8170CA1BF3DA4700769135 /* CalculationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8170C91BF3DA4700769135 /* CalculationTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,12 @@
 		AA8170B91BF3ACFB00769135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA8170BF1BF3B8F400769135 /* VoltageCalculateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageCalculateTableViewController.h; sourceTree = "<group>"; };
 		AA8170C01BF3B8F400769135 /* VoltageCalculateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageCalculateTableViewController.m; sourceTree = "<group>"; };
-		AA8170C21BF3B92C00769135 /* VoltageTypesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageTypesTableViewController.h; sourceTree = "<group>"; };
-		AA8170C31BF3B92C00769135 /* VoltageTypesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageTypesTableViewController.m; sourceTree = "<group>"; };
+		AA8170C21BF3B92C00769135 /* ValueTypesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueTypesTableViewController.h; sourceTree = "<group>"; };
+		AA8170C31BF3B92C00769135 /* ValueTypesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueTypesTableViewController.m; sourceTree = "<group>"; };
 		AA8170C51BF3B96300769135 /* VoltageBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageBrain.h; sourceTree = "<group>"; };
 		AA8170C61BF3B96300769135 /* VoltageBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageBrain.m; sourceTree = "<group>"; };
+		AA8170C81BF3DA4700769135 /* CalculationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculationTableViewCell.h; sourceTree = "<group>"; };
+		AA8170C91BF3DA4700769135 /* CalculationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculationTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +71,12 @@
 				AA8170AC1BF3ACFB00769135 /* AppDelegate.m */,
 				AA8170C51BF3B96300769135 /* VoltageBrain.h */,
 				AA8170C61BF3B96300769135 /* VoltageBrain.m */,
+				AA8170C81BF3DA4700769135 /* CalculationTableViewCell.h */,
+				AA8170C91BF3DA4700769135 /* CalculationTableViewCell.m */,
 				AA8170BF1BF3B8F400769135 /* VoltageCalculateTableViewController.h */,
 				AA8170C01BF3B8F400769135 /* VoltageCalculateTableViewController.m */,
-				AA8170C21BF3B92C00769135 /* VoltageTypesTableViewController.h */,
-				AA8170C31BF3B92C00769135 /* VoltageTypesTableViewController.m */,
+				AA8170C21BF3B92C00769135 /* ValueTypesTableViewController.h */,
+				AA8170C31BF3B92C00769135 /* ValueTypesTableViewController.m */,
 				AA8170B11BF3ACFB00769135 /* Main.storyboard */,
 				AA8170B41BF3ACFB00769135 /* Assets.xcassets */,
 				AA8170B61BF3ACFB00769135 /* LaunchScreen.storyboard */,
@@ -163,7 +168,8 @@
 				AA8170C71BF3B96300769135 /* VoltageBrain.m in Sources */,
 				AA8170C11BF3B8F400769135 /* VoltageCalculateTableViewController.m in Sources */,
 				AA8170AD1BF3ACFB00769135 /* AppDelegate.m in Sources */,
-				AA8170C41BF3B92C00769135 /* VoltageTypesTableViewController.m in Sources */,
+				AA8170CA1BF3DA4700769135 /* CalculationTableViewCell.m in Sources */,
+				AA8170C41BF3B92C00769135 /* ValueTypesTableViewController.m in Sources */,
 				AA8170AA1BF3ACFB00769135 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
