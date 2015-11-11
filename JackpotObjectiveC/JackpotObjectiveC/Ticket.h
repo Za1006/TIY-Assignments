@@ -12,9 +12,14 @@
 
 @property (assign) BOOL winner;
 @property (nonatomic) NSString *payout;
+<<<<<<< Updated upstream
 @property(nonatomic)NSMutableArray *pick;
 //@property (nonatomic, assign) int *pick;
 
 +(instancetype)createQuickPick;
 
+=======
+@property(nonatomic) NSMutableArray *pick;
+//@pppery (nonatomic) NSArray *pick;
+>>>>>>> Stashed changes
 @end

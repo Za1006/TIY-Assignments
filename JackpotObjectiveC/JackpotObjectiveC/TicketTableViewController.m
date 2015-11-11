@@ -19,7 +19,15 @@
 @end
 
 @implementation TicketTableViewController
+<<<<<<< Updated upstream
 //- (IBAction)addButton:(UIBarButtonItem *)sender {}
+=======
+- (IBAction)addButton:(UIBarButtonItem *)sender
+{
+    
+}
+
+>>>>>>> Stashed changes
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -99,7 +107,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-- (IBAction)createTicketButton:(UIBarButtonItem *)sender {
+- (IBAction)createTicketButton:(UIBarButtonItem *)sender
+{
 }
 
 }

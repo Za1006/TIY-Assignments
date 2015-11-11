@@ -10,6 +10,7 @@
 
 @implementation Ticket
 
+<<<<<<< Updated upstream
 {
     NSInteger aPick = arc4random_uniform(53) + 1;
     NSNumber *pickAsNumber = [NSNumber numberWithInteger: aPick];
@@ -21,6 +22,13 @@
     }
    while(!pickFound);
 }
+=======
+//- (instancetype)init
+//{
+//    self = [super init];
+//}
+
+>>>>>>> Stashed changes
 
 -(NSString*)description
 {
