@@ -10,9 +10,11 @@
 
 @interface Ticket : NSObject
 
-@property (nonatomic) BOOL *winner;
+@property (assign) BOOL winner;
 @property (nonatomic) NSString *payout;
 @property(nonatomic)NSMutableArray *pick;
 //@property (nonatomic, assign) int *pick;
+
++(instancetype)createQuickPick;
 
 @end

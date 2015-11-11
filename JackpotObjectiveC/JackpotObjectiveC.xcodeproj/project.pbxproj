@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DCDEE071BF2AD4F002C7EA1 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCDEE061BF2AD4F002C7EA1 /* TicketCell.m */; };
 		AAF03D621BF2517A00A45586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D611BF2517A00A45586 /* main.m */; };
 		AAF03D651BF2517A00A45586 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D641BF2517A00A45586 /* AppDelegate.m */; };
 		AAF03D6B1BF2517A00A45586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D691BF2517A00A45586 /* Main.storyboard */; };
@@ -14,11 +15,12 @@
 		AAF03D701BF2517A00A45586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF03D6E1BF2517A00A45586 /* LaunchScreen.storyboard */; };
 		AAF03D791BF251DA00A45586 /* TicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D781BF251DA00A45586 /* TicketTableViewController.m */; };
 		AAF03D7C1BF2534200A45586 /* WinningTicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */; };
-		AAF03D891BF268A200A45586 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D881BF268A200A45586 /* TicketCell.m */; };
 		AAF03D8C1BF268B700A45586 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF03D8B1BF268B700A45586 /* Ticket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DCDEE051BF2AD4F002C7EA1 /* TicketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCell.h; sourceTree = "<group>"; };
+		5DCDEE061BF2AD4F002C7EA1 /* TicketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCell.m; sourceTree = "<group>"; };
 		AAF03D5D1BF2517A00A45586 /* JackpotObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JackpotObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF03D611BF2517A00A45586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AAF03D631BF2517A00A45586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,8 +33,6 @@
 		AAF03D781BF251DA00A45586 /* TicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketTableViewController.m; sourceTree = "<group>"; };
 		AAF03D7A1BF2534200A45586 /* WinningTicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinningTicketViewController.h; sourceTree = "<group>"; };
 		AAF03D7B1BF2534200A45586 /* WinningTicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinningTicketViewController.m; sourceTree = "<group>"; };
-		AAF03D871BF268A200A45586 /* TicketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCell.h; sourceTree = "<group>"; };
-		AAF03D881BF268A200A45586 /* TicketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCell.m; sourceTree = "<group>"; };
 		AAF03D8A1BF268B700A45586 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		AAF03D8B1BF268B700A45586 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,8 +71,8 @@
 				AAF03D641BF2517A00A45586 /* AppDelegate.m */,
 				AAF03D8A1BF268B700A45586 /* Ticket.h */,
 				AAF03D8B1BF268B700A45586 /* Ticket.m */,
-				AAF03D871BF268A200A45586 /* TicketCell.h */,
-				AAF03D881BF268A200A45586 /* TicketCell.m */,
+				5DCDEE051BF2AD4F002C7EA1 /* TicketCell.h */,
+				5DCDEE061BF2AD4F002C7EA1 /* TicketCell.m */,
 				AAF03D771BF251DA00A45586 /* TicketTableViewController.h */,
 				AAF03D781BF251DA00A45586 /* TicketTableViewController.m */,
 				AAF03D7A1BF2534200A45586 /* WinningTicketViewController.h */,
@@ -166,8 +166,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAF03D791BF251DA00A45586 /* TicketTableViewController.m in Sources */,
+				5DCDEE071BF2AD4F002C7EA1 /* TicketCell.m in Sources */,
 				AAF03D7C1BF2534200A45586 /* WinningTicketViewController.m in Sources */,
-				AAF03D891BF268A200A45586 /* TicketCell.m in Sources */,
 				AAF03D651BF2517A00A45586 /* AppDelegate.m in Sources */,
 				AAF03D621BF2517A00A45586 /* main.m in Sources */,
 				AAF03D8C1BF268B700A45586 /* Ticket.m in Sources */,

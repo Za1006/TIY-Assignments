@@ -10,5 +10,26 @@
 
 @implementation Ticket
 
+{
+    NSInteger aPick = arc4random_uniform(53) + 1;
+    NSNumber *pickAsNumber = [NSNumber numberWithInteger: aPick];
+    if (![_picks containsObject:pickAsNumber])
+    {
+    
+        [_picks addObject: pickAsNumber];
+        pickFound = YES;
+    }
+   while(!pickFound);
+}
 
+-(NSString*)description
+{
+    NSMutableString *numbers = [[NSMutableString alloc]init];
+    for (NSNumber *pick in_picks)
+    {
+        [numbers appendString:[NSString stringWithFormat:@" %@",pick]];
+    }
+    return numbers;
+
+}
 @end

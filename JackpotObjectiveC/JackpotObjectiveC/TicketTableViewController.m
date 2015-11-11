@@ -19,13 +19,12 @@
 @end
 
 @implementation TicketTableViewController
-- (IBAction)addButton:(UIBarButtonItem *)sender {
-}
-
+//- (IBAction)addButton:(UIBarButtonItem *)sender {}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    tickets =[@[]mutableCopy];
    
 }
 
@@ -44,23 +43,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return tickets.count;
+    return [tickets count];
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JackpotCell" forIndexPath:indexPath];
     
-    NSDictionary *aTicket = tickets[indexPath.row];
-    cell.textLabel.text = aTicket[@"numbers"];
-    if (tickets[indexPath.row][@"numbers"] )
-    {
-        
-    }
-
-
-    // Configure the cell...
-    
+    NSString *aTicket = tickets[indexPath.row];
+    cell.numbersLabel.text = [aTicket description];
     return cell;
 }
 
@@ -110,5 +102,6 @@
 - (IBAction)createTicketButton:(UIBarButtonItem *)sender {
 }
 
+}
 
 @end

@@ -16,7 +16,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" id="lyV-uJ-YVf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JackpotCell" id="lyV-uJ-YVf" customClass="TicketCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lyV-uJ-YVf" id="e7e-qY-deR">
@@ -47,6 +47,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="numbersLabel" destination="AEX-uk-C54" id="ppS-Qb-z2V"/>
+                                    <outlet property="payoutLabel" destination="ZlZ-kN-S1g" id="BBh-fr-hAD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,14 +62,10 @@
                         <barButtonItem key="leftBarButtonItem" title="Create Tickets" id="SBl-LI-cBI">
                             <connections>
                                 <action selector="createTicketButton:" destination="fdB-Iy-SXo" id="meT-PM-8qE"/>
-                                <segue destination="suf-A5-bFw" kind="show" id="B5n-So-WcS"/>
+                                <segue destination="suf-A5-bFw" kind="presentation" id="Ew0-6r-LaV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XYF-jE-QbA">
-                            <connections>
-                                <action selector="addButton:" destination="fdB-Iy-SXo" id="ejc-qw-kjl"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XYF-jE-QbA"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHy-sk-ezX" userLabel="First Responder" sceneMemberID="firstResponder"/>
