@@ -14,6 +14,7 @@
 @interface VoltageCalculateTableViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate, ValueTypeDelegateProtocol, ElectricConvertionProtocol>
 
 @property (nonatomic) VoltageBrain *converter;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addTypeValueButon;
 
 @end
 
@@ -56,17 +57,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CalculationTableViewCell *cell = (CalculationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"CalculationTableViewCell" forIndexPath:indexPath];
+    
+    
+    NSString * cellIdentifier = (NSString *)_operatorStoreList[indexPath.row];
+    
+    CalculationTableViewCell *cell = (CalculationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
+    
     cell.valueTextField.text =[NSString stringWithFormat:@"%lid",(long)indexPath.row];
     cell.typeLabel.text = _operatorStoreList[indexPath.row];
+    
     UITextField * textField = (UITextField *)[cell viewWithTag:1];
     textField.text = @"";
     textField.delegate = self;
     textField.userInteractionEnabled = [self.converter allvaluesFound];
     
+<<<<<<< HEAD
     
 //    switch (identifier)
 //    {
@@ -101,48 +109,96 @@
 //    default:
 //        print("")
 //    }
+=======
+    if ([cellIdentifier isEqual: @"CurrentCell"])
+    {
+        _currentTextField = textField;
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.ampsString;
+        }
+    }
+    
+    if ([cellIdentifier isEqual: @"ResistanceCell"])
+    {
+        _resistanceTextField = textField;
+
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.ohmsString;
+        }
+    }
+    
+    if ([cellIdentifier isEqual: @"PowerCell"])
+    {
+        _powerTextField = textField;
+
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.wattsString;
+        }
+    }
+    
+    if ([cellIdentifier isEqual: @"VoltageCell"])
+    {
+        _voltageTextField = textField;
+
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.voltsString;
+        }
+    }
+
+    NSArray * keys = [_valueTypes allKeysForObject:cellIdentifier];
+    NSString *  keyToRemove = keys[0];
+    [_valueTypes removeObjectForKey:keyToRemove];
+    
+    [textField becomeFirstResponder];
+    
+>>>>>>> origin/High-Voltage-Redux
     return cell;
 }
-//
-//-(void)textFieldShouldReturn
-//{
-//    BOOL rc = NO;
-//    if (_textField.text != @"")
-//    {
-//        BOOL rc = YES;
-//        if (_textField == _currentTextField)
-//        {
-//            converter?.ampsString = textField.text!
-//        }
-//        if textField == resistanceTextField
-//        {
-//            converter?.ohmsString = textField.text!
-//        }
-//        if textField == voltageTextField
-//        {
-//            converter?.voltsString = textField.text!
-//        }
-//        if textField == powerTextField
-//        {
-//            converter?.wattsString = textField.text!
-//        }
-//    }
-//    
-//    if rc
-//    {
-//        textField.resignFirstResponder()
-//    }
-//    
-//    converter?.findOtherValuesIfPossible()
-//    
-//    return rc
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    BOOL rc = NO;
+    if (![textField.text  isEqual: @""])
+    {
+        rc = YES;
+        if (textField == _currentTextField)
+        {
+            _converter.ampsString = textField.text;
+        }
+        if (textField == _resistanceTextField)
+        {
+            _converter.ohmsString = textField.text;
+        }
+        if (textField == _voltageTextField)
+        {
+            _converter.voltsString = textField.text;
+        }
+        if (textField == _powerTextField)
+        {
+            _converter.wattsString = textField.text;
+        }
+    }
+    
+    if (rc)
+    {
+        [textField resignFirstResponder];
+    }
+    
+    [_converter findOtherValuesIfPossible];
+    
+    return rc;
+
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
-}
-*/
+}*/
 
 /*
 // Override to support editing the table view.
@@ -180,10 +236,10 @@
     {
         UITableViewController *newController = segue.destinationViewController;
         ValueTypesTableViewController *newValueTypeVC = (ValueTypesTableViewController *)newController;
-        newValueTypeVC.operatorList =  [_operatorList mutableCopy];
+        newValueTypeVC.operatorList = [[self.valueTypes allKeys] mutableCopy];// [_operatorList mutableCopy];
         newValueTypeVC.popoverPresentationController.delegate = self;
         newValueTypeVC.delegate = self;
-        double contentHight = 45.0 * (CGFloat) _operatorList.count;
+        double contentHight = 45.0 * (CGFloat) _valueTypes.count;
         newValueTypeVC.preferredContentSize = (CGSizeMake(100.0, contentHight));
         
     }
@@ -202,6 +258,25 @@
     [self.operatorStoreList addObject:electronicOperator];
     NSLog(@" operatorStoreList : %@", _operatorStoreList);
     [self.tableView reloadData];
+    
+    
+    if ([self.converter isEqual: nil])
+    {
+        self.converter = [[VoltageBrain alloc] init];
+        self.converter.delegate = self;
+    }
+    
+    NSString * cellIdentifier = [self.valueTypes objectForKey: electronicOperator ];
+    [self.operatorStoreList addObject: cellIdentifier ];
+    if ([_operatorStoreList count] == 2) 
+    {
+        self.addTypeValueButon.enabled = false;
+    }
+    
+    NSUInteger row = [_operatorStoreList indexOfObject:cellIdentifier];
+  //  tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: row, inSection: 0)], withRowAnimation: .Automatic)
+    
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 

@@ -22,5 +22,5 @@
 
 @property(nonatomic, weak) id <ElectricConvertionProtocol> delegate;
 
-
+-(void)findOtherValuesIfPossible;
 @end
