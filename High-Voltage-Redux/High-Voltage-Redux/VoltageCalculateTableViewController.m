@@ -14,6 +14,7 @@
 @interface VoltageCalculateTableViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate, ValueTypeDelegateProtocol, ElectricConvertionProtocol>
 
 @property (nonatomic) VoltageBrain *converter;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addTypeValueButon;
 
 @end
 
@@ -59,6 +60,12 @@
     CalculationTableViewCell *cell = (CalculationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"CalculationTableViewCell" forIndexPath:indexPath];
     
     // Configure the cell...
+//    
+//    UITextField * textField = (UITextField *)[cell viewWithTag:1];
+//    textField.text = @"";
+//    textField.delegate = self;
+//    textField.userInteractionEnabled = [self.converter allvaluesFound];
+    
     
     cell.valueTextField.text =[NSString stringWithFormat:@"%lid",(long)indexPath.row];
     cell.typeLabel.text = _operatorStoreList[indexPath.row];
@@ -135,6 +142,25 @@
     [self.operatorStoreList addObject:electronicOperator];
     NSLog(@" operatorStoreList : %@", _operatorStoreList);
     [self.tableView reloadData];
+    
+    
+    if ([self.converter isEqual: nil])
+    {
+        self.converter = [[VoltageBrain alloc] init];
+        self.converter.delegate = self;
+    }
+    
+    NSString * cellIdentifier = [self.valueTypes objectForKey: electronicOperator ];
+    [self.operatorStoreList addObject: cellIdentifier ];
+    if ([_operatorStoreList count] == 2) 
+    {
+        self.addTypeValueButon.enabled = false;
+    }
+    
+    NSUInteger row = [_operatorStoreList indexOfObject:cellIdentifier];
+  //  tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: row, inSection: 0)], withRowAnimation: .Automatic)
+    
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 -(void)valueWereCalculated
