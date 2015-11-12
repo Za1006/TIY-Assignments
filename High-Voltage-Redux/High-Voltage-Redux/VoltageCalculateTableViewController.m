@@ -57,98 +57,111 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CalculationTableViewCell *cell = (CalculationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"CalculationTableViewCell" forIndexPath:indexPath];
+    
+    
+    NSString * cellIdentifier = (NSString *)_operatorStoreList[indexPath.row];
+    
+    CalculationTableViewCell *cell = (CalculationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-//    
-//    UITextField * textField = (UITextField *)[cell viewWithTag:1];
-//    textField.text = @"";
-//    textField.delegate = self;
-//    textField.userInteractionEnabled = [self.converter allvaluesFound];
     
     
     cell.valueTextField.text =[NSString stringWithFormat:@"%lid",(long)indexPath.row];
     cell.typeLabel.text = _operatorStoreList[indexPath.row];
+    
     UITextField * textField = (UITextField *)[cell viewWithTag:1];
     textField.text = @"";
     textField.delegate = self;
     textField.userInteractionEnabled = [self.converter allvaluesFound];
     
-//    switch (identifier)
-//    {
-//    case "CurrentCell":
-//        currentTextField = textField
-//        if (_converter?.ampsString != "")
-//        {
-//            textField.text = converter?.ampsString
-//        }
-//        
-//    case "ResistanceCell":
-//        resistanceTextField = textField
-//        if converter?.ohmsString != ""
-//        {
-//            textField.text = converter?.ohmsString
-//        }
-//        
-//    case "PowerCell":
-//        powerTextField = textField
-//        if converter?.wattsString != ""
-//        {
-//            textField.text = converter?.wattsString
-//        }
-//        
-//    case "VoltageCell":
-//        voltageTextField = textField
-//        if converter?.voltsString != ""
-//        {
-//            textField.text = converter?.voltsString
-//        }
-//        
-//    default:
-//        print("")
-//    }
+    if ([cellIdentifier isEqual: @"CurrentCell"])
+    {
+        _currentTextField = textField;
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.ampsString;
+        }
+    }
+    
+    if ([cellIdentifier isEqual: @"ResistanceCell"])
+    {
+        _resistanceTextField = textField;
+
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.ohmsString;
+        }
+    }
+    
+    if ([cellIdentifier isEqual: @"PowerCell"])
+    {
+        _powerTextField = textField;
+
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.wattsString;
+        }
+    }
+    
+    if ([cellIdentifier isEqual: @"VoltageCell"])
+    {
+        _voltageTextField = textField;
+
+        if (![self.converter.ampsString  isEqual: @""])
+        {
+            textField.text = self.converter.voltsString;
+        }
+    }
+
+    NSArray * keys = [_valueTypes allKeysForObject:cellIdentifier];
+    NSString *  keyToRemove = keys[0];
+    [_valueTypes removeObjectForKey:keyToRemove];
+    
+    [textField becomeFirstResponder];
+    
     return cell;
 }
-//
-//-(void)textFieldShouldReturn
-//{
-//    BOOL rc = NO;
-//    if (_textField.text != @"")
-//    {
-//        BOOL rc = YES;
-//        if (_textField == _currentTextField)
-//        {
-//            converter?.ampsString = textField.text!
-//        }
-//        if textField == resistanceTextField
-//        {
-//            converter?.ohmsString = textField.text!
-//        }
-//        if textField == voltageTextField
-//        {
-//            converter?.voltsString = textField.text!
-//        }
-//        if textField == powerTextField
-//        {
-//            converter?.wattsString = textField.text!
-//        }
-//    }
-//    
-//    if rc
-//    {
-//        textField.resignFirstResponder()
-//    }
-//    
-//    converter?.findOtherValuesIfPossible()
-//    
-//    return rc
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    BOOL rc = NO;
+    if (![textField.text  isEqual: @""])
+    {
+        rc = YES;
+        if (textField == _currentTextField)
+        {
+            _converter.ampsString = textField.text;
+        }
+        if (textField == _resistanceTextField)
+        {
+            _converter.ohmsString = textField.text;
+        }
+        if (textField == _voltageTextField)
+        {
+            _converter.voltsString = textField.text;
+        }
+        if (textField == _powerTextField)
+        {
+            _converter.wattsString = textField.text;
+        }
+    }
+    
+    if (rc)
+    {
+        [textField resignFirstResponder];
+    }
+    
+    [_converter findOtherValuesIfPossible];
+    
+    return rc;
+
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
-}
-*/
+}*/
 
 /*
 // Override to support editing the table view.
