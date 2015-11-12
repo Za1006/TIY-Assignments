@@ -141,23 +141,24 @@
     if (_voltageTextField == nil)
     {
         NSString *cellIdentifier =[NSString stringWithFormat: @"Volts"];
-        [self _operatorStoreList.appendString: *cellIdentifier ]
+       // [self _operatorStoreList.appendString: *cellIdentifier ]
+        [self.operatorStoreList addObject: cellIdentifier ];
 
     }
     if (_currentTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Amps"];
-        _operatorStoreList.append(cellIdentifier!)
+        [self.operatorStoreList addObject: cellIdentifier ];
     }
     if (_resistanceTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Ohms"];
-        _operatorStoreList.append(cellIdentifier!)
+        [self.operatorStoreList addObject: cellIdentifier ];
     }
     if (_powerTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Watts"];
-        _operatorStoreList.append(cellIdentifier!)
+        [self.operatorStoreList addObject: cellIdentifier ];
     }
     
     [self.tableView reloadData];
