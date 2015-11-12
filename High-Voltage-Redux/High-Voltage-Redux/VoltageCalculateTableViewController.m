@@ -137,6 +137,30 @@
     [self.tableView reloadData];
 }
 
+//-(void)textFieldShouldReturn
+//{
+//    BOOL rc = NO;
+//    if (![_voltageTextField.text  isEqual: @""])
+//    {
+//        rc = YES;
+//        if (textField == _currentTextField)
+//        {
+//            converter?.ampsString = textField.text!
+//        }
+//        if textField == resistanceTextField
+//        {
+//            converter?.ohmsString = textField.text!
+//        }
+//        if textField == voltageTextField
+//        {
+//            converter?.voltsString = textField.text!
+//        }
+//        if textField == powerTextField
+//        {
+//            converter?.wattsString = textField.text!
+//        }
+//}
+
 -(void)valueWereCalculated
 {
     [self resetValueTypesDictionary];
