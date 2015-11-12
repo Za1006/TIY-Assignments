@@ -62,9 +62,10 @@
     
     cell.valueTextField.text =[NSString stringWithFormat:@"%lid",(long)indexPath.row];
     cell.typeLabel.text = _operatorStoreList[indexPath.row];
-    UITextField *textField = [[UITextField alloc ] init ];
+    UITextField * textField = (UITextField *)[cell viewWithTag:1];
     textField.text = @"";
-    
+    textField.delegate = self;
+    textField.userInteractionEnabled = [self.converter allvaluesFound];
     
 //    switch (identifier)
 //    {
