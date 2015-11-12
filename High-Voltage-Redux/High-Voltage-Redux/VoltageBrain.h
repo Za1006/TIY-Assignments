@@ -14,13 +14,13 @@
 
 
 
-@property (nonatomic) BOOL allvaluesFound;
-@property (nonatomic) NSString *ampsString;
-@property (nonatomic) NSString *ohmsString;
-@property (nonatomic) NSString *wattsString;
-@property (nonatomic) NSString *voltsString;
+@property (assign) BOOL allvaluesFound;
+@property (strong, nonatomic) NSString *ampsString;
+@property (strong, nonatomic) NSString *ohmsString;
+@property (strong, nonatomic) NSString *wattsString;
+@property (strong, nonatomic) NSString *voltsString;
 
-@property(nonatomic, weak) id <ElectricConvertionProtocol> delegate;
+@property(strong, nonatomic) id <ElectricConvertionProtocol> delegate;
 
 -(void)findOtherValuesIfPossible;
 @end

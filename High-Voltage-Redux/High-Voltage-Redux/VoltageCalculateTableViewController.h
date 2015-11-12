@@ -20,7 +20,7 @@
 
 @end
 
-@interface VoltageCalculateTableViewController : UITableViewController
+@interface VoltageCalculateTableViewController : UITableViewController 
 
 @property (nonatomic) NSMutableArray *operatorList;
 @property (nonatomic) NSMutableArray *tableData;

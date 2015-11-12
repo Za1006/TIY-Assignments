@@ -11,6 +11,7 @@
 @implementation VoltageBrain
 
 -(id)init
+//-(instance)init
 {
     self = [super init];
     if (self)
@@ -55,6 +56,7 @@
 {
     double amps = 0.0, ohms = 0.0, volts = 0.0, watts = 0.0;
     if (![_ohmsString  isEqual: @""] && ![_voltsString  isEqual: @""])
+//  if (self.ohmsString && self.voltsString)
     {
         ohms = [_ohmsString doubleValue];
         volts = [_voltsString doubleValue];
@@ -96,10 +98,10 @@
         amps = watts / volts;
         ohms = volts / amps;
     }
-    _voltsString = [NSString stringWithFormat:@"%f", volts];
-    _ampsString = [NSString stringWithFormat:@"%f", amps];
-    _ohmsString = [NSString stringWithFormat:@"%f", ohms];
-    _wattsString = [NSString stringWithFormat:@"%f", watts];
+    _voltsString = [NSString stringWithFormat:@"%g", volts];
+    _ampsString = [NSString stringWithFormat:@"%g", amps];
+    _ohmsString = [NSString stringWithFormat:@"%g", ohms];
+    _wattsString = [NSString stringWithFormat:@"%g", watts];
     
     _allvaluesFound = YES;
     [self.delegate valueWereCalculated];

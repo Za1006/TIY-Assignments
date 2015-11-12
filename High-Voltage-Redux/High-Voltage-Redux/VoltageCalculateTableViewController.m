@@ -14,7 +14,7 @@
 @interface VoltageCalculateTableViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate, ValueTypeDelegateProtocol, ElectricConvertionProtocol>
 
 @property (nonatomic) VoltageBrain *converter;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *addTypeValueButon;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addTypeValueButton;
 
 @end
 
@@ -177,11 +177,13 @@
 }
 */
 
-/*
+
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+{
+    
 }
-*/
+
 
 /*
 // Override to support conditional rearranging of the table view.
@@ -226,6 +228,7 @@
     
     
     if ([self.converter isEqual: nil])
+//  if (!converter)
     {
         self.converter = [[VoltageBrain alloc] init];
         self.converter.delegate = self;
@@ -235,7 +238,8 @@
     [self.tableData addObject: cellIdentifier ];
     if ([_tableData count] == 2)
     {
-        self.addTypeValueButon.enabled = false;
+        self.addTypeValueButton.enabled = NO;
+//      [self.addTypeValueBotton setEnable:NO]
     }
     
     NSUInteger row = [_tableData indexOfObject:cellIdentifier];
@@ -258,21 +262,22 @@
         [self.tableData addObject: cellIdentifier ];
         
     }
-    if (_currentTextField == nil)
+    else if (_currentTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Amps"];
         [self.tableData addObject: cellIdentifier ];
     }
-    if (_resistanceTextField == nil)
+    else if (_resistanceTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Ohms"];
         [self.tableData addObject: cellIdentifier ];
     }
-    if (_powerTextField == nil)
+    else if (_powerTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Watts"];
         [self.tableData addObject: cellIdentifier ];
     }
+ 
     
     [self.tableView reloadData];
 }
