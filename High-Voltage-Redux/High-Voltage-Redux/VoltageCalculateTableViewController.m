@@ -141,9 +141,9 @@
     if (_voltageTextField == nil)
     {
         NSString *cellIdentifier =[NSString stringWithFormat: @"Volts"];
-       // [self _operatorStoreList.appendString: *cellIdentifier ]
+        // [self _operatorStoreList.appendString: *cellIdentifier ]
         [self.operatorStoreList addObject: cellIdentifier ];
-
+        
     }
     if (_currentTextField == nil)
     {
