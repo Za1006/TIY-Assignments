@@ -199,10 +199,10 @@
     {
         UITableViewController *newController = segue.destinationViewController;
         ValueTypesTableViewController *newValueTypeVC = (ValueTypesTableViewController *)newController;
-        newValueTypeVC.operatorList =  [_operatorList mutableCopy];
+        newValueTypeVC.operatorList = [[self.valueTypes allKeys] mutableCopy];// [_operatorList mutableCopy];
         newValueTypeVC.popoverPresentationController.delegate = self;
         newValueTypeVC.delegate = self;
-        double contentHight = 45.0 * (CGFloat) _operatorList.count;
+        double contentHight = 45.0 * (CGFloat) _valueTypes.count;
         newValueTypeVC.preferredContentSize = (CGSizeMake(100.0, contentHight));
         
     }
