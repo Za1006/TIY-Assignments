@@ -23,7 +23,7 @@
 @interface VoltageCalculateTableViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *operatorList;
-@property (nonatomic) NSMutableArray *operatorStoreList;
+@property (nonatomic) NSMutableArray *tableData;
 
 @property (nonatomic) UITextField *currentTextField;
 @property (nonatomic) UITextField *resistanceTextField;

@@ -24,12 +24,12 @@
 {
     [super viewDidLoad];
     _operatorList = [[NSMutableArray alloc] init];
-    _operatorStoreList = [[NSMutableArray alloc] init];
+    _tableData = [[NSMutableArray alloc] init];
     
-    [_operatorList addObject:@"Watts"];
-    [_operatorList addObject:@"Volts"];
-    [_operatorList addObject:@"Amps"];
-    [_operatorList addObject:@"Ohms"];
+//    [_operatorList addObject:@"Watts"];
+//    [_operatorList addObject:@"Volts"];
+//    [_operatorList addObject:@"Amps"];
+//    [_operatorList addObject:@"Ohms"];
 
    _valueTypes =  [ NSMutableDictionary dictionaryWithDictionary:@{@"Amps":@"CurrentCell", @"Ohms":@"ResistanceCell", @"Volts":@"VoltageCell", @"Watts":@"PowerCell"}];
 
@@ -51,7 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _operatorStoreList.count;
+    return _tableData.count;
 }
 
 
@@ -59,57 +59,22 @@
 {
     
     
-    NSString * cellIdentifier = (NSString *)_operatorStoreList[indexPath.row];
+    NSString * cellIdentifier = _tableData[indexPath.row];
     
     CalculationTableViewCell *cell = (CalculationTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
     
-    cell.valueTextField.text =[NSString stringWithFormat:@"%lid",(long)indexPath.row];
-    cell.typeLabel.text = _operatorStoreList[indexPath.row];
+    //cell.valueTextField.text =[NSString stringWithFormat:@"%lid",(long)indexPath.row];
+    //cell.typeLabel.text = _operatorStoreList[indexPath.row];
     
     UITextField * textField = (UITextField *)[cell viewWithTag:1];
     textField.text = @"";
     textField.delegate = self;
     textField.userInteractionEnabled = [self.converter allvaluesFound];
     
-<<<<<<< HEAD
-    
-//    switch (identifier)
-//    {
-//    case "CurrentCell":
-//        currentTextField = textField
-//        if (_converter?.ampsString != "")
-//        {
-//            textField.text = converter?.ampsString
-//        }
-//        
-//    case "ResistanceCell":
-//        resistanceTextField = textField
-//        if converter?.ohmsString != ""
-//        {
-//            textField.text = converter?.ohmsString
-//        }
-//        
-//    case "PowerCell":
-//        powerTextField = textField
-//        if converter?.wattsString != ""
-//        {
-//            textField.text = converter?.wattsString
-//        }
-//        
-//    case "VoltageCell":
-//        voltageTextField = textField
-//        if converter?.voltsString != ""
-//        {
-//            textField.text = converter?.voltsString
-//        }
-//        
-//    default:
-//        print("")
-//    }
-=======
+
     if ([cellIdentifier isEqual: @"CurrentCell"])
     {
         _currentTextField = textField;
@@ -155,7 +120,7 @@
     
     [textField becomeFirstResponder];
     
->>>>>>> origin/High-Voltage-Redux
+//>>>>>>> origin/High-Voltage-Redux
     return cell;
 }
 
@@ -255,8 +220,8 @@
     NSLog(@" you return : %@", electronicOperator);
     [self.operatorList removeObject:electronicOperator];
     
-    [self.operatorStoreList addObject:electronicOperator];
-    NSLog(@" operatorStoreList : %@", _operatorStoreList);
+    [self.tableData addObject:electronicOperator];
+    NSLog(@" operatorStoreList : %@", _tableData);
     [self.tableView reloadData];
     
     
@@ -267,13 +232,13 @@
     }
     
     NSString * cellIdentifier = [self.valueTypes objectForKey: electronicOperator ];
-    [self.operatorStoreList addObject: cellIdentifier ];
-    if ([_operatorStoreList count] == 2) 
+    [self.tableData addObject: cellIdentifier ];
+    if ([_tableData count] == 2)
     {
         self.addTypeValueButon.enabled = false;
     }
     
-    NSUInteger row = [_operatorStoreList indexOfObject:cellIdentifier];
+    NSUInteger row = [_tableData indexOfObject:cellIdentifier];
   //  tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: row, inSection: 0)], withRowAnimation: .Automatic)
     
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -290,23 +255,23 @@
     {
         NSString *cellIdentifier =[NSString stringWithFormat: @"Volts"];
         // [self _operatorStoreList.appendString: *cellIdentifier ]
-        [self.operatorStoreList addObject: cellIdentifier ];
+        [self.tableData addObject: cellIdentifier ];
         
     }
     if (_currentTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Amps"];
-        [self.operatorStoreList addObject: cellIdentifier ];
+        [self.tableData addObject: cellIdentifier ];
     }
     if (_resistanceTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Ohms"];
-        [self.operatorStoreList addObject: cellIdentifier ];
+        [self.tableData addObject: cellIdentifier ];
     }
     if (_powerTextField == nil)
     {
         NSString *cellIdentifier = [NSString stringWithFormat: @"Watts"];
-        [self.operatorStoreList addObject: cellIdentifier ];
+        [self.tableData addObject: cellIdentifier ];
     }
     
     [self.tableView reloadData];
