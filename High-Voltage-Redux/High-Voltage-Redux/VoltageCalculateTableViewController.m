@@ -9,8 +9,11 @@
 #import "VoltageCalculateTableViewController.h"
 #import "ValueTypesTableViewController.h"
 #import "CalculationTableViewCell.h"
+#import "VoltageBrain.h"
 
 @interface VoltageCalculateTableViewController () <UITextFieldDelegate, UIPopoverPresentationControllerDelegate, ValueTypeDelegateProtocol, ElectricConvertionProtocol>
+
+@property (nonatomic) VoltageBrain *converter;
 
 @end
 

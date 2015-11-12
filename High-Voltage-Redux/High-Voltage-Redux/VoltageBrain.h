@@ -10,10 +10,8 @@
 #import "VoltageCalculateTableViewController.h"
 
 
-
 @interface VoltageBrain : NSObject
 
-@property (nonatomic, weak) id <ElectricConvertionProtocol> delegate;
 
 
 @property (nonatomic) BOOL allvaluesFound;
@@ -22,6 +20,7 @@
 @property (nonatomic) NSString *wattsString;
 @property (nonatomic) NSString *voltsString;
 
+@property(nonatomic, weak) id <ElectricConvertionProtocol> delegate;
 
 
 @end

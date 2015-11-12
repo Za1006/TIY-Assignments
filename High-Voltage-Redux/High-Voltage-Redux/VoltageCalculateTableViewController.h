@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VoltageBrain.h"
 
 @protocol ValueTypeDelegateProtocol <NSObject>
 
@@ -20,6 +19,7 @@
 -(void)valueWereCalculated;
 
 @end
+
 @interface VoltageCalculateTableViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *operatorList;
@@ -30,7 +30,7 @@
 @property (nonatomic) UITextField *voltageTextField;
 @property (nonatomic) UITextField *powerTextField;
 
-@property (nonatomic) VoltageBrain *converter;
+//@property (nonatomic) VoltageBrain *converter;
 
 @property (nonatomic) NSMutableDictionary *valueTypes;
 
