@@ -140,26 +140,27 @@
     
     if (_voltageTextField == nil)
     {
-        NSString * cellIdentifier =[NSString stringWithFormat: valueTypes["Volts"]
-        tableData.append(cellIdentifier!)]
+        NSString *cellIdentifier =[NSString stringWithFormat: @"Volts"];
+        tableData.append(cellIdentifier!)
+
     }
-    if currentTextField == nil
+    if (_currentTextField == nil)
     {
-        let cellIdentifier = valueTypes["Amps"]
+        NSString *cellIdentifier = [NSString stringWithFormat: @"Amps"];
         tableData.append(cellIdentifier!)
     }
-    if resistanceTextField == nil
+    if (_resistanceTextField == nil)
     {
-        let cellIdentifier = valueTypes["Ohms"]
+        NSString *cellIdentifier = [NSString stringWithFormat: @"Ohms"];
         tableData.append(cellIdentifier!)
     }
-    if powerTextField == nil
+    if (_powerTextField == nil)
     {
-        let cellIdentifier = valueTypes["Watts"]
+        NSString *cellIdentifier = [NSString stringWithFormat: @"Watts"];
         tableData.append(cellIdentifier!)
     }
     
-    tableView.reloadData()
+    [self.tableView reloadData];
 }
 
 -(void)resetValueTypesDictionary
