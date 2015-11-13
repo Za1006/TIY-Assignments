@@ -192,6 +192,10 @@
     return YES;
 }
 */
+#pragma mark - Action Handler
+//-(IBAction)clearTransaction(UIBarButtonItem *)sender
+//{
+//}
 
 
 #pragma mark - Navigation
@@ -256,6 +260,7 @@
     [self resetValueTypesDictionary];
     
     if (_voltageTextField == nil)
+//  if (!_voltageTextField)
     {
         NSString *cellIdentifier =[NSString stringWithFormat: @"Volts"];
         // [self _operatorStoreList.appendString: *cellIdentifier ]
