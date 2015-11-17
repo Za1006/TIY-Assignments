@@ -11,11 +11,14 @@
 @interface Ticket : NSObject
 
 @property (assign) BOOL winner;
-@property (nonatomic) NSArray *numbers;
+@property (strong, nonatomic) NSArray *numbers;
 @property (nonatomic) NSString *payout;
 @property (nonatomic) NSArray *winningNumbers;
-@property (nonatomic) NSArray *picks;
 
--(NSString *)checkWinningTicket:(NSMutableArray *)winningNumbers;
+-(NSArray *)picks;
++(instancetype)ticketUsingQuickPick;
++(instancetype)ticketUsingArray:(NSArray *)picks;
+
+-(void)compareWithTicket:(Ticket *)anotherTicket;
 
 @end

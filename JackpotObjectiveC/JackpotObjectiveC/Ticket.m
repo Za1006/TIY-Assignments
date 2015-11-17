@@ -8,104 +8,95 @@
 
 #import "Ticket.h"
 
+typedef enum
+{
+   winnerType1Dollar = 3,
+   winnerType5Dollar = 4,
+   winnerType20Dollar = 5,
+   winnerType100Dollar = 6,
+}WinnerType;
+
+@interface Ticket  ()
+{
+    NSMutableArray *picks;
+}
+
+@end
 @implementation Ticket
 
-- (instancetype)init
+
++ (instancetype)ticketUsingQuickPick
 {
-    self = [super init];
-    _picks = [[NSArray alloc] init];
-    _winner = NO;
-    _payout = @"";
+    Ticket *aTicket = [[Ticket alloc]init];
+    for (int i = 0; i < 6; i++)
+    {
+        [aTicket createPick];
+    }
+    return aTicket;
+
+}
+-(instancetype)init
+{
+    Ticket *aTicket = [[Ticket alloc] init];
+    [aTicket insertPicksUsingArray:specificPicks];
+    return aTicket;
+}
+
+-(instancetype)init
+{
+    if (self = [super init])
+    {
+        picks = [[NSMutableArray alloc] init];
+        _winner =  NO;
+        _payout = @"";
+    }
+    
     return self;
 }
 
+-(NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ %@ %@ %@ %@ %@",picks[0], picks[1], picks[2], picks[3], picks[4], picks[5]];
+}
 
-//- (void)createQuickPick
-//{
-//    _winner = NO;
-//    _payout = @"";
-//    
-//    for (int x = 0; x < 6; x++)
-//    {
-//        [self createPick];
-//    }
-//    
+-(NSArray *)picks
+{
+    return [picks copy];
+}
+
+
 - (void)createPick
 {
-    pickFound = BOOL
     
-    if pickFound = NO
+    BOOL shouldAddPick = YES;
+    do
     {
-        NSInteger aPick = arc4random_uniform(53) + 1;
-        NSNumber *pickAsNumber = [NSNumber numberWithInteger: aPick];
-        if (![_picks containsObject:pickAsNumber])
+        int pickInt = arc4random() % 53 + 1;
+        NSNumber *pickAsNumber = [NSNumber numberWithInt:pickInt];
+        for (NSNumber *aPick in picks)
         {
-            
-            [_picks addObject: pickAsNumber];
-            pickFound = YES;
-
-    }
-}
-    }
-//   while(!pickFound);
-
-- (void)createQuickPick
-{
-    _winner = NO;
-    _payout = @"";
-    
-    for (int x = 0; x < 6; x++)
-    {
-        [self createPick];
-    }
-    
-
--(NSString *)checkWinningTicket:(NSMutableArray *)winningTicketNumbers
-{
-    int matchingTickets = 0;
-    
-    NSString *prize = [[NSString alloc] init];
-    prize = @"$0";
-    self.winner = NO;
-    
-    for(NSNumber *winningNumbers in winningTicketNumbers)
-    {
-        for (NSNumber *number in self.numbers)
-        {
-            if ([number isEqualToNumber:winningTicketNumbers])
+            if ([pickAsNumber isEqualToNumber:aPick])
             {
-                matchingTickets += 1;
+                shouldAddPick = NO;
+                break;
             }
         }
-   }
-}
-
-if (matchingTickets == 3)
-{
-    prize = @"$1";
-    self.winner = YES;
-}
-else if (matchingTickets == 4)
-{
-    prize = @"$5";
-    self.winner = YES;
-}
-else if (matchingTickets == 5)
-{
-    
-}
-
-
-
--(NSString*)description
-{
-    NSMutableArray *numbers = [[NSMutableArray alloc]init];
-    for (NSNumber *pick in_picks)
-    {
-        [numbers appendString:[NSString stringWithFormat:@"%@",pick]];
+        else
+        {
+            shouldAddPick = YES;
+        }
     }
-    return numbers;
+    if (shouldAddPick)
+    {
+        [picks addObject:pickAsNumber];
+    }
+} while (!shouldAddPick);
 
-}
+   NSSortDescriptor *lowestToHighest = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES];
+[picks sortUsingDescriptors:@[lowestToHighest]];
+
+
+
+
 @end
     

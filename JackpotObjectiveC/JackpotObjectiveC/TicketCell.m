@@ -10,8 +10,7 @@
 
 @implementation TicketCell
 
-//@property (weak, nonatomic) IBOutlet UILabel *numbersLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *payoutLabel;
+
 - (void)awakeFromNib
 {
     // Initialization code

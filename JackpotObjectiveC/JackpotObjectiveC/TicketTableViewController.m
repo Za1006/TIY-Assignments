@@ -14,25 +14,23 @@
 @interface TicketTableViewController ()
 {
     NSMutableArray *tickets;
-    NSMutableArray *winningTicket;
+//    NSMutableArray *winningTicket;
 }
+
+@property (weak, nonatomic)IBOutlet UIBarButtonItem *addButton;
+
+-(IBAction)createTicket:(id)sender;
 
 @end
 
 @implementation TicketTableViewController
 
-- (IBAction)addButton:(UIBarButtonItem *)sender
-{
-    [self addTicket];
-}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.title = @"Lottery Tickets";
     tickets = [[NSMutableArray alloc] init];
-    tickets =[@[]mutableCopy];
    
 }
 
@@ -59,24 +57,23 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JackpotCell" forIndexPath:indexPath];
     
-    NSString *aTicket = tickets[indexPath.row];
-    cell.textLabel.text = [aTicket winningTicket];
+    Ticket *aTicket = tickets[indexPath.row];
+    UILabel *numbersLabel = (UILabel *)[cell viewWithTag:1];
+    UILabel *payoutLabel = (UILabel *)[cell viewWithTag:2];
     
     if (aTicket.winner)
     {
         cell.backgroundColor = [UIColor greenColor];
+        payoutLabel.text = aTicket.payout;
     }
     else
     {
         cell.backgroundColor = [UIColor whiteColor];
+        payoutLabel.text = @"";
     }
     return cell;
 }
 
--(void)addTicket
-{
-    
-}
 
 
 /*
@@ -112,6 +109,13 @@
     return YES;
 }
 */
+#pragma mark - WinningTicketViewControllerDelegate
+
+- (void) winningTicketWasAdded:(Ticket *)ticket;
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self checkForWinnersUsingTicket:ticket];
+}
 
 
 #pragma mark - Navigation
@@ -128,11 +132,23 @@
     
 }
 
-- (IBAction)createTicketButton:(UIBarButtonItem *)sender
+- (IBAction)createTicketButton:(id)sender
 {
+    Ticket *aTicket =[Ticket ticketUsingQuickPick];
+    [tickets addObject:aTicket];
+    [self.tableView reloadData];
     
 }
- 
+
+-(void)checkForWinnersUsingTicket:(Ticket *)winningTicket
+{
+    for (Ticket *aTicket in tickets)
+    {
+        [aTicket compareWithTicket:winningTicket];
+    }
+    [self.tableView reloadData];
+
+}
 
 
 @end

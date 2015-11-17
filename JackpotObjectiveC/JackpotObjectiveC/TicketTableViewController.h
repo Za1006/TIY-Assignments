@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ticket.h"
 
-@protocol PickerProtocol
+@protocol WinningTicketViewControllerDelegate
 
-- (void) winningNumbersWasChosen:(NSArray *)winningNumbers;
+- (void) winningTicketWasAdded:(Ticket *)ticket;
 
 @end
 
-@interface TicketTableViewController : UITableViewController <PickerProtocol>
+@interface TicketTableViewController : UITableViewController <WinningTicketViewControllerDelegate>
 
 @end
