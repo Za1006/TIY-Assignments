@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ContactsViewController: UIViewController
+class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
 
+      @IBOutlet weak var tableSortSegmentedControl: UISegmentedControl!
+    
+      @IBOutlet weak var tableView: UITableView!
+    
+    
+    let realm = try! Realm()
+    
+    var contacts: Results<Person>!
+
+
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        contacts = realm.objects(Person).sorted("name")
     }
 
     override func didReceiveMemoryWarning()
@@ -23,16 +35,32 @@ class ContactsViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+   
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
     }
-    */
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return contacts.count
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
+        
+        let aContact = contacts[indexPath.row]
+        cell.textLabel?.text = aContact.name
+        cell.detailTextLabel?.text = aContact.birthday
+        
+        
+       
+        return cell
+        
+    }
+    @IBAction func addContact(sender: UIBarButtonItem)
+    {
+        
+    }
+ 
 
 }

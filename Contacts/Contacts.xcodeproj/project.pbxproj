@@ -13,6 +13,7 @@
 		AA3660871BFFCBE5006396F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3660861BFFCBE5006396F9 /* Assets.xcassets */; };
 		AA36608A1BFFCBE5006396F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3660881BFFCBE5006396F9 /* LaunchScreen.storyboard */; };
 		AAF60E1F1BFFCE1B0092F56B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF60E1E1BFFCE1B0092F56B /* ContactsViewController.swift */; };
+		AAF60E211BFFE2180092F56B /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF60E201BFFE2180092F56B /* ContactList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		AA3660891BFFCBE5006396F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA36608B1BFFCBE5006396F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAF60E1E1BFFCE1B0092F56B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		AAF60E201BFFE2180092F56B /* ContactList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
 		D8DEE174027B116DFF864939 /* Pods-Contacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts/Pods-Contacts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				AA36607F1BFFCBE5006396F9 /* AppDelegate.swift */,
+				AAF60E201BFFE2180092F56B /* ContactList.swift */,
 				AAF60E1E1BFFCE1B0092F56B /* ContactsViewController.swift */,
 				AA3660831BFFCBE5006396F9 /* Main.storyboard */,
 				AA3660861BFFCBE5006396F9 /* Assets.xcassets */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF60E211BFFE2180092F56B /* ContactList.swift in Sources */,
 				AA3660801BFFCBE5006396F9 /* AppDelegate.swift in Sources */,
 				AAF60E1F1BFFCE1B0092F56B /* ContactsViewController.swift in Sources */,
 			);
