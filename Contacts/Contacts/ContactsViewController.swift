@@ -20,7 +20,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     let realm = try! Realm()
     
     var contacts: Results<Person>!
-
+    var currentCreateAction: UIAlertAction!
 
     
     override func viewDidLoad()
@@ -28,6 +28,11 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         contacts = realm.objects(Person).sorted("name")
+    }
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning()
@@ -50,7 +55,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let aContact = contacts[indexPath.row]
         cell.textLabel?.text = aContact.name
-        cell.detailTextLabel?.text = aContact.birthday
+        cell.detailTextLabel?.text = aContact.phoneNumber
         
         
        
@@ -59,7 +64,57 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     @IBAction func addContact(sender: UIBarButtonItem)
     {
+        let alertController = UIAlertController(title: "Person", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
+        currentCreateAction = UIAlertAction(title: "Create", style: .Default) {
+            (action) -> Void in
+            
+            let personName = alertController.textFields?.first?.text
+            let newPerson = Person()
+            newPerson.name = personName!
+            
+            
+            try! self.realm.write({ () -> Void in
+             self.realm.add(newPerson)
+                self.tableView.reloadData()
+                
+            })
+            
+        }
+        alertController.addAction(currentCreateAction)
+        currentCreateAction.enabled = false
         
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alertController.addTextFieldWithConfigurationHandler {
+            (textField) -> Void in
+            textField.placeholder = "Name"
+            textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        }
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    @IBAction func changeSortCriteria(sender: UISegmentedControl)
+    {
+        if sender.selectedSegmentIndex == 0
+        {
+            contacts = contacts.sorted("name")
+        }
+        else
+        {
+            contacts = contacts.sorted("birthday", ascending: false)
+        }
+        tableView.reloadData()
+    }
+    
+    func contactNameFieldDidChange(sender: UITextField)
+    {
+        self.currentCreateAction.enabled = sender.text?.characters.count > 0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let contactDetailVC = storyboard?.instantiateViewControllerWithIdentifier("ContactDetailViewController") as! ContactDetailViewController
+        contactDetailVC.contacts = contacts[indexPath.row]
+        navigationController?.pushViewController(contactDetailVC, animated: true)
     }
  
 
