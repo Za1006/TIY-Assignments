@@ -28,6 +28,8 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         contacts = realm.objects(Person).sorted("name")
+//        contacts = realm.objects(Person).sorted("family")
+//        contacts = realm.objects(Person).sorted("friends")
     }
     override func viewWillAppear(animated: Bool)
     {
@@ -64,7 +66,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     @IBAction func addContact(sender: UIBarButtonItem)
     {
-        let alertController = UIAlertController(title: "Person", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Add Contact", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
         currentCreateAction = UIAlertAction(title: "Create", style: .Default) {
             (action) -> Void in
             
@@ -99,7 +101,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         else
         {
-            contacts = contacts.sorted("birthday", ascending: false)
+            contacts = contacts.sorted("phone number", ascending: false)
         }
         tableView.reloadData()
     }
@@ -113,7 +115,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let contactDetailVC = storyboard?.instantiateViewControllerWithIdentifier("ContactDetailViewController") as! ContactDetailViewController
-        contactDetailVC.contacts = contacts[indexPath.row]
+        contactDetailVC.contact = contacts[indexPath.row]
         navigationController?.pushViewController(contactDetailVC, animated: true)
     }
  

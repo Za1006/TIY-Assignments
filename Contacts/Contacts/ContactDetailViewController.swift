@@ -13,14 +13,19 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
 {
     
     let realm = try! Realm()
-    var contacts: Person?
+    
+    var contact: Person?
+//    var  family: Person?
+//    var friends: Person?
     var allPeople: Results<Person>!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        allPeople = realm.objects(Person).filter("name !=%@", contacts!.name).sorted("name")
+        allPeople = realm.objects(Person).filter("name !=%@", contact!.name).sorted("name")
+//        allPeople = realm.objects(Person).filter("name !=%@", family!.name).sorted("family")
+//        allPeople = realm.objects(Person).filter("name !=%@", friends!.name).sorted("friends")
         
 
     }
@@ -52,7 +57,7 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
         
         let aPossibleContact = allPeople[indexPath.row]
         cell.textLabel?.text = aPossibleContact.name
-        let results = contacts!.contacts.filter(aPossibleContact.name)
+        let results = contact!.contacts.filter(aPossibleContact.name)
         if results.count == 1
         {
             cell.accessoryType = .Checkmark
@@ -75,7 +80,7 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
             cell?.accessoryType = .Checkmark
             try! realm.write { () -> Void in
                 
-                self.contacts!.contacts.append(self.allPeople[indexPath.row])
+                self.contact!.contacts.append(self.allPeople[indexPath.row])
             }
         }
     }

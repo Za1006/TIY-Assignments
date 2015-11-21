@@ -13,5 +13,11 @@ class Person: Object
     dynamic var name = ""
     dynamic var phoneNumber = ""
     dynamic var birthday = ""
+//    dynamic var city = ""
+//    dynamic var zipcode = ""
+    
     let contacts = List<Person>()
+//    let family = List<Person>()
+//    let friends = List<Person>()
+    
 }

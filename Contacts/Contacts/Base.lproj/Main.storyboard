@@ -60,8 +60,8 @@
                                 <rect key="frame" x="40" y="72" width="520" height="29"/>
                                 <animations/>
                                 <segments>
-                                    <segment title="Family"/>
-                                    <segment title="Friends"/>
+                                    <segment title="Name"/>
+                                    <segment title="Phone Number"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -84,12 +84,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="YHn-Zr-mnq"/>
-                                <exclude reference="jg9-AE-F8o"/>
                                 <exclude reference="3V2-8h-CN1"/>
                                 <exclude reference="eY3-PG-o8U"/>
                                 <exclude reference="rf4-7r-eni"/>
                                 <exclude reference="tWz-cM-G5M"/>
+                                <exclude reference="YHn-Zr-mnq"/>
+                                <exclude reference="jg9-AE-F8o"/>
                             </mask>
                         </variation>
                     </view>
@@ -147,6 +147,10 @@
                                         <animations/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z5I-cW-6pK" id="AVc-Ir-n1a"/>
+                                    <outlet property="delegate" destination="Z5I-cW-6pK" id="nof-Cu-eYm"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -159,6 +163,9 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="bMv-47-nNK" id="IrD-aw-mgA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXb-1B-hGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
