@@ -9,6 +9,11 @@
 import UIKit
 import RealmSwift
 
+protocol ContactListViewControllerDelegate
+{
+    func contactWasAdded(newContact: Person)
+}
+
 class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
 
@@ -28,6 +33,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         contacts = realm.objects(Person).sorted("name")
+        
 //        contacts = realm.objects(Person).sorted("family")
 //        contacts = realm.objects(Person).sorted("friends")
     }
@@ -51,16 +57,20 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     {
         return contacts.count
     }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        return "Person"
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
         
         let aContact = contacts[indexPath.row]
         cell.textLabel?.text = aContact.name
-        cell.detailTextLabel?.text = aContact.phoneNumber
+        cell.detailTextLabel?.text = "\(aContact.name)"
         
-        
-       
         return cell
         
     }
@@ -91,22 +101,38 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             textField.placeholder = "Name"
             textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         }
+//        addTextFieldWithConfigurationHandler {
+//            (textField) -> Void in
+//            textField.placeholder = "Number"
+//            textField.addTarget(self, action: "contactNumberFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+//        }
+//        
+//        addTextFieldWithConfigurationHandler {
+//            (textField) -> Void in
+//            textField.placeholder = "Name"
+//            textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+//        }
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     @IBAction func changeSortCriteria(sender: UISegmentedControl)
     {
         if sender.selectedSegmentIndex == 0
         {
-            contacts = contacts.sorted("name")
+            contacts = contacts.sorted("first name")
         }
         else
         {
-            contacts = contacts.sorted("phone number", ascending: false)
+            contacts = contacts.sorted("last name", ascending: false)
         }
         tableView.reloadData()
     }
     
     func contactNameFieldDidChange(sender: UITextField)
+    {
+        self.currentCreateAction.enabled = sender.text?.characters.count > 0
+    }
+    
+    func contactNumberFieldDidChange(sender: UITextField)
     {
         self.currentCreateAction.enabled = sender.text?.characters.count > 0
     }

@@ -10,11 +10,11 @@ import RealmSwift
 
 class Person: Object
 {
+    dynamic var firstName = ""
+    dynamic var lastName = ""
     dynamic var name = ""
-    dynamic var phoneNumber = ""
     dynamic var birthday = ""
-//    dynamic var city = ""
-//    dynamic var zipcode = ""
+    dynamic var phoneNumber = ""
     
     let contacts = List<Person>()
 //    let family = List<Person>()
