@@ -126,30 +126,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-47-nNK">
-                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bMv-47-nNK">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="ict-EG-sTE" rowHeight="36" style="IBUITableViewCellStyleDefault" id="BmI-j0-aZg">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="36"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="128" id="Xuw-GA-ByY">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BmI-j0-aZg" id="XOv-AX-tua">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="35"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xuw-GA-ByY" id="q1A-Wr-uhd">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ict-EG-sTE">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7d-tb-0Ch">
+                                                    <rect key="frame" x="15" y="8" width="289" height="22"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw1-Uf-kIR">
+                                                    <rect key="frame" x="15" y="38" width="289" height="22"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6g6-1I-LTR">
+                                                    <rect key="frame" x="15" y="68" width="289" height="22"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="family" translatesAutoresizingMaskIntoConstraints="NO" id="mnV-6y-ugT">
+                                                    <rect key="frame" x="312" y="8" width="135" height="116"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="RxK-TI-sYe">
+                                                    <rect key="frame" x="460" y="8" width="126" height="116"/>
+                                                    <animations/>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="6g6-1I-LTR" firstAttribute="width" secondItem="Lw1-Uf-kIR" secondAttribute="width" id="1xH-Pw-XZX"/>
+                                                <constraint firstItem="Lw1-Uf-kIR" firstAttribute="leading" secondItem="i7d-tb-0Ch" secondAttribute="leading" id="54l-KM-PQ3"/>
+                                                <constraint firstItem="mnV-6y-ugT" firstAttribute="top" secondItem="q1A-Wr-uhd" secondAttribute="top" constant="8" id="8s5-Z8-u68"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RxK-TI-sYe" secondAttribute="trailing" id="LfL-03-Asq"/>
+                                                <constraint firstAttribute="bottom" secondItem="mnV-6y-ugT" secondAttribute="bottom" constant="3" id="New-pf-u7J"/>
+                                                <constraint firstItem="6g6-1I-LTR" firstAttribute="leading" secondItem="Lw1-Uf-kIR" secondAttribute="leading" id="NsR-gI-Vgj"/>
+                                                <constraint firstItem="RxK-TI-sYe" firstAttribute="leading" secondItem="mnV-6y-ugT" secondAttribute="trailing" constant="13" id="Zs7-Fn-DPr"/>
+                                                <constraint firstItem="Lw1-Uf-kIR" firstAttribute="top" secondItem="i7d-tb-0Ch" secondAttribute="bottom" constant="8" id="auL-12-K1U"/>
+                                                <constraint firstItem="i7d-tb-0Ch" firstAttribute="width" secondItem="q1A-Wr-uhd" secondAttribute="width" constant="-311" id="dqT-rY-vj6"/>
+                                                <constraint firstItem="i7d-tb-0Ch" firstAttribute="top" secondItem="q1A-Wr-uhd" secondAttribute="top" constant="8" id="f0w-iE-Fr1"/>
+                                                <constraint firstAttribute="trailing" secondItem="mnV-6y-ugT" secondAttribute="trailing" constant="153" id="hK0-Bz-Crs"/>
+                                                <constraint firstItem="RxK-TI-sYe" firstAttribute="top" secondItem="q1A-Wr-uhd" secondAttribute="top" constant="8" id="hYx-bW-jRD"/>
+                                                <constraint firstAttribute="trailing" secondItem="RxK-TI-sYe" secondAttribute="trailing" constant="14" id="jh6-Ze-Us8"/>
+                                                <constraint firstItem="mnV-6y-ugT" firstAttribute="leading" secondItem="q1A-Wr-uhd" secondAttribute="leading" constant="312" id="k1M-Vw-WzE"/>
+                                                <constraint firstItem="6g6-1I-LTR" firstAttribute="top" secondItem="Lw1-Uf-kIR" secondAttribute="bottom" constant="8" id="koa-AB-TCD"/>
+                                                <constraint firstItem="Lw1-Uf-kIR" firstAttribute="width" secondItem="i7d-tb-0Ch" secondAttribute="width" id="mzI-QJ-2Ye"/>
+                                                <constraint firstItem="i7d-tb-0Ch" firstAttribute="leading" secondItem="q1A-Wr-uhd" secondAttribute="leading" constant="15" id="tjF-c0-IQA"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="LfL-03-Asq"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="RxK-TI-sYe" secondAttribute="bottom" constant="4" id="Yw4-09-5qC"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -157,18 +205,30 @@
                                     <outlet property="delegate" destination="Z5I-cW-6pK" id="nof-Cu-eYm"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hyx-vq-KhL">
+                                <rect key="frame" x="20" y="72" width="560" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Family"/>
+                                    <segment title="Friends"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hyx-vq-KhL" firstAttribute="centerX" secondItem="BK5-Pa-Vek" secondAttribute="centerX" id="1SB-4q-1Y5"/>
                             <constraint firstAttribute="trailing" secondItem="bMv-47-nNK" secondAttribute="trailing" id="E3S-UM-1dm"/>
-                            <constraint firstItem="bMv-47-nNK" firstAttribute="top" secondItem="1xB-Bf-LlS" secondAttribute="bottom" constant="8" id="Ozs-ox-Rg1"/>
+                            <constraint firstItem="bMv-47-nNK" firstAttribute="top" secondItem="1xB-Bf-LlS" secondAttribute="bottom" constant="44" id="Ozs-ox-Rg1"/>
                             <constraint firstItem="bMv-47-nNK" firstAttribute="leading" secondItem="BK5-Pa-Vek" secondAttribute="leading" id="VQe-dI-xTN"/>
                             <constraint firstItem="QTx-kI-KxO" firstAttribute="top" secondItem="bMv-47-nNK" secondAttribute="bottom" id="cKX-r3-DEC"/>
+                            <constraint firstItem="hyx-vq-KhL" firstAttribute="top" secondItem="1xB-Bf-LlS" secondAttribute="bottom" constant="8" id="ckZ-O3-zek"/>
+                            <constraint firstItem="hyx-vq-KhL" firstAttribute="width" secondItem="BK5-Pa-Vek" secondAttribute="width" constant="-40" id="u0d-0G-goQ"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="familyFriendSegmentedController" destination="hyx-vq-KhL" id="imy-uE-Pi7"/>
                         <outlet property="tableView" destination="bMv-47-nNK" id="IrD-aw-mgA"/>
                     </connections>
                 </viewController>
@@ -286,4 +346,8 @@
             <point key="canvasLocation" x="249" y="391"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="family" width="256" height="256"/>
+        <image name="friends" width="525" height="528"/>
+    </resources>
 </document>

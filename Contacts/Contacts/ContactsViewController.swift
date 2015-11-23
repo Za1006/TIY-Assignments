@@ -34,8 +34,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         contacts = realm.objects(Person).sorted("name")
         
-//        contacts = realm.objects(Person).sorted("family")
-//        contacts = realm.objects(Person).sorted("friends")
     }
     override func viewWillAppear(animated: Bool)
     {
@@ -46,7 +44,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
@@ -60,7 +57,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        return "Person"
+        return "Person:"
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -69,11 +66,25 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let aContact = contacts[indexPath.row]
         cell.textLabel?.text = aContact.name
-        cell.detailTextLabel?.text = "\(aContact.name)"
+        cell.detailTextLabel?.text = "\(aContact.phoneNumber)"
         
         return cell
         
     }
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete
+        {
+            let aContact = contacts[indexPath.row]
+            try! self.realm.write ({ () -> Void in
+                
+                self.realm.delete(self.contacts)
+            })
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+        }
+    }
+
     @IBAction func addContact(sender: UIBarButtonItem)
     {
         let alertController = UIAlertController(title: "Add Contact", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -101,19 +112,11 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             textField.placeholder = "Name"
             textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         }
-//        addTextFieldWithConfigurationHandler {
-//            (textField) -> Void in
-//            textField.placeholder = "Number"
-//            textField.addTarget(self, action: "contactNumberFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-//        }
-//        
-//        addTextFieldWithConfigurationHandler {
-//            (textField) -> Void in
-//            textField.placeholder = "Name"
-//            textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-//        }
+
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    
     @IBAction func changeSortCriteria(sender: UISegmentedControl)
     {
         if sender.selectedSegmentIndex == 0
@@ -122,7 +125,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         else
         {
-            contacts = contacts.sorted("last name", ascending: false)
+            contacts = contacts.sorted("last name")
         }
         tableView.reloadData()
     }

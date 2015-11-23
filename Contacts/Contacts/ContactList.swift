@@ -16,8 +16,8 @@ class Person: Object
     dynamic var birthday = ""
     dynamic var phoneNumber = ""
     
-    let contacts = List<Person>()
-//    let family = List<Person>()
-//    let friends = List<Person>()
+//    let contacts = List<Person>()
+    let family = List<Person>()
+    let friends = List<Person>()
     
 }

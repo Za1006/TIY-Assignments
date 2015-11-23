@@ -15,19 +15,24 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
     let realm = try! Realm()
     
     var contact: Person?
-//    var  family: Person?
-//    var friends: Person?
     var allPeople: Results<Person>!
+    let family: List<Person>!
+    let friends: List<Person>!
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var familyFriendSegmentedController: UISegmentedControl!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+
+    
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         allPeople = realm.objects(Person).filter("name !=%@", contact!.name).sorted("name")
-//        allPeople = realm.objects(Person).filter("name !=%@", family!.name).sorted("family")
-//        allPeople = realm.objects(Person).filter("name !=%@", friends!.name).sorted("friends")
         
-
+        setLabel()
     }
 
     override func didReceiveMemoryWarning()
@@ -36,6 +41,12 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
         // Dispose of any resources that can be recreated.
     }
     
+    func setLabel()
+    {
+        nameLabel.text = contact!.name
+        phoneNumberLabel.text = contact!.phoneNumber
+        birthdayLabel.text = contact!.birthday
+    }
 // MARK: - UITableView Data Source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
