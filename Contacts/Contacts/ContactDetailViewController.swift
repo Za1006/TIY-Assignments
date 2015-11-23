@@ -57,18 +57,17 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return allPeople.count
+
     }
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-    {
-        return "Add contacts"
-    }
+  
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
         
         let aPossibleContact = allPeople[indexPath.row]
         cell.textLabel?.text = aPossibleContact.name
-        let results = contact!.contacts.filter(aPossibleContact.name)
+        cell.detailTextLabel?.text = aPossibleContact.birthday
+        let results = contact!.friends.filter("name == %@", aPossibleContact.name)
         if results.count == 1
         {
             cell.accessoryType = .Checkmark
@@ -91,8 +90,30 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
             cell?.accessoryType = .Checkmark
             try! realm.write { () -> Void in
                 
-                self.contact!.contacts.append(self.allPeople[indexPath.row])
+                self.contact!.name.append(self.allPeople[indexPath.row])
             }
         }
+//        else
+//        {
+//            cell?.accessoryType = .None
+//            try! realm.write {() -> Void in
+//                
+//                let indext = self.contact!.friends.indextOf(self.allPeople[indexPath.row])
+//                self.contact!.friends.removeAtIndex(indext!)
+//            }
+        }
     }
-}
+    
+    @IBAction func changeSortCriteria(sender: UISegmentedControl)
+    {
+        if sender.selectedSegmentIndex == 0
+        {
+            Person = Contacts.sorted("firstName")
+        }
+        else
+        {
+            allPeople = allPeople.sorted("lastName")
+        }
+        tableView.reloadData()
+    }
+

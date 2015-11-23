@@ -57,7 +57,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        return "Person:"
+        return "Add contacts:"
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -75,7 +75,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     {
         if editingStyle == .Delete
         {
-            let aContact = contacts[indexPath.row]
+            _ = contacts[indexPath.row]
             try! self.realm.write ({ () -> Void in
                 
                 self.realm.delete(self.contacts)
@@ -84,37 +84,37 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             
         }
     }
-
-    @IBAction func addContact(sender: UIBarButtonItem)
-    {
-        let alertController = UIAlertController(title: "Add Contact", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
-        currentCreateAction = UIAlertAction(title: "Create", style: .Default) {
-            (action) -> Void in
-            
-            let personName = alertController.textFields?.first?.text
-            let newPerson = Person()
-            newPerson.name = personName!
-            
-            
-            try! self.realm.write({ () -> Void in
-             self.realm.add(newPerson)
-                self.tableView.reloadData()
-                
-            })
-            
-        }
-        alertController.addAction(currentCreateAction)
-        currentCreateAction.enabled = false
-        
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        alertController.addTextFieldWithConfigurationHandler {
-            (textField) -> Void in
-            textField.placeholder = "Name"
-            textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-        }
-
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
+//
+//    @IBAction func addContact(sender: UIBarButtonItem)
+//    {
+//        let alertController = UIAlertController(title: "Add Contact", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
+//        currentCreateAction = UIAlertAction(title: "Create", style: .Default) {
+//            (action) -> Void in
+//            
+//            let personName = alertController.textFields?.first?.text
+//            let newPerson = Person()
+//            newPerson.name = personName!
+//            
+//            
+//            try! self.realm.write({ () -> Void in
+//             self.realm.add(newPerson)
+//                self.tableView.reloadData()
+//                
+//            })
+//            
+//        }
+//        alertController.addAction(currentCreateAction)
+//        currentCreateAction.enabled = false
+//        
+//        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+//        alertController.addTextFieldWithConfigurationHandler {
+//            (textField) -> Void in
+//            textField.placeholder = "Name"
+//            textField.addTarget(self, action: "contactNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+//        }
+//
+//        self.presentViewController(alertController, animated: true, completion: nil)
+//    }
     
     
     @IBAction func changeSortCriteria(sender: UISegmentedControl)
@@ -135,10 +135,10 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.currentCreateAction.enabled = sender.text?.characters.count > 0
     }
     
-    func contactNumberFieldDidChange(sender: UITextField)
-    {
-        self.currentCreateAction.enabled = sender.text?.characters.count > 0
-    }
+//    func contactNumberFieldDidChange(sender: UITextField)
+//    {
+//        self.currentCreateAction.enabled = sender.text?.characters.count > 0
+//    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -147,6 +147,22 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         contactDetailVC.contact = contacts[indexPath.row]
         navigationController?.pushViewController(contactDetailVC, animated: true)
     }
- 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "AddContactSegue"
+        {
+            let destVC = segue.destinationViewController as! UINavigationController
+            let modalVC = destVC.viewControllers[0] as! ContactListViewController
+            modalVC.delegate = self
+        }
+    }
+    func contactWasAdded(newContact: Person)
+    {
+        
+        try! self.realm.write( { () -> Void in
+            self.realm.add(newContact)
+            self.tableView.reloadData()
+        } )
+    }
 
 }
