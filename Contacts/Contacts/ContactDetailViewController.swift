@@ -108,7 +108,7 @@ class ContactDetailViewController: UIViewController,UITableViewDelegate,UITableV
     {
         if sender.selectedSegmentIndex == 0
         {
-            Person = Contacts.sorted("firstName")
+            allPeople = allPeople.sorted("firstName")
         }
         else
         {
