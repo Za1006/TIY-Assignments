@@ -15,10 +15,25 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
 
     override func viewDidLoad()
     {
-        
-        
         super.viewDidLoad()
+        
+        title = "ToDo List"
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        
+//        let fetchRequest = NSFetchRequest(entityName: "ToDo")
+//        do {
+//            
+//            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ToDo]
+//            
+//            toDos = fetchResults!
+//        }
+//        catch {
+//            let nserror = error as NSError
+//            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+//            abort()
+//        }
+//    }
     }
 
     override func didReceiveMemoryWarning()
@@ -36,18 +51,31 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 0
+        return toDos.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoCell", forIndexPath: indexPath) as! ToDoCell
 
-        // Configure the cell...
-
+        let anItem = toDos[indexPath.row]
+        if anItem.itemToDo == nil
+        {
+            cell.titleTextField .becomeFirstResponder()
+        }
+        else
+        {
+            cell.titleTextField.text = anItem.itemToDo
+        }
+        
+        if anItem.isCompleted == false
+        {
+//            cell.switchTurnedOn.setImage(UISwitch, forState: UIControlState.Normal)
+        }
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

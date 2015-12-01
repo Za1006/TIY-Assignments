@@ -15,7 +15,7 @@ import CoreData
 extension ToDo
 {
 
-    @NSManaged var count: Int16
-    @NSManaged var title: String?
+    @NSManaged var itemToDo: String?
+    @NSManaged var isCompleted: Bool
 
 }
