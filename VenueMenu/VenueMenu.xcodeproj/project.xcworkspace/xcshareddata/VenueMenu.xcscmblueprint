@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "73F9F18DEF448C870DD34E274ACCAB2E2D85900E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8211DB8A25B93C5A27A19A5521E6302076AD013D" : 0,
+    "73F9F18DEF448C870DD34E274ACCAB2E2D85900E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6588A295-4C0D-4C81-8BF3-7DA5F7E0E2D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8211DB8A25B93C5A27A19A5521E6302076AD013D" : "TIYAssignments\/VenueMenu\/FloatRatingView\/",
+    "73F9F18DEF448C870DD34E274ACCAB2E2D85900E" : "TIYAssignments\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VenueMenu",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VenueMenu\/VenueMenu.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Za1006\/TIY-Assignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "73F9F18DEF448C870DD34E274ACCAB2E2D85900E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/glenyi\/FloatRatingView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8211DB8A25B93C5A27A19A5521E6302076AD013D"
+    }
+  ]
+}
