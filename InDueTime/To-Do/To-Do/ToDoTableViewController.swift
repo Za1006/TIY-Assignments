@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ToDoTableViewController: UITableViewController, UITextFieldDelegate
 {
@@ -21,20 +22,21 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         
-//        let fetchRequest = NSFetchRequest(entityName: "ToDo")
-//        do {
-//            
-//            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ToDo]
-//            
-//            toDos = fetchResults!
-//        }
-//        catch {
-//            let nserror = error as NSError
-//            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-//            abort()
-//        }
-//    }
+        let fetchRequest = NSFetchRequest(entityName: "ToDo")
+        do {
+            
+            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [ToDo]
+            
+            toDos = fetchResults!
+            }
+           catch
+            {
+               let nserror = error as NSError
+               NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
     }
+    
 
     override func didReceiveMemoryWarning()
     {
@@ -70,47 +72,85 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
         
         if anItem.isCompleted == false
         {
-//            cell.switchTurnedOn.setImage(UISwitch, forState: UIControlState.Normal)
-        }
+            cell.accessoryType = .None
         
+        }
+        else
+        {
+            cell.accessoryType = .Checkmark
+
+        }
         return cell
     }
 
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+         let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if cell?.accessoryType == UITableViewCellAccessoryType.None
+        {
+            cell?.accessoryType = .Checkmark
+        }
+        else
+        {
+            cell?.accessoryType = .None
+        }
+    }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
         return true
     }
-    */
 
-    /*
+
+
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+
+        if editingStyle == .Delete
+        {
+            
+            let anItem = toDos[indexPath.row]
+            if anItem.isCompleted
+            {
+              toDos.removeAtIndex(indexPath.row)
+              managedObjectContext.deleteObject(anItem)
+                
+            }
+            saveContext()
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+         }
 
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        var rc = false
+        
+        if textField != ""
+        {
+            rc = true
+            let contentView = textField.superview
+            let cell = contentView?.superview as! ToDoCell
+            let indextPath = tableView.indexPathForCell(cell)
+            let anItem = toDos[indextPath!.row]
+            anItem.itemToDo = textField.text
+            textField.resignFirstResponder()
+            saveContext()
+        }
+        return rc
     }
-    */
+
+    @IBAction func addToDo(sender: UIBarButtonItem)
+    {
+        let aToDo = NSEntityDescription.insertNewObjectForEntityForName("ToDo", inManagedObjectContext: managedObjectContext) as! ToDo
+        toDos.append(aToDo)
+        tableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
@@ -121,5 +161,21 @@ class ToDoTableViewController: UITableViewController, UITextFieldDelegate
         // Pass the selected object to the new view controller.
     }
     */
-
+  
+    func saveContext ()
+    {
+        if managedObjectContext.hasChanges
+        {
+            do
+            {
+                try managedObjectContext.save()
+            }
+            catch
+            {
+                let nserror = error as NSError
+                NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+                abort()
+            }
+        }
+    }
 }

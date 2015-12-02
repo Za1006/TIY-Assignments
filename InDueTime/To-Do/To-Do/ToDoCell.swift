@@ -11,12 +11,6 @@ import UIKit
 class ToDoCell: UITableViewCell
 {
     
-    @IBAction func switchTurnedOn(sender: AnyObject)
-    {
-//        check.setOn(false, animated: true)
-    }
-    
-    @IBOutlet weak var countLabel: UILabel!
     
     @IBOutlet weak var titleTextField: UITextField!
 

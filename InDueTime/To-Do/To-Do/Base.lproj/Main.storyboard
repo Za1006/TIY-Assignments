@@ -21,22 +21,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-jM-Imj">
-                                            <rect key="frame" x="443" y="11" width="47" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BI-jM-Imj">
+                                            <rect key="frame" x="490" y="11" width="0.0" height="0.0"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEr-Xh-mtp">
-                                            <rect key="frame" x="536" y="6" width="51" height="31"/>
-                                            <animations/>
-                                            <connections>
-                                                <action selector="switchbutton:" destination="xZh-CK-s1h" eventType="valueChanged" id="mIn-qs-0g0"/>
-                                            </connections>
-                                        </switch>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Do List" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-wg-sbx">
-                                            <rect key="frame" x="15" y="7" width="420" height="30"/>
+                                            <rect key="frame" x="15" y="7" width="400" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -44,19 +37,14 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="rEr-Xh-mtp" firstAttribute="leading" secondItem="8BI-jM-Imj" secondAttribute="trailing" constant="46" id="2xc-28-5Rx"/>
-                                        <constraint firstItem="8BI-jM-Imj" firstAttribute="centerY" secondItem="rEr-Xh-mtp" secondAttribute="centerY" id="V0O-a2-ciI"/>
-                                        <constraint firstItem="rEr-Xh-mtp" firstAttribute="centerY" secondItem="XbP-th-929" secondAttribute="centerY" id="YEM-xY-Vaf"/>
-                                        <constraint firstItem="8BI-jM-Imj" firstAttribute="leading" secondItem="6v6-wg-sbx" secondAttribute="trailing" constant="8" id="dNu-2M-tTy"/>
+                                        <constraint firstItem="6v6-wg-sbx" firstAttribute="width" secondItem="XbP-th-929" secondAttribute="width" constant="-200" id="6cx-PK-6eo"/>
+                                        <constraint firstItem="6v6-wg-sbx" firstAttribute="top" secondItem="XbP-th-929" secondAttribute="top" constant="7" id="UOb-Xw-Ish"/>
                                         <constraint firstItem="6v6-wg-sbx" firstAttribute="leading" secondItem="XbP-th-929" secondAttribute="leading" constant="15" id="eAV-aG-K5y"/>
-                                        <constraint firstItem="6v6-wg-sbx" firstAttribute="centerY" secondItem="XbP-th-929" secondAttribute="centerY" id="gDi-Lg-55M"/>
-                                        <constraint firstAttribute="trailing" secondItem="rEr-Xh-mtp" secondAttribute="trailing" constant="15" id="z9O-G2-fgf"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <outlet property="countLabel" destination="8BI-jM-Imj" id="ve2-Kc-Mre"/>
-                                    <outlet property="switch" destination="rEr-Xh-mtp" id="fuh-4b-wnf"/>
                                     <outlet property="titleTextField" destination="6v6-wg-sbx" id="MHB-nV-P1j"/>
                                 </connections>
                             </tableViewCell>
@@ -68,7 +56,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fsN-Az-LIV">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="aNw-dY-Ovw"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2ic-FB-tHL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2ic-FB-tHL">
+                            <connections>
+                                <action selector="addToDo:" destination="olN-rW-ILN" id="XnR-4B-GDb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hG8-65-OMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
