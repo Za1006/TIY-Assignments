@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		425D2B9CFCD3F26E2110908D /* libPods-FoodTruck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9ADC417C75DB53626B35C0E /* libPods-FoodTruck.a */; };
 		AABC3C2C1C1105E700CFE0A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC3C2B1C1105E700CFE0A1 /* AppDelegate.swift */; };
 		AABC3C2E1C1105E700CFE0A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABC3C2D1C1105E700CFE0A1 /* ViewController.swift */; };
 		AABC3C311C1105E700CFE0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AABC3C2F1C1105E700CFE0A1 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5219D820D03C371559127353 /* Pods-FoodTruck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruck.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTruck/Pods-FoodTruck.release.xcconfig"; sourceTree = "<group>"; };
+		65DEFE786BDD0AD79DC1805A /* Pods-FoodTruck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTruck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTruck/Pods-FoodTruck.debug.xcconfig"; sourceTree = "<group>"; };
 		AABC3C281C1105E700CFE0A1 /* FoodTruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABC3C2B1C1105E700CFE0A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AABC3C2D1C1105E700CFE0A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		AABC3C321C1105E700CFE0A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AABC3C351C1105E700CFE0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AABC3C371C1105E700CFE0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9ADC417C75DB53626B35C0E /* libPods-FoodTruck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodTruck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425D2B9CFCD3F26E2110908D /* libPods-FoodTruck.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842BD31C22794898DB009070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65DEFE786BDD0AD79DC1805A /* Pods-FoodTruck.debug.xcconfig */,
+				5219D820D03C371559127353 /* Pods-FoodTruck.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AABC3C1F1C1105E700CFE0A1 = {
 			isa = PBXGroup;
 			children = (
 				AABC3C2A1C1105E700CFE0A1 /* FoodTruck */,
 				AABC3C291C1105E700CFE0A1 /* Products */,
+				842BD31C22794898DB009070 /* Pods */,
+				F26E517FCC335C9501B32A8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = FoodTruck;
 			sourceTree = "<group>";
 		};
+		F26E517FCC335C9501B32A8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9ADC417C75DB53626B35C0E /* libPods-FoodTruck.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AABC3C3A1C1105E700CFE0A1 /* Build configuration list for PBXNativeTarget "FoodTruck" */;
 			buildPhases = (
+				14503D805EFB40D833DB5A11 /* Check Pods Manifest.lock */,
 				AABC3C241C1105E700CFE0A1 /* Sources */,
 				AABC3C251C1105E700CFE0A1 /* Frameworks */,
 				AABC3C261C1105E700CFE0A1 /* Resources */,
+				084F06CCBE4885ABAEB1313B /* Embed Pods Frameworks */,
+				6CD586CFD832CF68B522936D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		084F06CCBE4885ABAEB1313B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodTruck/Pods-FoodTruck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14503D805EFB40D833DB5A11 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6CD586CFD832CF68B522936D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodTruck/Pods-FoodTruck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AABC3C241C1105E700CFE0A1 /* Sources */ = {
@@ -246,6 +321,7 @@
 		};
 		AABC3C3B1C1105E700CFE0A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65DEFE786BDD0AD79DC1805A /* Pods-FoodTruck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTruck/Info.plist;
@@ -257,6 +333,7 @@
 		};
 		AABC3C3C1C1105E700CFE0A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5219D820D03C371559127353 /* Pods-FoodTruck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTruck/Info.plist;
@@ -285,6 +362,7 @@
 				AABC3C3C1C1105E700CFE0A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
