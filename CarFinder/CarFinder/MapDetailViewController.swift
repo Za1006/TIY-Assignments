@@ -21,9 +21,10 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
 {
     
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var addPin: UIBarButtonItem!
+    @IBOutlet var dropAPin: UIBarButtonItem!
     
     var locations = [Location]()
+    var login = false
 
     let locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
@@ -42,8 +43,9 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        mapView.delegate = self
+        
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning()
@@ -126,21 +128,10 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
     }
     
     
-//     func loginData()
-//      {
-//        if let data = NSUserDefaults.standardUserDefaults().objectForKey(kLocationsKey) as? NSData
-//        {
-//            if let savedLocations = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Location]
-//            {
-//                locations = savedLocations
-//                view.reloadInputViews()
-//            }
-//        }
-//      }
-    
     func saveMapData()
     {
-                let mapData = NSKeyedArchiver.archivedDataWithRootObject(locations)
+        
+        let mapData = NSKeyedArchiver.archivedDataWithRootObject(locations)
                 NSUserDefaults.standardUserDefaults().setObject(mapData, forKey: kLocationsKey)
         
 
@@ -156,6 +147,19 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
 //            }
 //        }
     }
+    
+    func loginData()
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey(kLocationsKey) as? NSData
+        {
+            if let savedLocations = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Location]
+            {
+                locations = savedLocations
+                view.reloadInputViews()
+            }
+        }
+    }
+    
     
 
 }

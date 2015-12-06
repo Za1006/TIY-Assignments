@@ -50,6 +50,16 @@ class LoginViewController: UIViewController
         return false
     }
     
+    func currentUser()
+    {
+        let currentUser = PFUser.currentUser()
+        if currentUser != nil
+        {
+            print("user logged in")
+        }
+
+    }
+    
     
     @IBAction func signInTapped(sender: UIButton)
     {
@@ -60,17 +70,17 @@ class LoginViewController: UIViewController
                 if user != nil
                 {
                     print("login successful")
-//              let VC = self.storyboard?.instantiateInitialViewControllerWithIdentifier(mapVC) as! MapViewController
-////                    
-                    self.performSegueWithIdentifier("ShowRegisterSegue", sender: self)
-                    self.dismissViewControllerAnimated(true, completion: nil)
+            // let VC = self.storyboard?.instantiateInitialViewControllerWithIdentifier(mapVC) as! MapViewController
+//               self.performSegueWithIdentifier("ShowRegisterSegue", sender: self)
+//             self.performSegueWithIdentifier("ShowDetailSegue", sender: self)
+           self.dismissViewControllerAnimated(true, completion: nil)
                     
                 }
                 else
                 {
                     print(error?.localizedDescription)
-                    self.passwordTextField.text = ""
-                    self.passwordTextField.placeholder = "Invalid Password"
+                 //  self.passwordTextField.text = ""
+                 //  self.passwordTextField.placeholder = "Invalid Password"
                 }
             }
         }

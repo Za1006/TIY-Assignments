@@ -59,9 +59,11 @@ class RegisterViewController: UIViewController
                 if !succeeded
                 {
                     print(error?.localizedDescription)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+
                 }
                 else
-                {
+                {    
                     self.navigationController?.popToRootViewControllerAnimated(true)
                 }
             }
