@@ -8,22 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		AAF90C481C13BD5300697E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C471C13BD5300697E2A /* AppDelegate.swift */; };
-		AAF90C4A1C13BD5300697E2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C491C13BD5300697E2A /* ViewController.swift */; };
 		AAF90C4D1C13BD5300697E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF90C4B1C13BD5300697E2A /* Main.storyboard */; };
 		AAF90C501C13BD5300697E2A /* CarFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C4E1C13BD5300697E2A /* CarFinder.xcdatamodeld */; };
 		AAF90C521C13BD5300697E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF90C511C13BD5300697E2A /* Assets.xcassets */; };
 		AAF90C551C13BD5300697E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF90C531C13BD5300697E2A /* LaunchScreen.storyboard */; };
+		AAF90C601C13C0F300697E2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C5F1C13C0F300697E2A /* LoginViewController.swift */; };
+		AF1EC200408D77217F860DD7 /* libPods-CarFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6BAC6E02BC8DEEAA031A36 /* libPods-CarFinder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F229C94E25452F7CE283E31 /* Pods-CarFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarFinder/Pods-CarFinder.release.xcconfig"; sourceTree = "<group>"; };
+		9D9F5FB4AB6A32AB644EB64C /* Pods-CarFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarFinder/Pods-CarFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		AAF90C441C13BD5300697E2A /* CarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF90C471C13BD5300697E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAF90C491C13BD5300697E2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAF90C4C1C13BD5300697E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAF90C4F1C13BD5300697E2A /* CarFinder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarFinder.xcdatamodel; sourceTree = "<group>"; };
 		AAF90C511C13BD5300697E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF90C541C13BD5300697E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF90C561C13BD5300697E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAF90C5D1C13BEFE00697E2A /* CarFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CarFinder-Bridging-Header.h"; sourceTree = "<group>"; };
+		AAF90C5F1C13C0F300697E2A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF6BAC6E02BC8DEEAA031A36 /* libPods-CarFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1EC200408D77217F860DD7 /* libPods-CarFinder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28D9E9D1B7D4D7ECDBEBCEE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6BAC6E02BC8DEEAA031A36 /* libPods-CarFinder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42395E23E72DFAB2F740FCF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D9F5FB4AB6A32AB644EB64C /* Pods-CarFinder.debug.xcconfig */,
+				5F229C94E25452F7CE283E31 /* Pods-CarFinder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AAF90C3B1C13BD5300697E2A = {
 			isa = PBXGroup;
 			children = (
 				AAF90C461C13BD5300697E2A /* CarFinder */,
 				AAF90C451C13BD5300697E2A /* Products */,
+				42395E23E72DFAB2F740FCF8 /* Pods */,
+				28D9E9D1B7D4D7ECDBEBCEE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				AAF90C471C13BD5300697E2A /* AppDelegate.swift */,
-				AAF90C491C13BD5300697E2A /* ViewController.swift */,
+				AAF90C5D1C13BEFE00697E2A /* CarFinder-Bridging-Header.h */,
+				AAF90C5F1C13C0F300697E2A /* LoginViewController.swift */,
 				AAF90C4B1C13BD5300697E2A /* Main.storyboard */,
 				AAF90C511C13BD5300697E2A /* Assets.xcassets */,
 				AAF90C531C13BD5300697E2A /* LaunchScreen.storyboard */,
@@ -74,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAF90C591C13BD5300697E2A /* Build configuration list for PBXNativeTarget "CarFinder" */;
 			buildPhases = (
+				31FF4D51AB6BA31D712C09EE /* Check Pods Manifest.lock */,
 				AAF90C401C13BD5300697E2A /* Sources */,
 				AAF90C411C13BD5300697E2A /* Frameworks */,
 				AAF90C421C13BD5300697E2A /* Resources */,
+				C84C16D3BE379A9EF7EA4FF9 /* Embed Pods Frameworks */,
+				2AFBF30F12E8D30792837E5F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,12 +163,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AFBF30F12E8D30792837E5F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarFinder/Pods-CarFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31FF4D51AB6BA31D712C09EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C84C16D3BE379A9EF7EA4FF9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CarFinder/Pods-CarFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAF90C401C13BD5300697E2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF90C4A1C13BD5300697E2A /* ViewController.swift in Sources */,
+				AAF90C601C13C0F300697E2A /* LoginViewController.swift in Sources */,
 				AAF90C501C13BD5300697E2A /* CarFinder.xcdatamodeld in Sources */,
 				AAF90C481C13BD5300697E2A /* AppDelegate.swift in Sources */,
 			);
@@ -250,23 +327,30 @@
 		};
 		AAF90C5A1C13BD5300697E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D9F5FB4AB6A32AB644EB64C /* Pods-CarFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CarFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.CarFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarFinder/CarFinder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		AAF90C5B1C13BD5300697E2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F229C94E25452F7CE283E31 /* Pods-CarFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CarFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.CarFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CarFinder/CarFinder-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -289,6 +373,7 @@
 				AAF90C5B1C13BD5300697E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
