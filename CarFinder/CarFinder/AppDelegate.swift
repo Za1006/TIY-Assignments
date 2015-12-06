@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication)
     {
         let navController = window?.rootViewController as! UINavigationController
-        let loginVC = navController.viewControllers[0] as! LoginViewController
-        loginVC.saveCityData()
+        let mapVC = navController.viewControllers[0] as! MapDetailViewController
+        mapVC.saveMapData()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navController = window?.rootViewController as! UINavigationController
         let loginVC = navController.viewControllers[0] as! LoginViewController
-        loginVC.loadCityData()
+        loginVC.loginData()
     }
 
     func applicationWillTerminate(application: UIApplication) {

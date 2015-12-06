@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
+
+
 
 class LoginViewController: UIViewController
 {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var locations = [Location]()
+
     
     override func viewDidLoad()
     {
@@ -54,8 +60,8 @@ class LoginViewController: UIViewController
                 if user != nil
                 {
                     print("login successful")
-                //  let VC = self.storyboard?.instantiateInitialViewControllerWithIdentifier(mapVC) as! MapViewController
-                    
+//              let VC = self.storyboard?.instantiateInitialViewControllerWithIdentifier(mapVC) as! MapViewController
+////                    
                     self.performSegueWithIdentifier("ShowRegisterSegue", sender: self)
                     self.dismissViewControllerAnimated(true, completion: nil)
                     
@@ -69,6 +75,18 @@ class LoginViewController: UIViewController
             }
         }
         
+    }
+    
+    func loginData()
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey(kLocationsKey) as? NSData
+        {
+            if let savedLocations = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Location]
+            {
+                locations = savedLocations
+                view.reloadInputViews()
+            }
+        }
     }
     
 //    func textFieldShouldReturn(textField: UITextField)
