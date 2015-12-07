@@ -12,19 +12,22 @@ import CoreLocation
 
 let kLocationsKey = "locations"
 
-protocol PopoverViewControllerDelegate
-{
-    func locationWasParked(location: Location)
-}
 
-class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, UIPopoverPresentationControllerDelegate, CLLocationManagerDelegate, MKMapViewDelegate
+
+class MapDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
 {
     
-    @IBOutlet var mapView: MKMapView!
-    @IBOutlet var dropAPin: UIBarButtonItem!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var dropAPinButton: UIButton!
     
     var locations = [Location]()
     var login = false
+    var pins = [Pin]()
+    var locationString: String = ""
+    
+//    var delegate: MapDetailViewControllerDelegate?
+
+
 
     let locationManager = CLLocationManager()
     let geocoder = CLGeocoder()
@@ -44,6 +47,12 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
     {
         super.viewDidLoad()
         mapView.delegate = self
+        configureLocationManager()
+        
+        if pins.count > 0
+        {
+            showLoadedPins()
+        }
         
 
     }
@@ -51,28 +60,68 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
 
     // MARK: - Navigation
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    
+    func  configureLocationManager()
     {
-        if segue.identifier == "ShowPopoverSegue"
+        if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Denied && CLLocationManager.authorizationStatus() != CLAuthorizationStatus.Restricted
         {
-            let destVC = segue.destinationViewController as! PopoverViewController
-            destVC.popoverPresentationController?.delegate = self
-            destVC.delegate = self
-            destVC.preferredContentSize = CGSizeMake(200.0, 80.0)
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.NotDetermined
+            {
+                locationManager.requestWhenInUseAuthorization()
+            }
+            else
+            {
+                dropAPinButton.enabled = true
+            }
         }
     }
     
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
     {
-        return .None
+        if status == CLAuthorizationStatus.AuthorizedWhenInUse
+        {
+            dropAPinButton.enabled = true
+        }
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        let location = locations.last
+        geocoder.reverseGeocodeLocation(location!, completionHandler: {(placemark: [CLPlacemark]?, error: NSError?) -> Void in
+            
+            if error != nil
+            {
+                print(error?.localizedDescription)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+
+            }
+            else
+            {
+                self.locationManager.stopUpdatingLocation()
+                self.updateMapView(placemark!)
+                
+                
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                
+            }
+        })
+    }
+    
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError)
+    {
+        print(error.localizedDescription)
+    }
+    
+    
     
     func locationWasParked(location: Location)
     {
@@ -98,7 +147,7 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
             locations.append(location)
         }
     }
-    
+  
     func mapLocations(location1: Location, location2: Location)
     {
         location1Coordinates = CLLocationCoordinate2DMake(location1.lat, location1.lng)
@@ -127,6 +176,93 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
       
     }
     
+    @IBAction func dropAPinButton(sender: UIButton)
+    {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        locationManager.startUpdatingLocation()
+
+    }
+    
+    @IBAction func cancelButtonTapped(sender: UIButton)
+    {
+        
+        print("cleared")
+        let query = PFQuery(className:"Pin")
+        query.findObjectsInBackgroundWithBlock({ (results : [PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                
+                for result in results! {
+                    result.deleteInBackground()
+                }
+            }
+        })
+        pins.removeAll()
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.removeOverlays(mapView.overlays)
+        
+        dropAPinButton.enabled = true
+        
+    }
+    
+    func updateMapView(placemarks: [CLPlacemark])
+    {
+        switch pins.count
+        {
+        case 0:
+            location1?.coordinate; placemarks[0].location!.coordinate
+            location1?.title; "parked car"
+            
+            let pin = Pin(lat: location1!.coordinate.latitude, lng: location1!.coordinate.longitude, name: location1!.title)
+            pins.append(pin)
+            
+            showLoadedPins()
+            
+        case 1:
+            location2?.coordinate; placemarks[0].location!.coordinate
+            location2?.title; "current location"
+            
+            let pin = Pin(lat: location2!.coordinate.latitude, lng: location2!.coordinate.longitude, name: location2!.title)
+            pins.append(pin)
+            
+            showLoadedPins()
+            
+        default: print("error")
+        }
+    }
+    
+    func showLoadedPins()
+    {
+        let annotations = pinsToAnnotations()
+        
+        if pins.count == 2
+        {
+            dropAPinButton.enabled = false
+            
+        }
+        
+        mapView.removeAnnotations(mapView.annotations)
+        
+        self.mapView.showAnnotations(annotations, animated: true)
+        self.mapView.camera.altitude *= 2
+    }
+    
+    func pinsToAnnotations() -> [MKPointAnnotation]
+    {
+        var annotations = [MKPointAnnotation]()
+        
+        for pin in pins
+        {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate.longitude = pin.lng
+            annotation.coordinate.latitude = pin.lat
+            annotation.title = pin.name
+            
+            print(pin.name, pin.lng, pin.lat, "was loaded")
+            
+            annotations.append(annotation)
+        }
+        return annotations
+    }
     
     func saveMapData()
     {
@@ -134,18 +270,21 @@ class MapDetailViewController: UIViewController,PopoverViewControllerDelegate, U
         let mapData = NSKeyedArchiver.archivedDataWithRootObject(locations)
                 NSUserDefaults.standardUserDefaults().setObject(mapData, forKey: kLocationsKey)
         
-
-//        parsePin["lat"] = locations.last
-//        parsePin["lng"] = locations.last
-////        parsePin["title"] = locations.name
-//        parsePin.saveInBackgroundWithBlock {
-//            (success: Bool, error: NSError?) -> Void in
-//            if (success) {
-//                print("saved ")
-//            } else {
-//                print("save failed")
-//            }
-//        }
+        parsePin["lat"] = locations.last
+        parsePin["lng"] = locations.last
+        parsePin["title"] = locations
+        
+        parsePin.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success)
+            {
+                print("saved ")
+            }
+            else
+            {
+                print("save failed")
+            }
+        }
     }
     
     func loginData()

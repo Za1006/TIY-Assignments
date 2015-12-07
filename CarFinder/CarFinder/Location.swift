@@ -13,19 +13,22 @@ import CoreLocation
 let kNameKey = "name"
 let kLatitudeKey = "latitude"
 let kLongitudeKey = "longitude"
+let kTitleKey = "title"
 
 class Location: NSObject, NSCoding
 {
     let name: String
+    let title: String
     let lat: Double
     let lng: Double
     let coordinate: CLLocationCoordinate2D
     
-    init(name: String, lat: Double, lng: Double)
+    init(name: String, title: String, lat: Double, lng: Double)
     {
         self.name = name
         self.lat = lat
         self.lng = lng
+        self.title = title
         self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
     }
     required convenience init?(coder aDecoder: NSCoder)
@@ -33,7 +36,7 @@ class Location: NSObject, NSCoding
         guard let name = aDecoder.decodeObjectForKey(kNameKey) as? String
             else { return nil }
         
-        self.init(name: name, lat: aDecoder.decodeDoubleForKey(kLatitudeKey), lng: aDecoder.decodeDoubleForKey(kLongitudeKey))
+        self.init(name: name, title: "", lat: aDecoder.decodeDoubleForKey(kLatitudeKey), lng: aDecoder.decodeDoubleForKey(kLongitudeKey))
         
     }
     

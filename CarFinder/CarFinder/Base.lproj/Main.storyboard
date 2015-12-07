@@ -116,27 +116,45 @@
                                 <animations/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAU-Mt-xLc">
-                                <rect key="frame" x="28" y="148" width="544" height="61"/>
+                                <rect key="frame" x="28" y="94" width="544" height="61"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Drop a pin">
                                     <color key="titleColor" red="0.0" green="0.26753085851669312" blue="0.87620276212692261" alpha="0.99662162160000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="dropAPinButton:" destination="ch2-UC-xPY" eventType="touchUpInside" id="VmM-Qy-re5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLQ-QH-3JR">
+                                <rect key="frame" x="28" y="172" width="544" height="61"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.26753085851669312" blue="0.87620276212692261" alpha="0.99662162160000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="ch2-UC-xPY" eventType="touchUpInside" id="ZhL-tY-ecn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qLQ-QH-3JR" secondAttribute="trailing" constant="28" id="2RH-2o-kb8"/>
                             <constraint firstItem="jsT-mY-p82" firstAttribute="top" secondItem="16a-ox-URH" secondAttribute="bottom" constant="8" id="B5A-f1-l6t"/>
                             <constraint firstItem="xAU-Mt-xLc" firstAttribute="leading" secondItem="3jO-ll-qyO" secondAttribute="leadingMargin" constant="8" id="BtI-UQ-h9o"/>
                             <constraint firstItem="16a-ox-URH" firstAttribute="leading" secondItem="3jO-ll-qyO" secondAttribute="leading" id="Gih-Ys-qZl"/>
                             <constraint firstItem="jsT-mY-p82" firstAttribute="top" secondItem="xAU-Mt-xLc" secondAttribute="bottom" constant="464" id="Hxj-qi-Uxp"/>
                             <constraint firstItem="16a-ox-URH" firstAttribute="centerX" secondItem="3jO-ll-qyO" secondAttribute="centerX" id="JKB-fZ-H9w"/>
-                            <constraint firstItem="xAU-Mt-xLc" firstAttribute="top" secondItem="aUM-0H-MHK" secondAttribute="bottom" constant="84" id="Jb5-YU-ycg"/>
+                            <constraint firstItem="xAU-Mt-xLc" firstAttribute="top" secondItem="aUM-0H-MHK" secondAttribute="bottom" constant="30" id="Jb5-YU-ycg"/>
                             <constraint firstItem="16a-ox-URH" firstAttribute="centerY" secondItem="3jO-ll-qyO" secondAttribute="centerY" id="KPn-JI-Dzc"/>
+                            <constraint firstItem="qLQ-QH-3JR" firstAttribute="leading" secondItem="3jO-ll-qyO" secondAttribute="leading" constant="28" id="Mea-dv-G4c"/>
                             <constraint firstItem="16a-ox-URH" firstAttribute="top" secondItem="aUM-0H-MHK" secondAttribute="bottom" constant="200" id="SYP-aM-ST9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xAU-Mt-xLc" secondAttribute="trailing" constant="8" id="YKf-91-1Gr"/>
-                            <constraint firstItem="jsT-mY-p82" firstAttribute="top" secondItem="xAU-Mt-xLc" secondAttribute="bottom" constant="391" id="cCH-Uz-Bn5"/>
+                            <constraint firstItem="16a-ox-URH" firstAttribute="top" secondItem="qLQ-QH-3JR" secondAttribute="bottom" constant="31" id="Zg2-69-Uy3"/>
+                            <constraint firstItem="jsT-mY-p82" firstAttribute="top" secondItem="xAU-Mt-xLc" secondAttribute="bottom" constant="445" id="cCH-Uz-Bn5"/>
+                            <constraint firstItem="qLQ-QH-3JR" firstAttribute="top" secondItem="xAU-Mt-xLc" secondAttribute="bottom" constant="17" id="eTX-1o-Dkh"/>
                             <constraint firstAttribute="trailing" secondItem="16a-ox-URH" secondAttribute="trailing" id="kD3-31-hWT"/>
                         </constraints>
                         <variation key="default">
@@ -147,6 +165,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="dropAPinButton" destination="xAU-Mt-xLc" id="8ki-G0-Wam"/>
                         <outlet property="mapView" destination="16a-ox-URH" id="6UL-7h-vpF"/>
                     </connections>
                 </viewController>

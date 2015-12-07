@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAF59D341C150C20002CC771 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF59D331C150C20002CC771 /* Pin.swift */; };
 		AAF90C481C13BD5300697E2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C471C13BD5300697E2A /* AppDelegate.swift */; };
 		AAF90C4D1C13BD5300697E2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF90C4B1C13BD5300697E2A /* Main.storyboard */; };
 		AAF90C501C13BD5300697E2A /* CarFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C4E1C13BD5300697E2A /* CarFinder.xcdatamodeld */; };
@@ -15,7 +16,6 @@
 		AAF90C601C13C0F300697E2A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C5F1C13C0F300697E2A /* LoginViewController.swift */; };
 		AAF90C621C13C92800697E2A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C611C13C92800697E2A /* RegisterViewController.swift */; };
 		AAF90C641C13C94B00697E2A /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C631C13C94B00697E2A /* MapDetailViewController.swift */; };
-		AAF90C661C13D32A00697E2A /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C651C13D32A00697E2A /* PopoverViewController.swift */; };
 		AAF90C681C13D51300697E2A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF90C671C13D51300697E2A /* Location.swift */; };
 		AF1EC200408D77217F860DD7 /* libPods-CarFinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6BAC6E02BC8DEEAA031A36 /* libPods-CarFinder.a */; };
 /* End PBXBuildFile section */
@@ -23,6 +23,7 @@
 /* Begin PBXFileReference section */
 		5F229C94E25452F7CE283E31 /* Pods-CarFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarFinder/Pods-CarFinder.release.xcconfig"; sourceTree = "<group>"; };
 		9D9F5FB4AB6A32AB644EB64C /* Pods-CarFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarFinder/Pods-CarFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		AAF59D331C150C20002CC771 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		AAF90C441C13BD5300697E2A /* CarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF90C471C13BD5300697E2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF90C4C1C13BD5300697E2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		AAF90C5F1C13C0F300697E2A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AAF90C611C13C92800697E2A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AAF90C631C13C94B00697E2A /* MapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
-		AAF90C651C13D32A00697E2A /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		AAF90C671C13D51300697E2A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		BF6BAC6E02BC8DEEAA031A36 /* libPods-CarFinder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CarFinder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,12 +95,12 @@
 				AAF90C5F1C13C0F300697E2A /* LoginViewController.swift */,
 				AAF90C611C13C92800697E2A /* RegisterViewController.swift */,
 				AAF90C631C13C94B00697E2A /* MapDetailViewController.swift */,
-				AAF90C651C13D32A00697E2A /* PopoverViewController.swift */,
 				AAF90C4B1C13BD5300697E2A /* Main.storyboard */,
 				AAF90C511C13BD5300697E2A /* Assets.xcassets */,
 				AAF90C531C13BD5300697E2A /* LaunchScreen.storyboard */,
 				AAF90C561C13BD5300697E2A /* Info.plist */,
 				AAF90C4E1C13BD5300697E2A /* CarFinder.xcdatamodeld */,
+				AAF59D331C150C20002CC771 /* Pin.swift */,
 			);
 			path = CarFinder;
 			sourceTree = "<group>";
@@ -231,8 +231,8 @@
 				AAF90C601C13C0F300697E2A /* LoginViewController.swift in Sources */,
 				AAF90C501C13BD5300697E2A /* CarFinder.xcdatamodeld in Sources */,
 				AAF90C481C13BD5300697E2A /* AppDelegate.swift in Sources */,
+				AAF59D341C150C20002CC771 /* Pin.swift in Sources */,
 				AAF90C621C13C92800697E2A /* RegisterViewController.swift in Sources */,
-				AAF90C661C13D32A00697E2A /* PopoverViewController.swift in Sources */,
 				AAF90C641C13C94B00697E2A /* MapDetailViewController.swift in Sources */,
 				AAF90C681C13D51300697E2A /* Location.swift in Sources */,
 			);
