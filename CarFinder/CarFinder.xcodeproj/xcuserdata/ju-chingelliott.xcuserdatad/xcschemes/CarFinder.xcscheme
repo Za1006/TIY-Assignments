@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAF90C201C139CE900697E2A"
+               BlueprintIdentifier = "AAF90C431C13BD5300697E2A"
                BuildableName = "CarFinder.app"
                BlueprintName = "CarFinder"
                ReferencedContainer = "container:CarFinder.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAF90C201C139CE900697E2A"
+            BlueprintIdentifier = "AAF90C431C13BD5300697E2A"
             BuildableName = "CarFinder.app"
             BlueprintName = "CarFinder"
             ReferencedContainer = "container:CarFinder.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAF90C201C139CE900697E2A"
+            BlueprintIdentifier = "AAF90C431C13BD5300697E2A"
             BuildableName = "CarFinder.app"
             BlueprintName = "CarFinder"
             ReferencedContainer = "container:CarFinder.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AAF90C201C139CE900697E2A"
+            BlueprintIdentifier = "AAF90C431C13BD5300697E2A"
             BuildableName = "CarFinder.app"
             BlueprintName = "CarFinder"
             ReferencedContainer = "container:CarFinder.xcodeproj">
