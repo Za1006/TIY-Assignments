@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gde-vz-zqj" customClass="ClockView" customModule="Clock" customModuleProvider="target">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="qyn-LL-TXO"/>
+                                    <constraint firstAttribute="width" secondItem="gde-vz-zqj" secondAttribute="height" multiplier="1:1" id="x5X-EN-M9h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gde-vz-zqj" secondAttribute="trailing" constant="210" id="CaI-3G-cMI"/>
+                            <constraint firstItem="gde-vz-zqj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6k-62-yME"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gde-vz-zqj" secondAttribute="bottom" constant="230" id="LXn-5e-Tdg"/>
+                            <constraint firstItem="gde-vz-zqj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UK0-BP-9Xg"/>
+                            <constraint firstItem="gde-vz-zqj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W3Y-ON-MTt"/>
+                            <constraint firstItem="gde-vz-zqj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="210" id="b7q-Ei-6x6"/>
+                            <constraint firstItem="gde-vz-zqj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="210" id="uAS-Eo-g7Y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CaI-3G-cMI"/>
+                                <exclude reference="W3Y-ON-MTt"/>
+                                <exclude reference="b7q-Ei-6x6"/>
+                                <exclude reference="uAS-Eo-g7Y"/>
+                                <exclude reference="LXn-5e-Tdg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clockView" destination="gde-vz-zqj" id="AnF-Uk-7aH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
